@@ -1,0 +1,4 @@
+[2018-07-27 17:13:25.733] [INFO] app - 数据库操作失败:
+Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHEREA.ID=B.coll_ID and district like "%%" and overlayScene like "%_%" and collT' at line 1
+[2018-07-27 17:13:25.734] [INFO] app - 导出需求数据到excel进行查询失败:
+Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHEREA.ID=B.coll_ID and district like "%%" and overlayScene like "%_%" and collT' at line 1
