@@ -1,0 +1,36 @@
+[2018-06-15 09:04:42.571] [INFO] app - 数据库操作失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+[2018-06-15 09:04:42.572] [INFO] app - 数据库连接失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+[2018-06-15 09:04:42.682] [INFO] app - 数据库操作失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+[2018-06-15 09:04:42.682] [INFO] app - 获取所有数据查询失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+[2018-06-15 09:06:42.569] [INFO] app - 数据库操作失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+[2018-06-15 09:06:42.569] [INFO] app - 数据库连接失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+[2018-06-15 09:35:07.710] [INFO] app - 数据库操作失败:
+Error: connect ECONNREFUSED 127.0.0.1:3306
+[2018-06-15 09:35:07.711] [INFO] app - 数据库连接失败:
+Error: connect ECONNREFUSED 127.0.0.1:3306
+[2018-06-15 09:35:07.799] [INFO] app - 数据库操作失败:
+Error: connect ECONNREFUSED 127.0.0.1:3306
+[2018-06-15 09:35:07.800] [INFO] app - 获取所有数据查询失败:
+Error: connect ECONNREFUSED 127.0.0.1:3306
+[2018-06-15 09:37:07.709] [INFO] app - 数据库操作失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+[2018-06-15 09:37:07.709] [INFO] app - 数据库连接失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+[2018-06-15 11:18:14.120] [INFO] app - 数据库操作失败:
+Error: connect ECONNREFUSED 127.0.0.1:3306
+[2018-06-15 11:18:14.120] [INFO] app - 数据库连接失败:
+Error: connect ECONNREFUSED 127.0.0.1:3306
+[2018-06-15 11:18:14.198] [INFO] app - 数据库操作失败:
+Error: connect ECONNREFUSED 127.0.0.1:3306
+[2018-06-15 11:18:14.199] [INFO] app - 获取所有数据查询失败:
+Error: connect ECONNREFUSED 127.0.0.1:3306
+[2018-06-15 11:20:14.127] [INFO] app - 数据库操作失败:
+Error: connect ECONNREFUSED 127.0.0.1:3306
+[2018-06-15 11:20:14.127] [INFO] app - 数据库连接失败:
+Error: connect ECONNREFUSED 127.0.0.1:3306

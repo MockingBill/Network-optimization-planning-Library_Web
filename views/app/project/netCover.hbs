@@ -15,7 +15,9 @@
 <div class="row" style="solid: rgba(106,93,153,0.51)">
 
     <div class="col-xs-10 col-md-10 text-left">
+
         <div style="margin-left: 60px">
+
             <label>采集时间&nbsp从</label>
             <input id="queryDateStart" name="queryDateStart" style="height: 34px;width:120px ">
             &nbsp到&nbsp
@@ -32,7 +34,9 @@
             <input class="easyui-combobox" value="请选择场景" style="width: 130px;height:34px;" name="secondScene"
                    id="secondScene"/>
 
+
         </div>
+
     </div>
 
     <div class="col-xs-2 col-md-2 text-left">
@@ -605,6 +609,8 @@
             // singleSelect: true,
             columns: [[
 
+
+
                 {
                     "field": "ID", "title": "ID", align: 'center', hidden: true
                 },
@@ -618,10 +624,21 @@
                     "field": "BSSS", "title": "信号强度", fixed: true, sortable: true
                 },
                 {
-                    "field": "GPS", "title": "GPS经纬度", fixed: true
+
+                    "field": "GpsLon", "title": "经度", fixed: true
                 },
                 {
-                    "field": "phoneNumber", "title": "手机号", halign: 'center'
+                    "field": "GpsLat", "title": "纬度", fixed: true
+                },
+                {
+                    "field": "collectUsername", "title": "上传人姓名", halign: 'center'
+                },
+                {
+                    "field": "phoneNumber", "title": "上传人手机号", halign: 'center'
+                },
+                {
+                    "field": "FromDepartment", "title": "上传人部门", halign: 'center'
+
                 },
                 {
                     "field": "phoneType", "title": "手机型号", halign: 'center'

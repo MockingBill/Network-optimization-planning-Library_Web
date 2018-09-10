@@ -42,9 +42,11 @@ router.route('/').post(function (req, res) {
 router.route('/checkSameLoca').post(function (req, res) {
 
     var params = req.body;
+
     service.get2GDataForm4G(params ,function (result) {
 
         console.log(result.data);
+
         utils.respJsonData(res, result);
     });
 
@@ -63,6 +65,7 @@ router.route('/updateStatus').get(function (req, res) {
     });
 
 });
+
 
 router.route('/errUpload').post(function (req,res) {
     var errData=req.body;
@@ -109,6 +112,7 @@ router.route('/errUpload').post(function (req,res) {
     }
 
 });
+
 
 
 

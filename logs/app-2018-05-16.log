@@ -1,0 +1,96 @@
+[2018-05-16 10:13:44.014] [INFO] app - 数据库操作失败:
+Error: ER_TRUNCATED_WRONG_VALUE_FOR_FIELD: Incorrect integer value: '城区' for column 'BSSS' at row 1
+[2018-05-16 10:13:44.014] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: ER_TRUNCATED_WRONG_VALUE_FOR_FIELD: Incorrect integer value: '城区' for column 'BSSS' at row 1
+[2018-05-16 10:13:44.015] [INFO] app - 数据库操作失败:
+Error: ER_TRUNCATED_WRONG_VALUE_FOR_FIELD: Incorrect integer value: '城区' for column 'BSSS' at row 1
+[2018-05-16 10:13:44.015] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: ER_TRUNCATED_WRONG_VALUE_FOR_FIELD: Incorrect integer value: '城区' for column 'BSSS' at row 1
+[2018-05-16 10:13:44.015] [INFO] app - 数据库操作失败:
+Error: ER_TRUNCATED_WRONG_VALUE_FOR_FIELD: Incorrect integer value: '城区' for column 'BSSS' at row 1
+[2018-05-16 10:13:44.015] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: ER_TRUNCATED_WRONG_VALUE_FOR_FIELD: Incorrect integer value: '城区' for column 'BSSS' at row 1
+[2018-05-16 10:13:44.016] [INFO] app - 数据库操作失败:
+Error: ER_TRUNCATED_WRONG_VALUE_FOR_FIELD: Incorrect integer value: '城区' for column 'BSSS' at row 1
+[2018-05-16 10:13:44.016] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: ER_TRUNCATED_WRONG_VALUE_FOR_FIELD: Incorrect integer value: '城区' for column 'BSSS' at row 1
+[2018-05-16 10:13:44.016] [INFO] app - 数据库操作失败:
+Error: ER_TRUNCATED_WRONG_VALUE_FOR_FIELD: Incorrect integer value: '城区' for column 'BSSS' at row 1
+[2018-05-16 10:13:44.016] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: ER_TRUNCATED_WRONG_VALUE_FOR_FIELD: Incorrect integer value: '城区' for column 'BSSS' at row 1
+[2018-05-16 10:13:44.017] [INFO] app - 数据库操作失败:
+Error: ER_TRUNCATED_WRONG_VALUE_FOR_FIELD: Incorrect integer value: '城区' for column 'BSSS' at row 1
+[2018-05-16 10:13:44.017] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: ER_TRUNCATED_WRONG_VALUE_FOR_FIELD: Incorrect integer value: '城区' for column 'BSSS' at row 1
+[2018-05-16 10:13:44.017] [INFO] app - 数据库操作失败:
+Error: ER_TRUNCATED_WRONG_VALUE_FOR_FIELD: Incorrect integer value: '城区' for column 'BSSS' at row 1
+[2018-05-16 10:13:44.017] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: ER_TRUNCATED_WRONG_VALUE_FOR_FIELD: Incorrect integer value: '城区' for column 'BSSS' at row 1
+[2018-05-16 10:13:44.017] [INFO] app - 数据库操作失败:
+Error: ER_TRUNCATED_WRONG_VALUE_FOR_FIELD: Incorrect integer value: '城区' for column 'BSSS' at row 1
+[2018-05-16 10:13:44.017] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: ER_TRUNCATED_WRONG_VALUE_FOR_FIELD: Incorrect integer value: '城区' for column 'BSSS' at row 1
+[2018-05-16 11:01:48.422] [INFO] app - 数据库操作失败:
+Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '"ID,city,district,address,overlayScene,GPS,ECI,TAC,BSSS,NetworkOperatorName,phon' at line 1
+[2018-05-16 11:01:48.423] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '"ID,city,district,address,overlayScene,GPS,ECI,TAC,BSSS,NetworkOperatorName,phon' at line 1
+[2018-05-16 11:01:48.423] [INFO] app - 数据库操作失败:
+Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '"ID,city,district,address,overlayScene,GPS,ECI,TAC,BSSS,NetworkOperatorName,phon' at line 1
+[2018-05-16 11:01:48.423] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '"ID,city,district,address,overlayScene,GPS,ECI,TAC,BSSS,NetworkOperatorName,phon' at line 1
+[2018-05-16 11:01:48.424] [INFO] app - 数据库操作失败:
+Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '"ID,city,district,address,overlayScene,GPS,ECI,TAC,BSSS,NetworkOperatorName,phon' at line 1
+[2018-05-16 11:01:48.424] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '"ID,city,district,address,overlayScene,GPS,ECI,TAC,BSSS,NetworkOperatorName,phon' at line 1
+[2018-05-16 11:01:48.424] [INFO] app - 数据库操作失败:
+Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '"ID,city,district,address,overlayScene,GPS,ECI,TAC,BSSS,NetworkOperatorName,phon' at line 1
+[2018-05-16 11:01:48.424] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '"ID,city,district,address,overlayScene,GPS,ECI,TAC,BSSS,NetworkOperatorName,phon' at line 1
+[2018-05-16 11:01:48.425] [INFO] app - 数据库操作失败:
+Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '"ID,city,district,address,overlayScene,GPS,ECI,TAC,BSSS,NetworkOperatorName,phon' at line 1
+[2018-05-16 11:01:48.425] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '"ID,city,district,address,overlayScene,GPS,ECI,TAC,BSSS,NetworkOperatorName,phon' at line 1
+[2018-05-16 11:01:48.425] [INFO] app - 数据库操作失败:
+Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '"ID,city,district,address,overlayScene,GPS,ECI,TAC,BSSS,NetworkOperatorName,phon' at line 1
+[2018-05-16 11:01:48.425] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '"ID,city,district,address,overlayScene,GPS,ECI,TAC,BSSS,NetworkOperatorName,phon' at line 1
+[2018-05-16 11:01:48.425] [INFO] app - 数据库操作失败:
+Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '"ID,city,district,address,overlayScene,GPS,ECI,TAC,BSSS,NetworkOperatorName,phon' at line 1
+[2018-05-16 11:01:48.426] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '"ID,city,district,address,overlayScene,GPS,ECI,TAC,BSSS,NetworkOperatorName,phon' at line 1
+[2018-05-16 11:01:48.426] [INFO] app - 数据库操作失败:
+Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '"ID,city,district,address,overlayScene,GPS,ECI,TAC,BSSS,NetworkOperatorName,phon' at line 1
+[2018-05-16 11:01:48.426] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '"ID,city,district,address,overlayScene,GPS,ECI,TAC,BSSS,NetworkOperatorName,phon' at line 1
+[2018-05-16 14:26:41.625] [INFO] app - 数据库操作失败:
+Error: ER_DUP_ENTRY: Duplicate entry '78cc7f10-5753-11e8-b4a5-bd1af6a0bd70' for key 'coll_ID'
+[2018-05-16 14:26:41.626] [INFO] app - 数据库操作失败:
+Error: ER_DUP_ENTRY: Duplicate entry '7be9ebb0-5753-11e8-b4a5-bd1af6a0bd70' for key 'coll_ID'
+[2018-05-16 14:26:41.626] [INFO] app - 数据库操作失败:
+Error: ER_DUP_ENTRY: Duplicate entry '80e89b70-5753-11e8-b4a5-bd1af6a0bd70' for key 'coll_ID'
+[2018-05-16 14:26:41.627] [INFO] app - 数据库操作失败:
+Error: ER_DUP_ENTRY: Duplicate entry '6b5a4420-5753-11e8-b4a5-bd1af6a0bd70' for key 'coll_ID'
+[2018-05-16 14:26:41.627] [INFO] app - 数据库操作失败:
+Error: ER_DUP_ENTRY: Duplicate entry '91722880-5753-11e8-b4a5-bd1af6a0bd70' for key 'coll_ID'
+[2018-05-16 14:26:41.627] [INFO] app - 数据库操作失败:
+Error: ER_DUP_ENTRY: Duplicate entry '856e2390-5753-11e8-b4a5-bd1af6a0bd70' for key 'coll_ID'
+[2018-05-16 14:26:41.628] [INFO] app - 数据库操作失败:
+Error: ER_DUP_ENTRY: Duplicate entry '8844c330-5753-11e8-b4a5-bd1af6a0bd70' for key 'coll_ID'
+[2018-05-16 14:26:41.628] [INFO] app - 数据库操作失败:
+Error: ER_DUP_ENTRY: Duplicate entry '8cb849f0-5753-11e8-b4a5-bd1af6a0bd70' for key 'coll_ID'
+[2018-05-16 14:29:17.053] [INFO] app - 数据库操作失败:
+Error: ER_DUP_ENTRY: Duplicate entry '6b5a4420-5753-11e8-b4a5-bd1af6a0bd70' for key 'coll_ID'
+[2018-05-16 14:29:17.054] [INFO] app - 数据库操作失败:
+Error: ER_DUP_ENTRY: Duplicate entry '78cc7f10-5753-11e8-b4a5-bd1af6a0bd70' for key 'coll_ID'
+[2018-05-16 14:29:17.054] [INFO] app - 数据库操作失败:
+Error: ER_DUP_ENTRY: Duplicate entry '7be9ebb0-5753-11e8-b4a5-bd1af6a0bd70' for key 'coll_ID'
+[2018-05-16 14:29:17.055] [INFO] app - 数据库操作失败:
+Error: ER_DUP_ENTRY: Duplicate entry '80e89b70-5753-11e8-b4a5-bd1af6a0bd70' for key 'coll_ID'
+[2018-05-16 14:29:17.055] [INFO] app - 数据库操作失败:
+Error: ER_DUP_ENTRY: Duplicate entry '856e2390-5753-11e8-b4a5-bd1af6a0bd70' for key 'coll_ID'
+[2018-05-16 14:29:17.055] [INFO] app - 数据库操作失败:
+Error: ER_DUP_ENTRY: Duplicate entry '8844c330-5753-11e8-b4a5-bd1af6a0bd70' for key 'coll_ID'
+[2018-05-16 14:29:17.056] [INFO] app - 数据库操作失败:
+Error: ER_DUP_ENTRY: Duplicate entry '8cb849f0-5753-11e8-b4a5-bd1af6a0bd70' for key 'coll_ID'
+[2018-05-16 14:29:17.056] [INFO] app - 数据库操作失败:
+Error: ER_DUP_ENTRY: Duplicate entry '91722880-5753-11e8-b4a5-bd1af6a0bd70' for key 'coll_ID'

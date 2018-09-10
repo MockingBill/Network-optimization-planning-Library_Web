@@ -13,7 +13,9 @@ var service = require('../service/weekCover_service');
 var insertService = require('../service/netCell_service');
 var requirementService = require('../service/requirementMan_service');
 var excelService = require('../model/execlExport.js');
+
 var uuid = require('uuid');
+
 var utils = require('gmdp').init_gmdp.core_app_utils;
 var fs = require('fs');
 var app=require('../../../../app');
@@ -233,7 +235,9 @@ router.route('/upload').post(function (req, res) {
     //只能上传压缩、文档、工作表类型的文件
     else if (file.extension === 'xls' || file.extension === 'xlsx') {
         //文件最大限制在 20 MB
-        if ((file.size / 1024) <= 20480) {
+
+        if ((file.size / 1024) <= 30720) {
+
             if (file.originalname !== null && file.originalname !== '' && file.originalname !== undefined) {
                 //读取上传Excel文件内容
                 excelService.importExcel(newFile, function (err, result) {
@@ -244,7 +248,6 @@ router.route('/upload').post(function (req, res) {
                     } else {
 
                         if (result != undefined) {
-
                             var succ = 0;
                             var fail = 0;
                             var failError = [];
@@ -286,13 +289,16 @@ router.route('/upload').post(function (req, res) {
                                         if((fail+succ)===(result.length-1)){
                                             utils.respJsonData(res, utils.returnMsg(true, '1000','数据写入成功。成功:'+succ+'条'+'失败:'+fail+'条',failError,null));
 
+
                                         }
                                     });
                                 }
                             }
                         }
+
                     }
                 });
+
             } else {
                 //上传出现异常的异常处理是若存在文件则删除、返回异常信息
                 if (fs.existsSync(dirPath + file.name)) {

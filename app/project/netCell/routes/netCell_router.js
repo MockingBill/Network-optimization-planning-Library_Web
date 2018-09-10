@@ -13,6 +13,9 @@ var uuid = require('uuid');
 var utils = require('gmdp').init_gmdp.core_app_utils;
 var app=require('../../../../app');
 
+var sd = require('silly-datetime');
+
+
 
 
 /**
@@ -57,29 +60,43 @@ router.route('/checkWeek').post(function (req, res ) {
 
 
 /**
- *  手动添加一条弱覆盖信息
+ *  手动添加一条如覆盖信息
  *  params 是要添加的弱覆盖数据
  */
 router.route('/insert').post(function (req,res) {
+    var loginName = req.session.current_user.login_account;
     var  params = [];
     params.push(uuid.v1());
+    params.push(req.body.address);
+    params.push(req.body.collTime);
+    params.push(req.body.GPSlon);
+    params.push(req.body.GPSlat);
     params.push(req.body.ECI);
     params.push(req.body.TAC);
     params.push(parseInt(req.body.BSSS));
-    params.push(req.body.GPS);
-    params.push(req.body.phoneNumber);
-    params.push(req.body.phoneType);
-    params.push(req.body.overlayScene);
-    params.push(req.body.district);
-    params.push(req.body.address);
-    params.push(req.body.NetworkOperatorName);
     params.push(req.body.city);
-    params.push(req.body.collTime);
+    params.push(req.body.collectUsername);
+    params.push(req.body.phoneNumber);
+    params.push(req.body.FromDepartment);
+    params.push(req.body.phoneType);
+    params.push(req.body.firstScene1+"_"+req.body.secondScene1);
+    params.push(req.body.district);
+    params.push(req.body.NetworkOperatorName);
+    params.push(req.body.netType);
     params.push(req.body.solveStatus);
     params.push(req.body.solveTime);
-    var loginName = req.session.current_user.login_account;
-    service.insertNetCellData(loginName,params,function (result) {
-        utils.respJsonData(res, result);
+    params.push(loginName);
+    params.push(getCurrentTime());
+    params.push("");
+    params.push("");
+
+
+
+
+
+    service.insertNetCellData(loginName,params,function (result,msg) {
+        utils.respJsonData(res,utils.returnMsg(true, '1000', '插入成功。', msg, null));
+
     });
 
 
@@ -101,6 +118,10 @@ router.route('/delete').get(function (req,res) {
         utils.respJsonData(res, result);
     });
 });
+
+function getCurrentTime() {
+    return sd.format(new Date(), 'YYYY-MM-DD HH:mm:ss');
+}
 
 
 

@@ -147,19 +147,95 @@ exports.getRequirementData = function (params, cb) {
 
 
     var sql1, sql2;
-    //如果第一次查询（没有排序），则进if,否则进入else
+
+
+    /**
+     *
+     * SELECT * FROM bu_weak_coverage_demand where ID in (
+     SELECT demand_id FROM bu_weak_confirmation WHERE coll_id in (
+     SELECT ID FROM bu_collect_info
+     WHERE district like "%%"
+     and overlayScene like "%_%"
+     and collTime between "2018-06-01"
+     and "2018-08-21 23:59:59"
+     )
+
+     )
+     * @type {string}
+     */
+
     if (sort === undefined && order === undefined) {
 
+
         //查询所有数据
-        sql1 = 'SELECT * FROM bu_weak_coverage_demand' +
-            ' WHERE coll_ID in (SELECT ID FROM netcellnet' +
+        sql1 = 'SELECT * FROM bu_weak_coverage_demand where ID in (' +
+            'SELECT demand_id FROM bu_weak_confirmation WHERE coll_id in (' +
+                'SELECT ID FROM bu_collect_info ' +
+                ' where district like ' + '"%' + city + '%"' +
+                ' and overlayScene like ' + '"%' + overlayScene + '%"' +
+                ' and collTime between ' + '"' + queryDateStart + '"' + ' and ' + '"' + queryDateEnd + ' 23:59:59"'  +
+                '     )' +
+            ')'
+        ;
+
+
+        //查询分页数据
+        sql2 = 'SELECT * FROM bu_weak_coverage_demand where ID in (' +
+            'SELECT demand_id FROM bu_weak_confirmation WHERE coll_id in (' +
+            'SELECT ID FROM bu_collect_info ' +
+            ' where district like ' + '"%' + city + '%"' +
+            ' and overlayScene like ' + '"%' + overlayScene + '%"' +
+            ' and collTime between ' + '"' + queryDateStart + '"' + ' and ' + '"' + queryDateEnd + ' 23:59:59"'  +
+            '     )' +
+            ')' +
+            ' limit ' + page * rows+',' + rows
+
+        ;
+    } else {
+        //查询所有数据
+        sql1 = 'SELECT * FROM bu_weak_coverage_demand where ID in (' +
+            'SELECT demand_id FROM bu_weak_confirmation WHERE coll_id in (' +
+            'SELECT ID FROM bu_collect_info ' +
+            ' where district like ' + '"%' + city + '%"' +
+            ' and overlayScene like ' + '"%' + overlayScene + '%"' +
+            ' and collTime between ' + '"' + queryDateStart + '"' + ' and ' + '"' + queryDateEnd + ' 23:59:59"'  +
+            '     )' +
+            ')'
+        ;
+
+        //查询分页数据并分页
+        sql2 = 'SELECT * FROM bu_weak_coverage_demand where ID in (' +
+            'SELECT demand_id FROM bu_weak_confirmation WHERE coll_id in (' +
+            'SELECT ID FROM bu_collect_info ' +
+            ' where district like ' + '"%' + city + '%"' +
+            ' and overlayScene like ' + '"%' + overlayScene + '%"' +
+            ' and collTime between ' + '"' + queryDateStart + '"' + ' and ' + '"' + queryDateEnd + ' 23:59:59"'  +
+            '     )' +
+            ')' +
+            ' ORDER BY ' + sort + ' ' + order +
+            ' limit ' + page * rows + ',' + rows
+        ;
+
+
+    }
+
+    //如果第一次查询（没有排序），则进if,否则进入else
+   /* if (sort === undefined && order === undefined) {
+
+
+        //查询所有数据
+        sql1 = 'SELECT * FROM bu_weak_confirmation' +
+            ' WHERE coll_id in (SELECT ID FROM bu_collect_info' +
+
             ' where district like ' + '"%' + city + '%"' +
             ' and overlayScene like ' + '"%' + overlayScene + '%"' +
             ' and collTime between ' + '"' + queryDateStart + '"' + ' and ' + '"' + queryDateEnd + ' 23:59:59"' + ')';
 
         //查询分页数据
-        sql2 = 'SELECT * FROM bu_weak_coverage_demand' +
-            ' WHERE coll_ID in (SELECT ID FROM netcellnet' +
+
+        sql2 = 'SELECT * FROM bu_weak_confirmation' +
+            ' WHERE coll_id in (SELECT ID FROM bu_collect_info' +
+
             ' where district like ' + '"%' + city + '%"' +
             ' and overlayScene like ' + '"%' + overlayScene + '%"' +
             ' and collTime between ' + '"' + queryDateStart + '"' + ' and ' + '"' + queryDateEnd + ' 23:59:59"' + ')' +
@@ -169,15 +245,19 @@ exports.getRequirementData = function (params, cb) {
         ;
     } else {
         //查询所有数据
-        sql1 = 'SELECT * FROM bu_weak_coverage_demand' +
-            ' WHERE coll_ID in (SELECT ID FROM netcellnet' +
+
+        sql1 = 'SELECT * FROM bu_weak_confirmation' +
+            ' WHERE coll_id in (SELECT ID FROM bu_collect_info' +
+
             ' where district like ' + '"%' + city + '%"' +
             ' and overlayScene like ' + '"%' + overlayScene + '%"' +
             ' and collTime between ' + '"' + queryDateStart + '"' + ' and ' + '"' + queryDateEnd + ' 23:59:59"' + ')';
 
         //查询分页数据并分页
-        sql2 = 'SELECT * FROM bu_weak_coverage_demand' +
-            ' WHERE coll_ID in (SELECT ID FROM netcellnet' +
+
+        sql2 = 'SELECT * FROM bu_weak_confirmation' +
+            ' WHERE coll_id in (SELECT ID FROM bu_collect_info' +
+
             ' where district like ' + '"%' + city + '%"' +
             ' and overlayScene like ' + '"%' + overlayScene + '%"' +
             ' and collTime between ' + '"' + queryDateStart + '"' + ' and ' + '"' + queryDateEnd + ' 23:59:59"' + ')' +
@@ -186,7 +266,12 @@ exports.getRequirementData = function (params, cb) {
         ;
 
 
-    }
+
+    }*/
+
+    console.log(sql1);
+    console.log(sql2);
+
 
 
     //查询并加工数据，完成后返回到前台
@@ -285,23 +370,26 @@ exports.getRequirementExcelData = function (params, cb) {
 
 
     //根据查询条件查询sql
-    var sql1 = 'SELECT * FROM bu_weak_coverage_demand' +
-            ' WHERE coll_ID in (SELECT ID FROM netcellnet' +
-            ' where district like ' + '"%' + city + '%"' +
-            ' and overlayScene like ' + '"%' + overlayScene + '%"' +
-            ' and collTime between ' + '"' + queryDateStart + '"' + ' and ' + '"' + queryDateEnd + ' 23:59:59"' + ')';
 
+    var sql1 = 'SELECT * FROM bu_weak_coverage_demand where ID in (' +
+        'SELECT demand_id FROM bu_weak_confirmation WHERE coll_id in (' +
+        'SELECT ID FROM bu_collect_info ' +
+        ' where district like ' + '"%' + city + '%"' +
+        ' and overlayScene like ' + '"%' + overlayScene + '%"' +
+        ' and collTime between ' + '"' + queryDateStart + '"' + ' and ' + '"' + queryDateEnd + ' 23:59:59"'  +
+        '     )' +
+        ')'
+    ;
+    // var sql1 = 'SELECT * FROM bu_weak_coverage_demand' +
+    //         ' WHERE coll_ID in (SELECT ID FROM bu_collect_info' +
+    //         ' where district like ' + '"%' + city + '%"' +
+    //         ' and overlayScene like ' + '"%' + overlayScene + '%"' +
+    //         ' and collTime between ' + '"' + queryDateStart + '"' + ' and ' + '"' + queryDateEnd + ' 23:59:59"' + ')';
 
-    var sql2='SELECT ECI ,TAC,BSSS ,GPS ,phoneNumber,phoneType ,overlayScene,district ,address,NetworkOperatorName,city ,collTime ' +
-',solveStatus ,solveTime ,createPersion ,createTime,alterpersion,alterTime,preStName,stAddress,netModel,stPrope,' +
-'buildType,reqCellNum,isPass,personCharge,personTel,reportTime FROM netcellnet as A,bu_weak_coverage_demand as B WHERE' +
-    ' A.ID=B.coll_ID and ' +
-'district like '+'"%' + city + '%"'+' ' +
-    'and overlayScene like '+ '"%' + overlayScene + '%"' +' and collTime ' +
-    'between '+ '"' + queryDateStart + '"' +' and  ' + '"' + queryDateEnd + ' 23:59:59"';
 
     //查询并加工数据，并导出到Excel
-    model.query(sql2, [], function (err, rows) {
+    model.query(sql1, [], function (err, rows) {
+
         if (err) {
             app.logger.info("导出需求数据到excel进行查询失败:\n"+err);
             cb(utils.returnMsg(false, '0000', '获取数据失败', null,err));
@@ -316,24 +404,10 @@ exports.getRequirementExcelData = function (params, cb) {
 
             //设置Excel表头
             var header = [
-                'ECI',
-                'TAC',
-                'BSSS',
-                'GPS',
-                '上传人信息',
-                '手机类型',
-                '场景',
-                '县市',
-                '详细地址',
-                '运营商与网络制式',
-                '地区',
-                '采集时间',
-                '解决状态',
-                '解决时间',
-                '创建人账号',
-                '创建时间',
-                '修改人账号',
-                '修改时间',
+
+                '记录ID',
+                '弱覆盖ID',
+
                 '预建站点名称',
                 '建站位置地址',
                 '网络制式',
@@ -377,7 +451,9 @@ exports.getRequirementExcelData = function (params, cb) {
 exports.updateRequirementMan = function (id,params, cb) {
 
     //插入数据sql
-    var sql = 'UPDATE bu_weak_coverage_demand SET ' +
+
+    var sql = 'UPDATE bu_weak_confirmation SET ' +
+
         ' preStName=' +'"'+ params.preStName +'"'+
         ' ,netModel=' +'"'+ params.netModel +'"'+
         ' ,stAddress=' +'"'+ params.stAddress +'"'+
@@ -416,7 +492,9 @@ exports.isExistsRequirement = function (id, cb) {
 
 
     //插入数据sql              ' where district like ' + '"%' + city + '%"' +
-    var sql = 'select * from bu_weak_coverage_demand where coll_ID like ' + '"%' + id + '%"';
+
+    var sql = 'select * from bu_weak_confirmation where coll_ID like ' + '"%' + id + '%"';
+
 
      console.log(sql);
 
@@ -445,7 +523,9 @@ exports.isExistsRequirement = function (id, cb) {
 exports.addExcelRequirement = function (params, cb) {
 
     //插入数据sql
-    var sql = 'INSERT INTO bu_weak_coverage_demand( ID ,coll_ID,preStName ,netModel  ,stAddress,stPrope ,buildType ,reqCellNum ,isPass ,personCharge ,personTel,reportTime ) VALUES(?,?,?,?,?,?,?,?,?,?,?,?)';
+
+    var sql = 'INSERT INTO bu_weak_confirmation( ID ,coll_ID,preStName ,netModel  ,stAddress,stPrope ,buildType ,reqCellNum ,isPass ,personCharge ,personTel,reportTime ) VALUES(?,?,?,?,?,?,?,?,?,?,?,?)';
+
    try{
        model.query(sql, params, function (err, rows) {
            if (err) {

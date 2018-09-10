@@ -1,0 +1,25 @@
+[2018-05-02 09:19:04.829] [INFO] app - 哈哈哈
+[2018-05-02 09:57:08.051] [INFO] app - 获取所有数据查询失败；
+Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'select1 * from netcellnet  where district like "%%" and overlayScene like "%_%" ' at line 1
+[2018-05-02 10:01:29.855] [INFO] app - 获取所有数据查询失败:
+Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'select1 * from netcellnet  where district like "%%" and overlayScene like "%_%" ' at line 1
+[2018-05-02 14:43:22.702] [INFO] app - 数据库操作失败:
+Error: ER_DUP_ENTRY: Duplicate entry '094192cc-6d37-4aca-b187-d0d3e2356534' for key 'coll_ID'
+[2018-05-02 14:43:22.752] [INFO] app - 数据库操作失败:
+Error: ER_DUP_ENTRY: Duplicate entry '9facf9f5-6ded-496d-8db5-564d0befcb63' for key 'coll_ID'
+[2018-05-02 14:43:22.757] [INFO] app - 数据库操作失败:
+Error: ER_DUP_ENTRY: Duplicate entry 'db1261f4-d141-42cf-a70d-e98e6fa16024' for key 'coll_ID'
+[2018-05-02 14:43:22.760] [INFO] app - 数据库操作失败:
+Error: ER_DUP_ENTRY: Duplicate entry '2c063250-e156-4596-8905-36435ffdf0b6' for key 'coll_ID'
+[2018-05-02 14:43:22.793] [INFO] app - 数据库操作失败:
+Error: ER_DUP_ENTRY: Duplicate entry '0c78e8e2-e6bb-4e27-a359-22d10f326c23' for key 'coll_ID'
+[2018-05-02 14:57:43.921] [INFO] app - 数据库操作失败:
+Error: ER_DUP_ENTRY: Duplicate entry '094192cc-6d37-4aca-b187-d0d3e2356534' for key 'coll_ID'
+[2018-05-02 14:57:43.978] [INFO] app - 数据库操作失败:
+Error: ER_DUP_ENTRY: Duplicate entry '0c78e8e2-e6bb-4e27-a359-22d10f326c23' for key 'coll_ID'
+[2018-05-02 14:57:43.995] [INFO] app - 数据库操作失败:
+Error: ER_DUP_ENTRY: Duplicate entry '2c063250-e156-4596-8905-36435ffdf0b6' for key 'coll_ID'
+[2018-05-02 14:57:44.000] [INFO] app - 数据库操作失败:
+Error: ER_DUP_ENTRY: Duplicate entry 'db1261f4-d141-42cf-a70d-e98e6fa16024' for key 'coll_ID'
+[2018-05-02 14:57:44.004] [INFO] app - 数据库操作失败:
+Error: ER_DUP_ENTRY: Duplicate entry '9facf9f5-6ded-496d-8db5-564d0befcb63' for key 'coll_ID'

@@ -1,0 +1,6 @@
+[2018-08-21 11:08:31.881] [INFO] app - 数据库操作失败:
+Error: ER_BAD_FIELD_ERROR: Unknown column 'coll_ID' in 'IN/ALL/ANY subquery'
+[2018-08-21 11:08:31.882] [INFO] app - 获取需求记录数据总长度失败:
+Error: ER_BAD_FIELD_ERROR: Unknown column 'coll_ID' in 'IN/ALL/ANY subquery'
+[2018-08-21 13:44:22.082] [INFO] app - 数据库操作失败:
+Error: ER_BAD_FIELD_ERROR: Unknown column 'ID' in 'where clause'

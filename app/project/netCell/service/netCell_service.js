@@ -10,6 +10,10 @@ var model = require('../model/mysqlModel');
 var app=require('../../../../app');
 var config=require('../../../../config');
 
+var sd = require('silly-datetime');
+var uuid = require('uuid');
+
+
 
 /**
  * 获取所有覆盖数据
@@ -53,12 +57,16 @@ exports.getNetCellData = function (params, cb) {
     if (sort === undefined && order === undefined) {
 
         //查询所有数据，根据区县、场景和采集时间。sql查询总数，sql2查询分页
-        sql = 'select * from netcellnet ' +
+
+        sql = 'select * from bu_collect_info ' +
+
             ' where district like ' + '"%' + city + '%"' +
             ' and overlayScene like ' + '"%' + overlayScene + '%"' +
             ' and deleteFlag="0" '+
             ' and collTime between ' + '"' + queryDateStart + '"' + ' and ' + '"' + queryDateEnd + ' 23:59:59"';
-        sql2 = 'select * from netcellnet ' +
+
+        sql2 = 'select * from bu_collect_info ' +
+
             ' where district like ' + '"%' + city + '%"' +
             ' and overlayScene like ' + '"%' + overlayScene + '%"' +
             ' and deleteFlag="0" '+
@@ -68,12 +76,16 @@ exports.getNetCellData = function (params, cb) {
     } else {
 
         //查询所有数据，根据区县、场景和采集时间。sql查询总数，sql2查询分页并排序
-        sql = 'select * from netcellnet ' +
+
+        sql = 'select * from bu_collect_info ' +
+
             'where district like ' + '"%' + city + '%"' +
             ' and overlayScene like ' + '"%' + overlayScene + '%"' +
             ' and deleteFlag="0" '+
             ' and collTime between ' + '"' + queryDateStart + '"' + ' and ' + '"' + queryDateEnd + ' 23:59:59"';
-        sql2 = 'select * from netcellnet ' +
+
+        sql2 = 'select * from bu_collect_info ' +
+
             ' where district like ' + '"%' + city + '%"' +
             ' and overlayScene like ' + '"%' + overlayScene + '%"' +
             ' and deleteFlag="0" '+
@@ -128,24 +140,7 @@ exports.getNetCellData = function (params, cb) {
  */
 exports.insertNetCellData = function (loginName, params, cb) {
 
-    //添加时间（采集时间）
-    var month = (new Date()).getMonth() + 1;
-    var day = (new Date()).getDate();
-    var hour = (new Date()).getHours();
-    var min = (new Date()).getMinutes();
-
-    //保存导入人名
-    params.push(loginName);
-
-    var collTime = (new Date().getFullYear()) + '-' + ((month >= 10) ? month : '0' + month) + '-' + ((day >= 10) ? day : '0' + day) + ' ' + ((hour >= 10) ? hour : '0' + hour) + ':' + ((min >= 10) ? min : '0' + min);
-
-    params.push(collTime);
-    params.push('');
-    params.push('');
-
-    //添加插入sql语句
-
-    var sql = 'INSERT INTO netcellnet(ID, ECI ,TAC ,BSSS ,GPS ,phoneNumber ,phoneType ,overlayScene ,district ,address ,NetworkOperatorName,city,collTime ,solveStatus,solveTime,createPersion,createTime,alterpersion,alterTime) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)';
+    var sql = 'INSERT INTO bu_collect_info(ID,address,collTime,GpsLon,GpsLat,ECI,TAC,BSSS,city,collectUsername,phoneNumber,FromDepartment,phoneType,overlayScene,district,NetworkOperatorName,netWorkType,solveStatus,solveTime,createPersion,createTime,alterpersion,alterTime) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)';
 
    try {
        model.query(sql, params, function (err, rows) {
@@ -166,59 +161,42 @@ exports.insertNetCellData = function (loginName, params, cb) {
 };
 
 
-var uuid = require('uuid');
+
+
+
 /**
  * 添加一条弱覆盖信息信息记录:仅仅为了弱覆盖excel导入。
  * @param params 要添加的如覆盖信息
  * @param cb
  */
 exports.insertNetCellDataForInput = function (loginName, params, cb) {
-    params[18]="";
-    var isNull = false;
-    for (var i=0;i<=15;i++) {
-        if (params[i] == undefined || params[i] == null || params[i] == "") {
-            isNull = true
-        }
-    }
-    if (isNull) {
-        err= new Error('data is null');
-        app.logger.info("添加一条弱覆盖信息或导入弱覆盖记录失败:\n" + err);
-        cb(err, '插入数据失败。');
-    }
 
-     else {
-        params.splice(0,0,uuid.v4());
-        params[4]=params[4]+"_"+params[5];
-        params[5]="("+params[6]+","+params[7]+")";
-        params[6]=params[8];
-        params[7]=params[9];
-        params[8]=params[10];
-        params[9]=params[11];
-        params[10]=params[12];
-        params[11]=params[13];
-        params[12]=params[14];
-        params[13]=params[15];
-        params[14]=params[16];
-        params[15]=loginName;
-        params[16]=getCurrentTime();
-        params[17]="";
-        var sql = 'INSERT INTO netcellnet(ID,city,district,address,overlayScene,GPS,ECI,TAC,BSSS,NetworkOperatorName,phoneNumber,phoneType,collTime,solveStatus,solveTime,createPersion,createTime,alterpersion,alterTime) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)';
-        try {
-            model.query(sql, params, function (err, rows) {
-                if (err) {
-                    app.logger.info("添加一条弱覆盖信息或导入弱覆盖记录失败:\n" + err);
-                    cb(err, '插入数据失败。');
+    params.splice(0, 0, uuid.v4());
+    params[4]=params[4]+"_"+params[5];
+    params.splice(5,1);
+    params[19]=loginName;
+    params[20]=getCurrentTime();
+    params[21]="";
+    params[22]="";
+    console.log(params);
+    var sql = 'INSERT INTO bu_collect_info(ID,city,district,address,overlayScene,GpsLon,GpsLat,ECI,TAC,BSSS,collectUsername,phoneNumbgiter,FromDepartment,NetworkOperatorName,netWorkType,phoneType,collTime,solveStatus,solveTime' +
+        'createPersion,createTime,alterpersion,alterTime) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)';
+    try {
+        model.query(sql, params, function (err, rows) {
+            if (err) {
+                app.logger.info("添加一条弱覆盖信息或导入弱覆盖记录失败:\n" + err);
+                cb(err, '插入数据失败。');
 
-                } else {
-                    //成功后返回插入数据条数
-                    cb(null, rows.affectedRows + '条数据已保存。');
-                }
+            } else {
+                //成功后返回插入数据条数
+                cb(null, rows.affectedRows + '条数据已保存。');
+            }
 
-            });
-        } catch (err) {
-            app.logger.info("数据库连接错误:\n" + err);
-            cb(err, '数据库连接失败。');
-        }
+        });
+    }catch(err){
+        app.logger.info("数据库连接错误:\n"+err);
+        cb(false,'数据库连接失败。');
+
     }
 };
 
@@ -248,7 +226,8 @@ exports.deleteWeekData = function (id, cb) {
              * @type {string}
              */
 
-            var sql = 'UPDATE netcellnet SET deleteFlag="1" where ID="' + id[i].toString() + '"';
+            var sql = 'UPDATE bu_collect_info SET deleteFlag="1" where ID="' + id[i].toString() + '"';
+
 
 var flag=false;
             model.query(sql, [], function (err, result) {
@@ -302,22 +281,30 @@ exports.getCheckAll = function (params, cb) {
 
 
     //统计区县的数量
-    var sql1 = 'SELECT count(*) as num ,district from netcellnet ' +
+
+    var sql1 = 'SELECT count(*) as num ,district from bu_collect_info ' +
+
         ' where collTime between ' + '"' + queryDateStart + '"' + ' and ' + '"' + queryDateEnd + ' 23:59:59"' +
         ' and deleteFlag='+'"0"'+
         ' GROUP BY district';
     var sql2="";
     if(target!=undefined){
-        sql2 = 'SELECT count(*) as num ,overlayScene from netcellnet ' +
+
+        sql2 = 'SELECT count(*) as num ,overlayScene from bu_collect_info ' +
+
             ' where collTime between ' + '"' + queryDateStart + '"' + ' and ' + '"' + queryDateEnd + ' 23:59:59"' +
             ' and deleteFlag="0" and district="'+target+'"'+
             ' GROUP BY overlayScene';
     }else{
-        sql2 = 'SELECT count(*) as num , overlayScene from netcellnet ' +
+
+        sql2 = 'SELECT count(*) as num , overlayScene from bu_collect_info ' +
+
             ' where collTime between ' + '"' + queryDateStart + '"' + ' and ' + '"' + queryDateEnd + ' 23:59:59"' +
             ' and deleteFlag="0" '+
             ' GROUP BY overlayScene';
     }
+
+
     //统计场景的数量
 
     model.query(sql1, [], function (err, result1) {
@@ -450,18 +437,24 @@ exports.getCheckWeek = function (params, cb) {
 
 
     //统计区县的数量
-    var sql1 = 'SELECT count(*) as num ,district from netcellnet ' +
+
+    var sql1 = 'SELECT count(*) as num ,district from bu_collect_info ' +
+
         ' where collTime between ' + '"' + queryDateStart + '"' + ' and ' + '"' + queryDateEnd + ' 23:59:59"' +
         ' and deleteFlag="0" and BSSS<='+config.app.minBSSS+
         ' GROUP BY district';
     var sql2="";
     if(target!=undefined){
-        sql2 = 'SELECT count(*) as num ,overlayScene from netcellnet ' +
+
+        sql2 = 'SELECT count(*) as num ,overlayScene from bu_collect_info ' +
+
             ' where collTime between ' + '"' + queryDateStart + '"' + ' and ' + '"' + queryDateEnd + ' 23:59:59"' +
             ' and deleteFlag="0" and BSSS<='+config.app.minBSSS+' and district="'+target+'"'+
             ' GROUP BY overlayScene';
     }else{
-        sql2 = 'SELECT count(*) as num , overlayScene from netcellnet ' +
+
+        sql2 = 'SELECT count(*) as num , overlayScene from bu_collect_info ' +
+
             ' where collTime between ' + '"' + queryDateStart + '"' + ' and ' + '"' + queryDateEnd + ' 23:59:59"' +
             ' and deleteFlag="0" and BSSS<='+config.app.minBSSS+
             ' GROUP BY overlayScene';
@@ -566,17 +559,12 @@ exports.getCheckWeek = function (params, cb) {
 };
 
 
+
+
 function getCurrentTime() {
-    var month = (new Date()).getMonth() + 1;
-    var day = (new Date()).getDate();
-    var hour = (new Date()).getHours();
-    var min = (new Date()).getMinutes();
-    var createTime = (new Date().getFullYear()) + '-' + ((month >= 10) ? month : '0' + month) + '-' + ((day >= 10) ? day : '0' + day) + ' ' + ((hour >= 10) ? hour : '0' + hour) + ':' + ((min >= 10) ? min : '0' + min);
-    return createTime;
+    return sd.format(new Date(), 'YYYY-MM-DD HH:mm:ss');
+
 }
-
-
-
 
 
 

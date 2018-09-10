@@ -1,0 +1,173 @@
+[2018-09-07 10:33:23.620] [INFO] app - 数据库操作失败:
+Error: ER_BAD_FIELD_ERROR: Unknown column 'GPS' in 'field list'
+[2018-09-07 10:33:23.621] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: ER_BAD_FIELD_ERROR: Unknown column 'GPS' in 'field list'
+[2018-09-07 15:52:44.947] [INFO] app - 数据库操作失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 15:52:44.947] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:35:57.715] [INFO] app - 文件读取失败:
+ReferenceError: uuid is not defined
+[2018-09-07 16:36:50.705] [INFO] app - 数据库操作失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:36:50.706] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:36:50.707] [INFO] app - 数据库操作失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:36:50.708] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:36:50.708] [INFO] app - 数据库操作失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:36:50.708] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:36:50.708] [INFO] app - 数据库操作失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:36:50.708] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:36:50.709] [INFO] app - 数据库操作失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:36:50.709] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:36:50.709] [INFO] app - 数据库操作失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:36:50.709] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:36:50.709] [INFO] app - 数据库操作失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:36:50.710] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:36:50.710] [INFO] app - 数据库操作失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:36:50.710] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:39:46.587] [INFO] app - 数据库操作失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:39:46.588] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:39:46.588] [INFO] app - 数据库操作失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:39:46.588] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:39:46.590] [INFO] app - 数据库操作失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:39:46.590] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:39:46.590] [INFO] app - 数据库操作失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:39:46.591] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:39:46.591] [INFO] app - 数据库操作失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:39:46.591] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:39:46.591] [INFO] app - 数据库操作失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:39:46.591] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:39:46.592] [INFO] app - 数据库操作失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:39:46.592] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:39:46.592] [INFO] app - 数据库操作失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:39:46.592] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:41:06.135] [INFO] app - 文件读取失败:
+ReferenceError: uuid is not defined
+[2018-09-07 16:41:06.136] [INFO] app - 文件读取出错:ReferenceError: uuid is not defined
+[2018-09-07 16:42:35.145] [INFO] app - 数据库操作失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:42:35.145] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:42:35.145] [INFO] app - 数据库操作失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:42:35.145] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:42:35.145] [INFO] app - 数据库操作失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:42:35.146] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:42:35.146] [INFO] app - 数据库操作失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:42:35.146] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:42:35.146] [INFO] app - 数据库操作失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:42:35.146] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:42:35.147] [INFO] app - 数据库操作失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:42:35.147] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:42:35.147] [INFO] app - 数据库操作失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:42:35.147] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:42:35.147] [INFO] app - 数据库操作失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:42:35.147] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:45:40.458] [INFO] app - 数据库操作失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:45:40.458] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:45:40.459] [INFO] app - 数据库操作失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:45:40.459] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:45:40.459] [INFO] app - 数据库操作失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:45:40.459] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:45:40.459] [INFO] app - 数据库操作失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:45:40.460] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:45:40.460] [INFO] app - 数据库操作失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:45:40.460] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:45:40.460] [INFO] app - 数据库操作失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:45:40.460] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:45:40.461] [INFO] app - 数据库操作失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:45:40.461] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:45:40.461] [INFO] app - 数据库操作失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:45:40.461] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:46:56.337] [INFO] app - 数据库操作失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:46:56.338] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:46:56.338] [INFO] app - 数据库操作失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:46:56.338] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:46:56.341] [INFO] app - 数据库操作失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:46:56.341] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:46:56.341] [INFO] app - 数据库操作失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:46:56.341] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:46:56.341] [INFO] app - 数据库操作失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:46:56.341] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:46:56.342] [INFO] app - 数据库操作失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:46:56.342] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:46:56.342] [INFO] app - 数据库操作失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:46:56.342] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:46:56.343] [INFO] app - 数据库操作失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+[2018-09-07 16:46:56.343] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1

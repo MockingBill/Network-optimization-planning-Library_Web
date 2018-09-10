@@ -14,6 +14,7 @@ var uuid = require('node-uuid');
 var sd = require('silly-datetime');
 
 
+
 /**
  * 根据条件   获取导出覆盖信息数据
  * @param params 查询条件
@@ -40,22 +41,49 @@ exports.getAllCoverExcelData = function (params, cb) {
     //合成场景查询条件
     var overlayScene = firstScene + '_' + secondScene;
 
-    var sql1 = 'SELECT city, district, address,' +
-        ' SUBSTRING_INDEX(overlayScene, "_", 1) as overlayScene1,' +
-        ' SUBSTRING_INDEX(overlayScene, "_", -1) as overlayScene2, '+
-        ' right(SUBSTRING_INDEX(GPS, ",", 1), LENGTH(SUBSTRING_INDEX(GPS, ",", 1))-1) as longitude, ' +
-        ' left(SUBSTRING_INDEX(GPS, ",", -1), LENGTH(SUBSTRING_INDEX(GPS, ",", 1))-1) as  asdimension,' +
-        ' TAC, ECI,BSSS,' +
-        ' phoneNumber, phoneType, collTime, solveStatus,' +
-        '   solveTime, preStName,' +
-        '   stAddress, netModel,' +
-        '   stPrope, buildType,' +
-        '   reqCellNum, isPass,' +
-        '   personCharge, personTel,' +
-        '   reportTime' +
-        ' FROM netcellnet' +
-        ' LEFT JOIN bu_weak_coverage_demand' +
-        ' ON netcellnet.ID=bu_weak_coverage_demand.coll_ID' +
+
+    var sql1 = "select  city, \n" +
+        "        district, \n" +
+        "        address, \n" +
+        "        SUBSTRING_INDEX(overlayScene,'_', 1) as overlayScene1,\n" +
+        "        SUBSTRING_INDEX(overlayScene,'_', -1) as overlayScene2,\n" +
+        "        GpsLon  as longitude, \n" +
+        "        Gpslat as  asdimension, \n" +
+        "        TAC, \n" +
+        "        ECI, \n" +
+        "        BSSS, \n" +
+        "        collectUsername, \n" +
+        "        phoneNumber, \n" +
+        "        FromDepartment, \n" +
+        "        phoneType, \n" +
+        "        NetworkOperatorName, \n" +
+        "        netWorkType, \n" +
+        "        phoneType, \n" +
+        "        collTime, \n" +
+        "        solveStatus, \n" +
+        "        solveTime, \n" +
+        "        preStName, \n" +
+        "        stAddress, \n" +
+        "        netModel, \n" +
+        "        stPrope, \n" +
+        "        buildType, \n" +
+        "        reqCellNum, \n" +
+        "        isPass, \n" +
+        "        personCharge, \n" +
+        "        personTel, \n" +
+        "        bu_weak_confirmation.reportTime, \n" +
+        "        im_remark, \n" +
+        "        confirm_eci, \n" +
+        "        confirm_tac, \n" +
+        "        confirm_bsss, \n" +
+        "        confirm_networktype, \n" +
+        "        confirm_lon, \n" +
+        "        confirm_lat \n" +
+        "        FROM (bu_collect_info left JOIN bu_weak_confirmation \n" +
+        "        on bu_collect_info.ID=bu_weak_confirmation.coll_id) \n" +
+        "        LEFT JOIN bu_weak_coverage_demand  \n" +
+        "        on bu_weak_confirmation.demand_id=bu_weak_coverage_demand.ID"+
+
         ' where district like ' + '"%' + city + '%"' +
         ' and overlayScene like ' + '"%' + overlayScene + '%"' +
         ' and collTime between ' + '"' + queryDateStart + '"' + ' and ' + '"' + queryDateEnd + ' 23:59:59"' +
@@ -63,11 +91,8 @@ exports.getAllCoverExcelData = function (params, cb) {
         'order by collTime desc'
     ;
 
-    /* var sql1 = 'select * from netcellnet ' +
-         'where district like ' + '"%' + city + '%"' +
-         ' and overlayScene like ' + '"%' + overlayScene + '%"' +
-         ' and collTime between ' + '"' + queryDateStart + '"' + ' and ' + '"' + queryDateEnd + ' 23:59:59"' +
-         ' and deleteFlag="0" ';*/
+
+
 
     console.log('查询条件：'+sql1);
     //查询并加工数据，完成后返回到前台
@@ -86,32 +111,44 @@ exports.getAllCoverExcelData = function (params, cb) {
 
                 //设置导出excel头
             var header = [
-                    '城市',
-                    '区县',
-                    '详细地址',
-                    '第一覆盖场景',
-                    '第二覆盖场景',
-                    '经度',
-                    '纬度',
-                    'ECI',
-                    'TAC',
-                    '信号强度',
-                    '手机号',
-                    '手机型号',
-                    '采集时间',
-                    '解决状态',
-                    '解决时间',
-                    '预建站点名称',
-                    '建站位置地址',
-                    '网络制式',
-                    '站点属性',
-                    '建设类型',
-                    '需求小区数',
-                    '是否通过联席会',
-                    '负责人',
-                    '联系电话',
-                    '上报时间'
-                ];
+                '城市',
+                '区县',
+                '详细地址',
+                '第一覆盖场景',
+                '第二覆盖场景',
+                '经度',
+                '纬度',
+                'TAC',
+                'ECI',
+                '信号强度',
+                '采集人员',
+                '采集人员手机号',
+                '采集人员部门',
+                '手机型号',
+                '运营商',
+                '网络类型',
+                '采集时间',
+                '解决状态',
+                '解决时间',
+                '预建站点名称',
+                '建站位置地址',
+                '网络制式',
+                '站点属性',
+                '建设类型',
+                '需求小区数',
+                '是否通过联席会',
+                '负责人',
+                '联系电话',
+                '上报时间',
+                '备注信息',
+                '[核查]ECI',
+                '[核查]TAC',
+                '[核查]信号强度',
+                '[核查]网络类型',
+                '[核查]经度',
+                '[核查]纬度'
+            ];
+
 
             //添加弱覆盖需求信息（预留到excel填写）
            /* for (var i in result) {
@@ -199,7 +236,9 @@ exports.getWeekCoverData = function (params, cb) {
     if (sort === undefined && order === undefined) {
 
         //查询所有数据，根据区县、场景和采集时间
-        sql1 = 'select * from netcellnet ' +
+
+        sql1 = 'select * from bu_collect_info ' +
+
             'where district like ' + '"%' + city + '%"' +
             ' and overlayScene like ' + '"%' + overlayScene + '%"' +
             ' and collTime between ' + '"' + queryDateStart + '"' + ' and ' + '"' + queryDateEnd + ' 23:59:59"' +
@@ -207,7 +246,9 @@ exports.getWeekCoverData = function (params, cb) {
             ' and BSSS <='+config.app.minBSSS;
 
         //查询条件，区县、场景、采集时间和信号强度低于-110
-        sql2 = 'select * from netcellnet ' +
+
+        sql2 = 'select * from bu_collect_info ' +
+
             'where district like ' + '"%' + city + '%"' +
             ' and overlayScene like ' + '"%' + overlayScene + '%"' +
             ' and collTime between ' + '"' + queryDateStart + '"' + ' and ' + '"' + queryDateEnd + ' 23:59:59"' +
@@ -219,7 +260,9 @@ exports.getWeekCoverData = function (params, cb) {
     } else {
 
         //查询所有的弱覆盖数据，根据区县、场景和采集时间
-        sql1 = 'select * from netcellnet ' +
+
+        sql1 = 'select * from bu_collect_info ' +
+
             'where district like ' + '"%' + city + '%"' +
             ' and overlayScene like ' + '"%' + overlayScene + '%"' +
             ' and collTime between ' + '"' + queryDateStart + '"' + ' and ' + '"' + queryDateEnd + ' 23:59:59"' +
@@ -227,7 +270,9 @@ exports.getWeekCoverData = function (params, cb) {
             ' and BSSS <='+config.app.minBSSS;
 
         //查询条件，区县、场景、采集时间和信号强度低于-110，并排序
-        sql2 = 'select * from netcellnet ' +
+
+        sql2 = 'select * from bu_collect_info ' +
+
             'where district like ' + '"%' + city + '%"' +
             ' and overlayScene like ' + '"%' + overlayScene + '%"' +
             ' and collTime between ' + '"' + queryDateStart + '"' + ' and ' + '"' + queryDateEnd + ' 23:59:59"' +
@@ -328,7 +373,9 @@ exports.getWeekCover2GData = function (params, cb) {
     if (sort === undefined && order === undefined) {
 
         //查询所有数据，根据区县、场景和采集时间
-        sql1 = 'select * from netcellnet ' +
+
+        sql1 = 'select * from bu_collect_info ' +
+
             'where district like ' + '"%' + city + '%"' +
             ' and overlayScene like ' + '"%' + overlayScene + '%"' +
             ' and collTime between ' + '"' + queryDateStart + '"' + ' and ' + '"' + queryDateEnd + ' 23:59:59"' +
@@ -337,7 +384,9 @@ exports.getWeekCover2GData = function (params, cb) {
             ' and BSSS ='+config.app.BSSSfor2G;
 
         //查询条件，区县、场景、采集时间和信号强度低于-110
-        sql2 = 'select * from netcellnet ' +
+
+        sql2 = 'select * from bu_collect_info ' +
+
             'where district like ' + '"%' + city + '%"' +
             ' and overlayScene like ' + '"%' + overlayScene + '%"' +
             ' and collTime between ' + '"' + queryDateStart + '"' + ' and ' + '"' + queryDateEnd + ' 23:59:59"' +
@@ -350,7 +399,9 @@ exports.getWeekCover2GData = function (params, cb) {
     } else {
 
         //查询所有的弱覆盖数据，根据区县、场景和采集时间
-        sql1 = 'select * from netcellnet ' +
+
+        sql1 = 'select * from bu_collect_info ' +
+
             'where district like ' + '"%' + city + '%"' +
             ' and overlayScene like ' + '"%' + overlayScene + '%"' +
             ' and collTime between ' + '"' + queryDateStart + '"' + ' and ' + '"' + queryDateEnd + ' 23:59:59"' +
@@ -359,7 +410,9 @@ exports.getWeekCover2GData = function (params, cb) {
             ' and BSSS ='+config.app.BSSSfor2G;
 
         //查询条件，区县、场景、采集时间和信号强度低于-110，并排序
-        sql2 = 'select * from netcellnet ' +
+
+        sql2 = 'select * from bu_collect_info ' +
+
             'where district like ' + '"%' + city + '%"' +
             ' and overlayScene like ' + '"%' + overlayScene + '%"' +
             ' and collTime between ' + '"' + queryDateStart + '"' + ' and ' + '"' + queryDateEnd + ' 23:59:59"' +
@@ -446,7 +499,9 @@ exports.get2GDataForm4G = function (params, cb) {
     // }
 
 
-    var sql1 = 'select * from netcellnet ' +
+
+    var sql1 = 'select * from bu_collect_info ' +
+
             'where GPS like ' + '"%' + GPS + '%"' +
             ' and TAC like ' + '"%' + TAC + '%"' +
             ' and collTime like ' + '"%' + collTime + '%"' +
@@ -515,7 +570,9 @@ exports.getWeekExcelData = function (params, cb) {
     //合成场景查询条件
     var overlayScene = firstScene + '_' + secondScene;
 
-    var sql1 = 'SELECT netcellnet.ID,city,' +
+
+    var sql1 = 'SELECT bu_collect_info.ID,city,' +
+
         ' district,' +
         ' address,' +
         ' SUBSTRING_INDEX(overlayScene, "_", 1) as overlayScene1, ' +
@@ -534,9 +591,11 @@ exports.getWeekExcelData = function (params, cb) {
         ' reqCellNum, isPass,' +
         ' personCharge, personTel,' +
         ' reportTime' +
-        ' FROM netcellnet' +
+
+        ' FROM bu_collect_info' +
         ' LEFT JOIN bu_weak_coverage_demand' +
-        ' ON netcellnet.ID=bu_weak_coverage_demand.coll_ID '+
+        ' ON bu_collect_info.ID=bu_weak_coverage_demand.coll_ID '+
+
         'where district like ' + '"%' + city + '%"' +
         ' and overlayScene like ' + '"%' + overlayScene + '%"' +
         ' and collTime between ' + '"' + queryDateStart + '"' + ' and ' + '"' + queryDateEnd + ' 23:59:59"' +
@@ -635,10 +694,12 @@ exports.getWeekExcelData = function (params, cb) {
 
 };
 
+
+
 exports.updateWeekStatus = function (params, cb) {
 
     //插入数据sql
-    var sql = 'UPDATE netcellnet SET ' +
+    var sql = 'UPDATE bu_collect_info SET ' +
         ' solveStatus=' + '"' + params.nowStatus + '"' +
         ' WHERE ID=' + '"' + params.ID + '"';
 
@@ -657,6 +718,7 @@ exports.updateWeekStatus = function (params, cb) {
 
 
 };
+
 
 
 
@@ -697,6 +759,7 @@ for(var i in data){
 
 
 };
+
 
 
 
