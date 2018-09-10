@@ -246,7 +246,6 @@ router.route('/upload').post(function (req, res) {
                         utils.respJsonData(res, utils.returnMsg(false, '0000', '写入数据出错。', null, null));
 
                     } else {
-
                         if (result != undefined) {
                             var succ = 0;
                             var fail = 0;
@@ -271,16 +270,21 @@ router.route('/upload').post(function (req, res) {
                                         "eci":result[i][7],
                                         "tac":result[i][8],
                                         "bsss":result[i][9],
-                                        "oper":result[i][10],
-                                        "phoneNumber":result[i][11],
-                                        "phoneStatus":result[i][12],
-                                        "collTime":result[i][13],
-                                        "collStatus":result[i][14],
-                                        "solveTime":result[i][15],
-                                        "err":err.sqlMessage
+                                        "collName":result[i][10],
+                                        "collPhoneNumber":result[i][11],
+                                        "collDempart":result[i][12],
+                                        "oper":result[i][13],
+                                        "nettype":result[i][14],
+                                        "phoneStatus":result[i][15],
+                                        "collTime":result[i][16],
+                                        "collStatus":result[i][17],
+                                        "solveTime":result[i][18],
+                                        "err":""
                                     };
+
                                     insertService.insertNetCellDataForInput(loginName, result[i], function (err,res1) {
                                         if(err){
+                                            obj['err']=err.sqlMessage;
                                             fail++;
                                             failError.push(obj);
                                         }else{
@@ -288,8 +292,6 @@ router.route('/upload').post(function (req, res) {
                                         }
                                         if((fail+succ)===(result.length-1)){
                                             utils.respJsonData(res, utils.returnMsg(true, '1000','数据写入成功。成功:'+succ+'条'+'失败:'+fail+'条',failError,null));
-
-
                                         }
                                     });
                                 }

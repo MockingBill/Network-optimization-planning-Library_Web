@@ -30,12 +30,7 @@
                    id="firstScene"/>
             <input class="easyui-combobox" value="请选择场景" style="width: 130px;height:34px;" name="secondScene"
                    id="secondScene"/>
-
-
-        </div>
-
     </div>
-
 
     <div class="col-xs-2 col-md-2 text-left">
         <div class="btn-group" style="margin-top: 3px">
@@ -1191,7 +1186,6 @@
             contentType: false,
             processData: false,
             success: function (data) {
-
                 if (data.success) {
                     msgSuccess(data.msg);
                     if (data.data != undefined) {
@@ -1206,7 +1200,7 @@
                                     btnCls: 'btn btn-blue',
                                     handler: function () {
                                         var editDate=$("#errUploadTable").datagrid("getRows");
-                                        console.log(editDate);
+
                                         //这里还没有写完
                                         $.ajax({
                                             url: "{{projcfg.appurl}}/api/netCell/weekCover_router/errUpload",
@@ -1240,7 +1234,6 @@
                                 }
                             ]
                         });
-
                         genDataGird(data.data);
 
                     }
@@ -1795,7 +1788,7 @@
                 },
                 {
 
-                    "field": "FromDepartment", "title": "部门", halign: 'center'
+                    "field": "FromDepartment", "title": "部门", halign: 'center',width:200
                 },
                 {
 
@@ -1805,7 +1798,7 @@
                     "field": "overlayScene", "title": "覆盖场景", halign: 'center'
                 },
                 {
-                    "field": "district", "title": "区县", halign: 'center',width:100
+                    "field": "district", "title": "区县", halign: 'center'
                 },
                 {
                     "field": "address", "title": "详细地址", halign: 'center'
@@ -2129,11 +2122,21 @@
                     "field": "bsss", "title": "信号强度", halign: 'center', editor: 'text'
                 },
                 {
+                    "field": "collName", "title": "采集人", halign: 'center', editor: 'text'
+                },
+                {
+                    "field": "collPhoneNumber", "title": "电话号", halign: 'center', editor: 'text'
+                },
+                {
+                    "field": "collDempart", "title": "部门", halign: 'center', editor: 'text'
+                },
+                {
                     "field": "oper", "title": "运营商", halign: 'center', editor: 'text'
                 },
                 {
-                    "field": "phoneNumber", "title": "手机号", halign: 'center', editor: 'text'
+                    "field": "nettype", "title": "网络类型", halign: 'center', editor: 'text'
                 },
+
                 {
                     "field": "phoneStatus", "title": "手机型号", halign: 'center', editor: 'text'
                 },
@@ -2159,6 +2162,9 @@
                 },
                 {
                     "field": "solveTime", "title": "解决时间", fixed: true, editor: 'text'
+                },
+                {
+                    "field": "err", "title": "错误原因", fixed: true, editor: 'text'
                 },
                 {field:'action',title:'Action',width:70,align:'center',
                     formatter:function(value,row,index){

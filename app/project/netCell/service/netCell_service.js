@@ -178,9 +178,8 @@ exports.insertNetCellDataForInput = function (loginName, params, cb) {
     params[20]=getCurrentTime();
     params[21]="";
     params[22]="";
-    console.log(params);
-    var sql = 'INSERT INTO bu_collect_info(ID,city,district,address,overlayScene,GpsLon,GpsLat,ECI,TAC,BSSS,collectUsername,phoneNumbgiter,FromDepartment,NetworkOperatorName,netWorkType,phoneType,collTime,solveStatus,solveTime' +
-        'createPersion,createTime,alterpersion,alterTime) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)';
+    var sql = 'INSERT INTO bu_collect_info(ID,city,district,address,overlayScene,GpsLon,GpsLat,ECI,TAC,BSSS,collectUsername,phoneNumber,FromDepartment,NetworkOperatorName,netWorkType,phoneType,collTime,solveStatus,solveTime' +
+        ',createPersion,createTime,alterpersion,alterTime) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)';
     try {
         model.query(sql, params, function (err, rows) {
             if (err) {

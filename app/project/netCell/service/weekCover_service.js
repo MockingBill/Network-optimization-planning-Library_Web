@@ -571,32 +571,46 @@ exports.getWeekExcelData = function (params, cb) {
     var overlayScene = firstScene + '_' + secondScene;
 
 
-    var sql1 = 'SELECT bu_collect_info.ID,city,' +
+    var sql1 = 'SELECT weak_id,'+
+        'city,'+
+        'district,'+
+        'address,'+
+        'SUBSTRING_INDEX(overlayScene,"_",1)asoverlayScene1,'+
+        'SUBSTRING_INDEX(overlayScene,"_",-1)asoverlayScene2,'+
+        'GpsLon,'+
+        'GpsLat,'+
+        'ECI,'+
+        'TAC,'+
+        'BSSS,'+
+        'NetworkOperatorName,'+
+        'netWorkType,'+
+        'collectUsername,'+
+        'phoneNumber,'+
+        'FromDepartment,'+
+        'collTime,'+
+        'phoneType,'+
+        'solveStatus,'+
+        'solveTime,'+
+        'preStName,'+
+        'stAddress,'+
+        'netModel,'+
+        'stPrope,'+
+        'buildType,'+
+        'reqCellNum,'+
+        'isPass,'+
+        'personCharge,'+
+        'personTel,'+
+        'demand_reportTime,'+
+        'confirm_eci,'+
+        'confirm_tac,'+
+        'confirm_bsss,'+
+        'confirm_networktype,'+
+        'confirm_lon,'+
+        'confirm_lat,'+
+        'im_remark '+
 
-        ' district,' +
-        ' address,' +
-        ' SUBSTRING_INDEX(overlayScene, "_", 1) as overlayScene1, ' +
-        ' SUBSTRING_INDEX(overlayScene, "_", -1) as overlayScene2, ' +
-        ' right(SUBSTRING_INDEX(GPS, ",", 1), LENGTH(SUBSTRING_INDEX(GPS, ",", 1))-1) as longitude, ' +
-        ' left(SUBSTRING_INDEX(GPS, ",", -1), LENGTH(SUBSTRING_INDEX(GPS, ",", 1))-1) as  asdimension,' +
-        ' TAC, ECI,BSSS,NetworkOperatorName,' +
-        ' phoneNumber,' +
-        ' phoneType, ' +
-        ' collTime, ' +
-        ' solveStatus,' +
-        ' solveTime, ' +
-        ' preStName,' +
-        ' stAddress, netModel,' +
-        ' stPrope, buildType,' +
-        ' reqCellNum, isPass,' +
-        ' personCharge, personTel,' +
-        ' reportTime' +
-
-        ' FROM bu_collect_info' +
-        ' LEFT JOIN bu_weak_coverage_demand' +
-        ' ON bu_collect_info.ID=bu_weak_coverage_demand.coll_ID '+
-
-        'where district like ' + '"%' + city + '%"' +
+        ' FROM weak_and_demand' +
+        ' where district like ' + '"%' + city + '%"' +
         ' and overlayScene like ' + '"%' + overlayScene + '%"' +
         ' and collTime between ' + '"' + queryDateStart + '"' + ' and ' + '"' + queryDateEnd + ' 23:59:59"' +
         ' and deleteFlag="0" ' +
@@ -624,7 +638,7 @@ exports.getWeekExcelData = function (params, cb) {
 
                 //设置导出excel头
             var header = [
-                    '记录编号',
+                    '需求id',
                     '城市',
                     '区县',
                     '详细地址',
@@ -636,11 +650,15 @@ exports.getWeekExcelData = function (params, cb) {
                     'TAC',
                     '信号强度',
                     '运营商',
+                    '网络类型',
+                    '上传',
                     '手机号',
-                    '手机型号',
+                    '部门',
                     '采集时间',
+                    '手机型号',
                     '解决状态',
                     '解决时间',
+
                     '预建站点名称',
                     '建站位置地址',
                     '网络制式',
@@ -650,26 +668,15 @@ exports.getWeekExcelData = function (params, cb) {
                     '是否通过联席会',
                     '负责人',
                     '联系电话',
-                    '上报时间'
+                    '上报时间',
+                    '确认点eci',
+                    '确认点tac',
+                    '确认点信号强度',
+                    '确认点网络类型',
+                    '确认点经度',
+                    '确认点纬度',
+                    '备注'
                 ];
-
-            //添加弱覆盖需求信息（预留到excel填写）
-            /*for (var i in result) {
-                result[i]['coll_ID'] = "";
-                result[i]['preStName'] = "";
-                result[i]['stAddress'] = "";
-                result[i]['netModel'] = "";
-                result[i]['stPrope'] = "";
-                result[i]['buildType'] = "";
-                result[i]['reqCellNum'] = "";
-                result[i]['isPass'] = "";
-                result[i]['personCharge'] = "";
-                result[i]['personTel'] = "";
-                result[i]['reportTime'] = ""
-                console.log(result[i]);
-            }*/
-
-
 
             var fileName = '弱覆盖_信息_导出_文件_' + params['user_account'] + '.xlsx';
             var filePath = '../public/static/file/exportExcel/' + fileName;
@@ -723,22 +730,28 @@ exports.updateWeekStatus = function (params, cb) {
 
 
 exports.SaveWeekData=function (data,loginName,cb) {
-
-for(var i in data){
     var sqlParamsEntity = [];
-    var sql='INSERT INTO netcellnet(ID,city,district,address,overlayScene,GPS,ECI,TAC,BSSS,NetworkOperatorName,phoneNumber,phoneType,collTime,solveStatus,solveTime,createPersion,createTime,alterpersion,alterTime) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)';
+for(var i in data){
+    var sql = 'INSERT INTO bu_collect_info(ID,city,district,address,overlayScene,GpsLon,GpsLat,ECI,TAC,BSSS,collectUsername,phoneNumber,FromDepartment,NetworkOperatorName,netWorkType,phoneType,collTime,solveStatus,solveTime' +
+        ',createPersion,createTime,alterpersion,alterTime) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)';
     var time=sd.format(new Date(), 'YYYY-MM-DD HH:mm:ss');
+
     var param = [
         uuid.v1(),
         data[i].city,
-        data[i].zone,data[i].address,
+        data[i].zone,
+        data[i].address,
         data[i].firstScene+'_'+data[i].secondScene,
-        '('+data[i].localX+','+data[i].localY+')',
+        data[i].localX,
+        data[i].localY,
         data[i].eci,
         data[i].tac,
         data[i].bsss,
+        data[i].collName,
+        data[i].collPhoneNumber,
+        data[i].collDempart,
         data[i].oper,
-        data[i].phoneNumber,
+        data[i].nettype,
         data[i].phoneStatus,
         data[i].collTime,
         data[i].collStatus,
@@ -759,6 +772,68 @@ for(var i in data){
 
 
 };
+
+
+/**
+ * 弱覆盖需求视图创建语句
+ *
+ *
+ *
+ *
+ */
+//
+// CREATE VIEW weak_and_demand as (SELECT
+// /*弱覆盖表*/
+// bu_collect_info.ID as weak_id,
+// bu_weak_coverage_demand.ID as demand_id,
+//     address,
+//     collTime,
+//     GpsLon,
+//     GpsLat,
+//     ECI,
+//     TAC,
+//     BSSS,
+//     city,
+//     collectUsername,
+//     phoneNumber,
+//     FromDepartment,
+//     phoneType,
+//     overlayScene,
+//     district,
+//     NetworkOperatorName,
+//     netWorkType,
+//     solveStatus,
+//     solveTime,
+// bu_collect_info.createPersion as weak_createPersion,
+//     bu_collect_info.createTime createTime,
+//     bu_collect_info.alterpersion weak_alterpersion,
+//     bu_collect_info.alterTime weak_alterTime,
+//     deleteFlag,
+//     /*确认表*/
+//     im_remark,
+// bu_weak_confirmation.reportTime as confirm_reportTime,
+// bu_weak_confirmation.reportPersion as confirm_reportPersion,
+// bu_weak_confirmation.createPersion as confirm_createPersion,
+// bu_weak_confirmation.createTime as confirm_createTime,
+//     confirm_eci,
+//     confirm_tac,
+//     confirm_bsss,
+//     confirm_networktype,
+//     confirm_lon,
+//     confirm_lat,
+//     /*需求表*/
+//     preStName,
+//     stAddress,
+//     netModel,
+//     stPrope,
+//     buildType,
+//     reqCellNum,
+//     isPass,
+//     personCharge,
+//     personTel,
+// bu_weak_coverage_demand.reportTime as demand_reportTime
+// FROM (bu_collect_info LEFT JOIN bu_weak_confirmation ON bu_collect_info.ID=coll_id)
+// LEFT JOIN bu_weak_coverage_demand ON demand_id=bu_weak_coverage_demand.ID)
 
 
 

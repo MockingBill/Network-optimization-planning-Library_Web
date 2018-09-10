@@ -81,14 +81,17 @@ router.route('/errUpload').post(function (req,res) {
            errData[i].eci,
            errData[i].localX,
            errData[i].localY,
+           errData[i].collName,
+           errData[i].collPhoneNumber,
+           errData[i].collDempart,
            errData[i].num,
            errData[i].oper,
-           errData[i].phoneNumber,
+           errData[i].nettype,
            errData[i].phoneStatus,
            errData[i].firstScene,
            errData[i].secondScene,
            errData[i].tac,
-           errData[i].zone]
+           errData[i].zone];
         for(var j in currentData){
            if(currentData[j]==undefined||currentData[j]==null||currentData[j]==''){
                flag=false;
@@ -97,13 +100,9 @@ router.route('/errUpload').post(function (req,res) {
         }
 
     }
-
-
-
-
     if(flag){
-        service.SaveWeekData(errData,req.session.current_user.login_account,function (result,msg) {
-            utils.respJsonData(res,utils.returnMsg(true, '1000', '插入成功。', msg, null));
+        service.SaveWeekData(errData,req.session.current_user.login_account,function (result) {
+            utils.respJsonData(res,result);
         });
 
     }
