@@ -1,0 +1,1172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="50ed0416-b83b-4ab5-bd05-a268609e9dc2" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/static/common/sence.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/views/app/project/requirementCon.hbs" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
+      <change beforePath="$PROJECT_DIR$/app/project/netCell/model/execlExport.js" afterPath="$PROJECT_DIR$/app/project/netCell/model/execlExport.js" />
+      <change beforePath="$PROJECT_DIR$/app/project/netCell/model/mysqlModel.js" afterPath="$PROJECT_DIR$/app/project/netCell/model/mysqlModel.js" />
+      <change beforePath="$PROJECT_DIR$/app/project/netCell/routes/exportAndInput_router.js" afterPath="$PROJECT_DIR$/app/project/netCell/routes/exportAndInput_router.js" />
+      <change beforePath="$PROJECT_DIR$/app/project/netCell/routes/netCell_router.js" afterPath="$PROJECT_DIR$/app/project/netCell/routes/netCell_router.js" />
+      <change beforePath="$PROJECT_DIR$/app/project/netCell/routes/requirementMan_router.js" afterPath="$PROJECT_DIR$/app/project/netCell/routes/requirementMan_router.js" />
+      <change beforePath="$PROJECT_DIR$/app/project/netCell/routes/weekCover_router.js" afterPath="$PROJECT_DIR$/app/project/netCell/routes/weekCover_router.js" />
+      <change beforePath="$PROJECT_DIR$/app/project/netCell/service/netCell_service.js" afterPath="$PROJECT_DIR$/app/project/netCell/service/netCell_service.js" />
+      <change beforePath="$PROJECT_DIR$/app/project/netCell/service/requirementMan_service.js" afterPath="$PROJECT_DIR$/app/project/netCell/service/requirementMan_service.js" />
+      <change beforePath="$PROJECT_DIR$/app/project/netCell/service/weekCover_service.js" afterPath="$PROJECT_DIR$/app/project/netCell/service/weekCover_service.js" />
+      <change beforePath="$PROJECT_DIR$/config.js" afterPath="$PROJECT_DIR$/config.js" />
+      <change beforePath="$PROJECT_DIR$/logs/app-2018-05-02.log" afterPath="$PROJECT_DIR$/logs/app-2018-05-02.log" />
+      <change beforePath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/sequences/Sequence.js" afterPath="$PROJECT_DIR$/node_modules/mysql/lib/protocol/sequences/Sequence.js" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
+      <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/exportExcel/弱覆盖信息_导出文件1034.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/exportExcel/弱覆盖信息_导出文件1247.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/exportExcel/弱覆盖信息_导出文件135.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/exportExcel/弱覆盖信息_导出文件146.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/exportExcel/弱覆盖信息_导出文件1520.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/exportExcel/弱覆盖信息_导出文件16.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/exportExcel/弱覆盖信息_导出文件163.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/exportExcel/弱覆盖信息_导出文件1711.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/exportExcel/弱覆盖信息_导出文件1734.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/exportExcel/弱覆盖信息_导出文件187.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/exportExcel/弱覆盖信息_导出文件2519.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/exportExcel/弱覆盖信息_导出文件2659.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/exportExcel/弱覆盖信息_导出文件2757.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/exportExcel/弱覆盖信息_导出文件316.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/exportExcel/弱覆盖信息_导出文件324.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/exportExcel/弱覆盖信息_导出文件340.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/exportExcel/弱覆盖信息_导出文件3410.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/exportExcel/弱覆盖信息_导出文件3413.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/exportExcel/弱覆盖信息_导出文件3434.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/exportExcel/弱覆盖信息_导出文件3446.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/exportExcel/弱覆盖信息_导出文件349.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/exportExcel/弱覆盖信息_导出文件3629.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/exportExcel/弱覆盖信息_导出文件3752.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/exportExcel/弱覆盖信息_导出文件3759.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/exportExcel/弱覆盖信息_导出文件382.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/exportExcel/弱覆盖信息_导出文件384.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/exportExcel/弱覆盖信息_导出文件391.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/exportExcel/弱覆盖信息_导出文件3912.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/exportExcel/弱覆盖信息_导出文件432.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/exportExcel/弱覆盖信息_导出文件451.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/exportExcel/弱覆盖信息_导出文件4718.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/exportExcel/弱覆盖信息_导出文件5120.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/exportExcel/弱覆盖信息_导出文件5331.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/exportExcel/弱覆盖信息_导出文件5416.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/exportExcel/弱覆盖信息_导出文件5453.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/exportExcel/弱覆盖信息_导出文件5752.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/exportExcel/弱覆盖信息_导出文件5838.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/exportExcel/弱覆盖信息_导出文件5912.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/exportExcel/弱覆盖信息_导出文件5929.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/exportExcel/弱覆盖信息_导出文件83.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/exportExcel/弱覆盖需求_导出文件111.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/exportExcel/弱覆盖需求_导出文件1430.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/exportExcel/弱覆盖需求_导出文件173.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/exportExcel/弱覆盖需求_导出文件253.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/exportExcel/弱覆盖需求_导出文件2653.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/exportExcel/弱覆盖需求_导出文件2727.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/exportExcel/弱覆盖需求_导出文件2750.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/exportExcel/弱覆盖需求_导出文件318.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/exportExcel/弱覆盖需求_导出文件33.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/exportExcel/弱覆盖需求_导出文件5735.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/importExcel/ggg.jf" afterPath="$PROJECT_DIR$/public/static/code/drilldown.js" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/importExcel/弱覆盖信息_导出文件135.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/importExcel/弱覆盖信息_导出文件1520.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/importExcel/弱覆盖信息_导出文件163.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/importExcel/弱覆盖信息_导出文件187.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/importExcel/弱覆盖信息_导出文件3446.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/importExcel/弱覆盖信息_导出文件4718.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/importExcel/弱覆盖信息_导出文件742.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/importExcel/弱覆盖信息_导出文件83.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/importExcel/弱覆盖信息导入模板 (1).xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/importExcel/弱覆盖信息导入模板.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/importExcel/弱覆盖需求导入模板.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/importExcel/弱覆盖需求导入模板11.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/importExcel/网优规划建设库支撑工具需求分析1_2.docx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/弱覆盖信息导入模板.xlsx" afterPath="$PROJECT_DIR$/public/static/file/弱覆盖信息导入模板.xlsx" />
+      <change beforePath="$PROJECT_DIR$/public/static/file/弱覆盖需求导入模板.xlsx" afterPath="$PROJECT_DIR$/public/static/file/弱覆盖需求导入模板.xlsx" />
+      <change beforePath="$PROJECT_DIR$/views/app/project/netCover.hbs" afterPath="$PROJECT_DIR$/views/app/project/netCover.hbs" />
+      <change beforePath="$PROJECT_DIR$/views/app/project/requirementMan.hbs" afterPath="$PROJECT_DIR$/views/app/project/requirementMan.hbs" />
+      <change beforePath="$PROJECT_DIR$/views/app/project/weekCover.hbs" afterPath="$PROJECT_DIR$/views/app/project/weekCover.hbs" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="1751916621">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="5" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.7" value="2" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="hbs" value="2" />
+          <entry key="js" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Handlebars/Mustache" value="2" />
+          <entry key="JavaScript" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="js" value="76" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JavaScript" value="76" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="netcellForWeb" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="weekCover.hbs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/app/project/weekCover.hbs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="22021">
+              <caret line="1159" column="77" lean-forward="false" selection-start-line="1159" selection-start-column="71" selection-end-line="1159" selection-end-column="77" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="exportAndInput_router.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/project/netCell/routes/exportAndInput_router.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2394">
+              <caret line="255" column="62" lean-forward="false" selection-start-line="255" selection-start-column="62" selection-end-line="255" selection-end-column="62" />
+              <folding>
+                <element signature="e#1754#7732#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="netCell_service.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/project/netCell/service/netCell_service.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="170" column="22" lean-forward="true" selection-start-line="170" selection-start-column="22" selection-end-line="170" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="netCell_router.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/project/netCell/routes/netCell_router.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="361">
+              <caret line="19" column="11" lean-forward="false" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app_api.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node_modules/gmdp/lib/common/app/routes/app_api.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="513">
+              <caret line="27" column="11" lean-forward="false" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sence.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/static/common/sence.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="4" column="33" lean-forward="true" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>cityFor2G</find>
+      <find>districtFor2G</find>
+      <find>phoneNumberFor2G</find>
+      <find>GPSFor2G</find>
+      <find>solveStatusFor2G</find>
+      <find>BSSSFor2G</find>
+      <find>easyui-datebox</find>
+      <find>服务商信息</find>
+      <find>NetworkOperatorNameFor2G</find>
+      <find>sameLocInf</find>
+      <find>showUploadErr</find>
+      <find>uploadErr</find>
+      <find>target</find>
+      <find>coll_ID</find>
+      <find>\n</find>
+      <find>netcellnet</find>
+      <find>sence</find>
+      <find>overlaySceneLoader</find>
+      <find>secondScene</find>
+      <find>typeData</find>
+      <find>FromDepartment</find>
+      <find>district</find>
+      <find>districtCom</find>
+      <find>city</find>
+      <find>addWeekCover</find>
+      <find>check</find>
+      <find>firstScene1</find>
+      <find>collTime</find>
+      <find>导入</find>
+      <find>upload</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>importExcel</replace>
+      <replace>'</replace>
+      <replace>showRequirement</replace>
+      <replace>rows[i]</replace>
+      <replace>checkAllCount</replace>
+      <replace>checkWeekCount</replace>
+      <replace>queryDateStart</replace>
+      <replace>queryDateEnd</replace>
+      <replace>result</replace>
+      <replace>22</replace>
+      <replace>23</replace>
+      <replace>24</replace>
+      <replace>25</replace>
+      <replace>26</replace>
+      <replace>27</replace>
+      <replace>28</replace>
+      <replace>params</replace>
+      <replace>data</replace>
+      <replace>form-control</replace>
+      <replace>coll_id</replace>
+      <replace>bu_collect_info</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/public</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/app/project/subway/routes/getAreaCounty.js" />
+        <option value="$PROJECT_DIR$/views/app/project/sceneData.json" />
+        <option value="$PROJECT_DIR$/app/project/subway/service/getOtherData.js" />
+        <option value="$PROJECT_DIR$/app/project/subway/service/netCell_service.js" />
+        <option value="$PROJECT_DIR$/app/project/subway/routes/netCell_router.js" />
+        <option value="$PROJECT_DIR$/app/project/netCell/routes/getAreaCounty.js" />
+        <option value="$PROJECT_DIR$/views/app/project/readyBuild.hbs" />
+        <option value="$PROJECT_DIR$/app/project/netCell/model/daochu.js" />
+        <option value="$PROJECT_DIR$/app/project/netCell/routes/dada.js" />
+        <option value="$PROJECT_DIR$/app/project/netCell/routes/DASD.js" />
+        <option value="$PROJECT_DIR$/app/project/netCell/routes/DWFA.js" />
+        <option value="$PROJECT_DIR$/app/project/netCell/routes/qwad.js" />
+        <option value="$PROJECT_DIR$/app/project/netCell/routes/wafa.js" />
+        <option value="$PROJECT_DIR$/app/project/netCell/routes/qwfa.js" />
+        <option value="$PROJECT_DIR$/app/project/netCell/routes/afas.js" />
+        <option value="$PROJECT_DIR$/app/project/netCell/routes/exportAndInport.js" />
+        <option value="$PROJECT_DIR$/app/project/netCell/routes/exportAndInput.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/node_modules/mysql/lib/Pool.js" />
+        <option value="$PROJECT_DIR$/node_modules/mysql/lib/protocol/Parser.js" />
+        <option value="$PROJECT_DIR$/app/project/netCell/service/getOtherData.js" />
+        <option value="$PROJECT_DIR$/app/project/netCell/routes/weekCoverRequire.js" />
+        <option value="$PROJECT_DIR$/app/project/netCell/model/requirementMan_model.js" />
+        <option value="$PROJECT_DIR$/views/app/project/sads.html" />
+        <option value="$PROJECT_DIR$/views/app/project/dadwa.html" />
+        <option value="$PROJECT_DIR$/views/app/project/dadad.css" />
+        <option value="$PROJECT_DIR$/app/project/netCell/model/netCell_model.js" />
+        <option value="$PROJECT_DIR$/views/app/project/test.html" />
+        <option value="$PROJECT_DIR$/views/app/project/test.hbs" />
+        <option value="$PROJECT_DIR$/views/app/project/weakCover.hbs" />
+        <option value="$PROJECT_DIR$/app/project/netCell/service/test1.js" />
+        <option value="$PROJECT_DIR$/public/static/flume/js/jsPlumb/tests/miscellaneous/jquery.mockjax.js" />
+        <option value="$PROJECT_DIR$/app/project/netCell/model/execlExport.js" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/logs/app-2018-05-03.log" />
+        <option value="$PROJECT_DIR$/node_modules/mysql/lib/protocol/sequences/Sequence.js" />
+        <option value="$PROJECT_DIR$/public/static/code/drilldown.js" />
+        <option value="$PROJECT_DIR$/views/app/project/requirementMan.hbs" />
+        <option value="$PROJECT_DIR$/app/project/netCell/routes/requirementMan_router.js" />
+        <option value="$PROJECT_DIR$/config.js" />
+        <option value="$PROJECT_DIR$/app/project/netCell/routes/weekCover_router.js" />
+        <option value="$PROJECT_DIR$/views/app/project/requirementCon.hbs" />
+        <option value="$PROJECT_DIR$/app/project/netCell/model/mysqlModel.js" />
+        <option value="$PROJECT_DIR$/app/project/netCell/service/requirementMan_service.js" />
+        <option value="$PROJECT_DIR$/app/project/netCell/service/weekCover_service.js" />
+        <option value="$PROJECT_DIR$/views/app/project/netCover.hbs" />
+        <option value="$PROJECT_DIR$/public/static/common/sence.js" />
+        <option value="$PROJECT_DIR$/views/app/project/weekCover.hbs" />
+        <option value="$PROJECT_DIR$/app/project/netCell/routes/netCell_router.js" />
+        <option value="$PROJECT_DIR$/app/project/netCell/routes/exportAndInput_router.js" />
+        <option value="$PROJECT_DIR$/app/project/netCell/service/netCell_service.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/package.json" />
+      <path value="$PROJECT_DIR$/public/static/flume/js/bootstrap/package.json" />
+      <path value="$PROJECT_DIR$/public/static/flume/js/jquery-ui/package.json" />
+      <path value="$PROJECT_DIR$/public/static/flume/js/jsPlumb/package.json" />
+      <path value="$PROJECT_DIR$/public/static/flume/js/underscore/package.json" />
+    </packageJsonPaths>
+  </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="netcellForWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netcellForWeb" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="netcellForWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netcellForWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="netcellForWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netcellForWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="netcellForWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netcellForWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="netCell" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="netcellForWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netcellForWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="netCell" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="netcellForWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netcellForWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="netCell" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="netcellForWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netcellForWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="netCell" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="netcellForWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netcellForWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="netcellForWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netcellForWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="netcellForWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netcellForWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="netcellForWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netcellForWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="netcellForWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netcellForWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="netcellForWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netcellForWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/fungdong/WebstormProjects/netcellForWeb/app/project/netCell/routes/weekCover_router.js&#10;mysql&#9;FILE&#9;file:///Users/fungdong/WebstormProjects/netcellForWeb/node_modules/mysql&#10;easy&#9;FILE&#9;file:///Users/dengqian/code/subway/subway/public/static/js/easyui/themes/black/easyui.css" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.prettier" value="true" />
+    <property name="node.js.path.for.package.prettier" value="project" />
+    <property name="node.js.selected.package.prettier" value="" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/node_modules" />
+      <recent name="$PROJECT_DIR$/public/static/file" />
+      <recent name="$PROJECT_DIR$/public/static" />
+      <recent name="$PROJECT_DIR$/public/static/images" />
+      <recent name="$PROJECT_DIR$/node_modules/mysql/lib/protocol" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/static/data" />
+      <recent name="$PROJECT_DIR$/app/project/subway/service" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Node.js.netCell">
+    <configuration name="mysqlModel.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="mysqlModel.js" working-dir="$PROJECT_DIR$/app/project/netCell/model" />
+    <configuration name="netCell" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="netCell" working-dir="$PROJECT_DIR$/bin" />
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Node.js.netCell" />
+      <item index="1" class="java.lang.String" itemvalue="Node.js.mysqlModel.js" />
+    </list>
+    <recent_temporary>
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Node.js.netCell" />
+        <item index="1" class="java.lang.String" itemvalue="Node.js.mysqlModel.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="50ed0416-b83b-4ab5-bd05-a268609e9dc2" name="Default" comment="" />
+      <created>1514511369841</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1514511369841</updated>
+      <workItem from="1514511372701" duration="6455000" />
+      <workItem from="1514554496597" duration="135000" />
+      <workItem from="1514855443500" duration="16279000" />
+      <workItem from="1514941488698" duration="6862000" />
+      <workItem from="1514962276738" duration="24000" />
+      <workItem from="1514962450430" duration="6878000" />
+      <workItem from="1515027755636" duration="10244000" />
+      <workItem from="1515047934193" duration="102000" />
+      <workItem from="1515048054021" duration="4504000" />
+      <workItem from="1515114475699" duration="9660000" />
+      <workItem from="1515373246797" duration="5486000" />
+      <workItem from="1515395769791" duration="6475000" />
+      <workItem from="1515459271812" duration="17902000" />
+      <workItem from="1515545991940" duration="3622000" />
+      <workItem from="1515564282987" duration="1112000" />
+      <workItem from="1515572996153" duration="2228000" />
+      <workItem from="1515632354715" duration="1135000" />
+      <workItem from="1515654301881" duration="1192000" />
+      <workItem from="1515657161345" duration="15217000" />
+      <workItem from="1515977968339" duration="2974000" />
+      <workItem from="1515981980731" duration="2657000" />
+      <workItem from="1515996724480" duration="5838000" />
+      <workItem from="1516005289197" duration="2209000" />
+      <workItem from="1516064909083" duration="853000" />
+      <workItem from="1516238639737" duration="1856000" />
+      <workItem from="1516325003610" duration="885000" />
+      <workItem from="1516344041537" duration="4221000" />
+      <workItem from="1516436018837" duration="254000" />
+      <workItem from="1516582825853" duration="10174000" />
+      <workItem from="1516609901924" duration="2661000" />
+      <workItem from="1516669583062" duration="24659000" />
+      <workItem from="1516850802567" duration="1315000" />
+      <workItem from="1516863461536" duration="12000" />
+      <workItem from="1516866587404" duration="1505000" />
+      <workItem from="1516929107951" duration="9965000" />
+      <workItem from="1516950531248" duration="1215000" />
+      <workItem from="1516953300466" duration="272000" />
+      <workItem from="1517015293101" duration="1315000" />
+      <workItem from="1517139082327" duration="1142000" />
+      <workItem from="1517187523152" duration="10802000" />
+      <workItem from="1517207686304" duration="29510000" />
+      <workItem from="1517361128459" duration="18300000" />
+      <workItem from="1517447275853" duration="14227000" />
+      <workItem from="1517533649859" duration="575000" />
+      <workItem from="1517537391336" duration="2297000" />
+      <workItem from="1517540843867" duration="10747000" />
+      <workItem from="1517792617262" duration="9079000" />
+      <workItem from="1517878880816" duration="3407000" />
+      <workItem from="1517899793657" duration="4085000" />
+      <workItem from="1517906502912" duration="2155000" />
+      <workItem from="1517965315063" duration="2547000" />
+      <workItem from="1517990979598" duration="460000" />
+      <workItem from="1517991909703" duration="811000" />
+      <workItem from="1518051469733" duration="405000" />
+      <workItem from="1518065085562" duration="6465000" />
+      <workItem from="1518138346325" duration="2107000" />
+      <workItem from="1518156270279" duration="770000" />
+      <workItem from="1518157472690" duration="8132000" />
+      <workItem from="1518313213162" duration="2086000" />
+      <workItem from="1518332668707" duration="659000" />
+      <workItem from="1518333358532" duration="1789000" />
+      <workItem from="1518336520010" duration="3623000" />
+      <workItem from="1518401786148" duration="307000" />
+      <workItem from="1518421466067" duration="510000" />
+      <workItem from="1519261017713" duration="490000" />
+      <workItem from="1519262494716" duration="806000" />
+      <workItem from="1519264000114" duration="1824000" />
+      <workItem from="1519269175236" duration="913000" />
+      <workItem from="1519347565912" duration="2107000" />
+      <workItem from="1519973792100" duration="602000" />
+      <workItem from="1519979780111" duration="119000" />
+      <workItem from="1520211955428" duration="237000" />
+      <workItem from="1522054771594" duration="84000" />
+      <workItem from="1522054951192" duration="677000" />
+      <workItem from="1522055633294" duration="5000" />
+      <workItem from="1522112539926" duration="455000" />
+      <workItem from="1522113055608" duration="13489000" />
+      <workItem from="1522199152552" duration="15026000" />
+      <workItem from="1522227859356" duration="326000" />
+      <workItem from="1522285621748" duration="12024000" />
+      <workItem from="1522308676958" duration="872000" />
+      <workItem from="1522309765695" duration="3583000" />
+      <workItem from="1522372015213" duration="12157000" />
+      <workItem from="1522589718620" duration="1268000" />
+      <workItem from="1522631802578" duration="14886000" />
+      <workItem from="1522675249898" duration="5042000" />
+      <workItem from="1522717225988" duration="10167000" />
+      <workItem from="1522737333245" duration="1275000" />
+      <workItem from="1522738677927" duration="2425000" />
+      <workItem from="1522742168998" duration="3786000" />
+      <workItem from="1522765021155" duration="4537000" />
+      <workItem from="1522769988204" duration="1548000" />
+      <workItem from="1522803275282" duration="5653000" />
+      <workItem from="1522811159283" duration="724000" />
+      <workItem from="1522811915776" duration="384000" />
+      <workItem from="1522812517109" duration="190000" />
+      <workItem from="1522812854446" duration="1372000" />
+      <workItem from="1522929048124" duration="5994000" />
+      <workItem from="1523105047220" duration="5210000" />
+      <workItem from="1523112780661" duration="660000" />
+      <workItem from="1523149238302" duration="15588000" />
+      <workItem from="1523196117008" duration="1009000" />
+      <workItem from="1523234762662" duration="2074000" />
+      <workItem from="1523237920726" duration="2665000" />
+      <workItem from="1523241959587" duration="9296000" />
+      <workItem from="1523261444167" duration="448000" />
+      <workItem from="1523262033336" duration="3103000" />
+      <workItem from="1523285053865" duration="942000" />
+      <workItem from="1523286349667" duration="4000" />
+      <workItem from="1523322312582" duration="93000" />
+      <workItem from="1523322420349" duration="6596000" />
+      <workItem from="1523330931915" duration="10405000" />
+      <workItem from="1523370598960" duration="3583000" />
+      <workItem from="1523408753223" duration="12921000" />
+      <workItem from="1523495576682" duration="3377000" />
+      <workItem from="1523519879757" duration="873000" />
+      <workItem from="1523521316187" duration="2025000" />
+      <workItem from="1523533745625" duration="1710000" />
+      <workItem from="1523581933534" duration="85000" />
+      <workItem from="1523582035793" duration="17477000" />
+      <workItem from="1523799967523" duration="5999000" />
+      <workItem from="1523840592311" duration="16885000" />
+      <workItem from="1523927188375" duration="7776000" />
+      <workItem from="1523947418326" duration="858000" />
+      <workItem from="1523948323863" duration="2193000" />
+      <workItem from="1523951006367" duration="963000" />
+      <workItem from="1523953052064" duration="3554000" />
+      <workItem from="1524013536749" duration="3091000" />
+      <workItem from="1524025768361" duration="6108000" />
+      <workItem from="1524101434028" duration="2512000" />
+      <workItem from="1524118102324" duration="73000" />
+      <workItem from="1524118181720" duration="118000" />
+      <workItem from="1524118306573" duration="4000" />
+      <workItem from="1524118332987" duration="622000" />
+      <workItem from="1524119167597" duration="5685000" />
+      <workItem from="1524186352668" duration="5672000" />
+      <workItem from="1524194361204" duration="12356000" />
+      <workItem from="1524406581431" duration="5530000" />
+      <workItem from="1524445980847" duration="306000" />
+      <workItem from="1524448014515" duration="509000" />
+      <workItem from="1524466053603" duration="5169000" />
+      <workItem from="1524490499255" duration="5308000" />
+      <workItem from="1524549642286" duration="9971000" />
+      <workItem from="1524618278764" duration="17948000" />
+      <workItem from="1524712916775" duration="11049000" />
+      <workItem from="1524735063093" duration="12000" />
+      <workItem from="1524791102913" duration="7081000" />
+      <workItem from="1524799358682" duration="14724000" />
+      <workItem from="1524876875361" duration="4544000" />
+      <workItem from="1524895377632" duration="2802000" />
+      <workItem from="1524898756223" duration="4388000" />
+      <workItem from="1524970331551" duration="1050000" />
+      <workItem from="1524971421579" duration="753000" />
+      <workItem from="1525222918171" duration="7639000" />
+      <workItem from="1525230933706" duration="7788000" />
+      <workItem from="1525313700398" duration="20000" />
+      <workItem from="1525313822557" duration="8243000" />
+      <workItem from="1525332020886" duration="1064000" />
+      <workItem from="1525397706895" duration="1362000" />
+      <workItem from="1525830962839" duration="3037000" />
+      <workItem from="1526003724525" duration="2472000" />
+      <workItem from="1526265767620" duration="1541000" />
+      <workItem from="1526286462801" duration="2100000" />
+      <workItem from="1526345378401" duration="4446000" />
+      <workItem from="1526354864748" duration="818000" />
+      <workItem from="1526364793224" duration="8779000" />
+      <workItem from="1526435708172" duration="11058000" />
+      <workItem from="1526520066352" duration="407000" />
+      <workItem from="1527126042723" duration="561000" />
+      <workItem from="1528702014061" duration="876000" />
+      <workItem from="1528704358705" duration="826000" />
+      <workItem from="1528706890875" duration="5534000" />
+      <workItem from="1528851966232" duration="11000" />
+      <workItem from="1528852395874" duration="5215000" />
+      <workItem from="1528862857126" duration="9030000" />
+      <workItem from="1528938291279" duration="589000" />
+      <workItem from="1528939435621" duration="933000" />
+      <workItem from="1528948462266" duration="11225000" />
+      <workItem from="1529024555412" duration="456000" />
+      <workItem from="1529245614542" duration="850000" />
+      <workItem from="1529632806413" duration="588000" />
+      <workItem from="1529638780129" duration="661000" />
+      <workItem from="1529649818149" duration="2000" />
+      <workItem from="1529649827254" duration="5000" />
+      <workItem from="1530023740991" duration="5000" />
+      <workItem from="1530181636577" duration="43000" />
+      <workItem from="1531015850927" duration="388000" />
+      <workItem from="1531030288776" duration="70000" />
+      <workItem from="1534820898555" duration="692000" />
+      <workItem from="1534822148669" duration="3471000" />
+      <workItem from="1534986134610" duration="315000" />
+      <workItem from="1535444672669" duration="152000" />
+      <workItem from="1535706355068" duration="4000" />
+      <workItem from="1536218574709" duration="5684000" />
+      <workItem from="1536284080889" duration="5129000" />
+      <workItem from="1536302412983" duration="33000" />
+      <workItem from="1536302456177" duration="5671000" />
+      <workItem from="1536309574796" duration="1588000" />
+      <workItem from="1536544393756" duration="177000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="839711000" />
+  </component>
+  <component name="TodoView" selected-index="3">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25792813" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39540508" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31438935" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2797745" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/app/project/netCell/routes/weekCover_router.js</url>
+          <line>43</line>
+          <option name="timeStamp" value="79" />
+        </line-breakpoint>
+      </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>req.body</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/views/app/project/sads.html" />
+    <entry file="file://$PROJECT_DIR$/views/app/project/dadad.css" />
+    <entry file="file://$PROJECT_DIR$/views/app/project/dadwa.html" />
+    <entry file="file://$PROJECT_DIR$/public/static/laydate/laydate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="1" column="26933" lean-forward="false" selection-start-line="1" selection-start-column="26933" selection-end-line="1" selection-end-column="26933" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/app/project/test.html" />
+    <entry file="file://$PROJECT_DIR$/node_modules/express/lib/middleware/query.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/code/highcharts.src.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1245">
+          <caret line="83" column="8" lean-forward="false" selection-start-line="83" selection-start-column="8" selection-end-line="83" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="3210" column="4" lean-forward="false" selection-start-line="3210" selection-start-column="4" selection-end-line="3210" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/code/css/js/modules/sunburst.src.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1590">
+          <caret line="106" column="11" lean-forward="false" selection-start-line="106" selection-start-column="11" selection-end-line="106" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/uuid/v4.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="9" lean-forward="false" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/multer/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="23" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/express/lib/express.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="945">
+          <caret line="69" column="31" lean-forward="false" selection-start-line="69" selection-start-column="26" selection-end-line="69" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/express/lib/router/layer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="102" column="22" lean-forward="true" selection-start-line="102" selection-start-column="22" selection-end-line="102" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/gmdp/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="34" lean-forward="false" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/js/common/sys-init.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="165" column="9" lean-forward="false" selection-start-line="165" selection-start-column="9" selection-end-line="165" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/js/common/sys-init-portal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="134" column="9" lean-forward="false" selection-start-line="134" selection-start-column="9" selection-end-line="134" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/flume/js/jsPlumb/tests/miscellaneous/jquery.mockjax.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="166" column="38" lean-forward="true" selection-start-line="166" selection-start-column="38" selection-end-line="166" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/highcharts/css/js/themes/gray.js" />
+    <entry file="file://$PROJECT_DIR$/node_modules/mysql/lib/protocol/Parser.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/project/netCell/service/test1.js" />
+    <entry file="file://$PROJECT_DIR$/logs/test.js" />
+    <entry file="file://$PROJECT_DIR$/views/themes/beyond/layout.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1330">
+          <caret line="54" column="7" lean-forward="true" selection-start-line="54" selection-start-column="7" selection-end-line="54" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/app-2018-05-02.log" />
+    <entry file="file://$PROJECT_DIR$/logs/app-2018-04-29.log" />
+    <entry file="file://$PROJECT_DIR$/node_modules/gmdp/lib/gmdp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="58" lean-forward="true" selection-start-line="8" selection-start-column="58" selection-end-line="8" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/app-2018-05-03.log" />
+    <entry file="file://$PROJECT_DIR$/public/static/code/drilldown.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="742">
+          <caret line="25" column="492" lean-forward="false" selection-start-line="25" selection-start-column="492" selection-end-line="25" selection-end-column="492" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/app-2018-06-11.log" />
+    <entry file="file://$PROJECT_DIR$/node_modules/gmdp/lib/common/core/utils/app_utils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="428">
+          <caret line="1039" column="1" lean-forward="true" selection-start-line="1039" selection-start-column="1" selection-end-line="1039" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/app/project/test.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/mysql/lib/PoolConnection.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="34" column="38" lean-forward="false" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/mysql/lib/Pool.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="211" column="4" lean-forward="false" selection-start-line="211" selection-start-column="4" selection-end-line="211" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/mysql/lib/protocol/sequences/Sequence.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="90" column="6" lean-forward="false" selection-start-line="90" selection-start-column="6" selection-end-line="90" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/project/netCell/routes/weekCover_router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="28" lean-forward="false" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1425">
+          <caret line="70" column="47" lean-forward="false" selection-start-line="70" selection-start-column="40" selection-end-line="70" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/app/project/requirementMan.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14117">
+          <caret line="711" column="17" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="854" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/netCell">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/project/netCell/service/requirementMan_service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7121">
+          <caret line="372" column="65" lean-forward="false" selection-start-line="372" selection-start-column="65" selection-end-line="372" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/project/netCell/model/execlExport.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1444">
+          <caret line="76" column="26" lean-forward="false" selection-start-line="76" selection-start-column="24" selection-end-line="76" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/project/netCell/service/weekCover_service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1083">
+          <caret line="57" column="25" lean-forward="false" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/project/netCell/routes/requirementMan_router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="24" column="21" lean-forward="false" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/project/netCell/model/mysqlModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="43" lean-forward="false" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/app/project/requirementCon.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="854" column="9" lean-forward="false" selection-start-line="854" selection-start-column="9" selection-end-line="854" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/app/project/netCover.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="628" column="44" lean-forward="false" selection-start-line="628" selection-start-column="44" selection-end-line="628" selection-end-column="44" />
+          <folding>
+            <marker date="1536284347379" expanded="true" signature="11485:11499" ph="..." />
+            <marker date="1536284347379" expanded="true" signature="11574:11604" ph="..." />
+            <marker date="1536284347379" expanded="true" signature="11658:11667" ph="..." />
+            <marker date="1536284347379" expanded="true" signature="16536:16550" ph="..." />
+            <marker date="1536284347379" expanded="true" signature="16625:16655" ph="..." />
+            <marker date="1536284347379" expanded="true" signature="16709:16718" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="11" lean-forward="false" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/gmdp/lib/common/app/routes/app_api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="27" column="11" lean-forward="false" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/app/project/weekCover.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22021">
+          <caret line="1159" column="77" lean-forward="false" selection-start-line="1159" selection-start-column="71" selection-end-line="1159" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/project/netCell/routes/netCell_router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/project/netCell/routes/exportAndInput_router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2394">
+          <caret line="255" column="62" lean-forward="false" selection-start-line="255" selection-start-column="62" selection-end-line="255" selection-end-column="62" />
+          <folding>
+            <element signature="e#1754#7732#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/common/sence.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="33" lean-forward="true" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/project/netCell/service/netCell_service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="170" column="22" lean-forward="true" selection-start-line="170" selection-start-column="22" selection-end-line="170" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

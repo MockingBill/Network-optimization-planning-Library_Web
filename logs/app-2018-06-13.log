@@ -1,0 +1,144 @@
+[2018-06-13 09:22:40.629] [INFO] app - 数据库操作失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+[2018-06-13 09:22:40.630] [INFO] app - 获取弱覆盖记录总长度失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+[2018-06-13 09:22:45.216] [INFO] app - 数据库操作失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+[2018-06-13 09:22:45.216] [INFO] app - 获取弱覆盖记录总长度失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+[2018-06-13 09:22:58.842] [INFO] app - 数据库操作失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+[2018-06-13 09:22:58.842] [INFO] app - 获取弱覆盖记录总长度失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+[2018-06-13 09:26:00.861] [INFO] app - 数据库操作失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+[2018-06-13 09:26:00.861] [INFO] app - 获取弱覆盖记录总长度失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+[2018-06-13 09:26:02.034] [INFO] app - 数据库操作失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+[2018-06-13 09:26:02.034] [INFO] app - 获取需求记录数据总长度失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+[2018-06-13 09:26:04.068] [INFO] app - 数据库操作失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+[2018-06-13 09:26:04.068] [INFO] app - 获取弱覆盖记录总长度失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+[2018-06-13 09:27:21.154] [INFO] app - 数据库操作失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+[2018-06-13 09:27:21.155] [INFO] app - 获取弱覆盖记录总长度失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+[2018-06-13 09:37:18.178] [INFO] app - 数据库操作失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+[2018-06-13 09:37:18.179] [INFO] app - 获取弱覆盖记录总长度失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+[2018-06-13 09:37:19.718] [INFO] app - 数据库操作失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+[2018-06-13 09:37:19.718] [INFO] app - 获取弱覆盖记录总长度失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+[2018-06-13 09:37:44.396] [INFO] app - 数据库操作失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+[2018-06-13 09:37:44.397] [INFO] app - 获取弱覆盖记录总长度失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+[2018-06-13 10:28:50.614] [INFO] app - 数据库操作失败:
+Error: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+[2018-06-13 10:28:50.615] [INFO] app - 获取弱覆盖记录数据失败:
+Error: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+[2018-06-13 10:29:19.847] [INFO] app - 数据库操作失败:
+Error: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+[2018-06-13 10:29:19.847] [INFO] app - 获取弱覆盖记录数据失败:
+Error: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+[2018-06-13 10:29:25.430] [INFO] app - 数据库操作失败:
+Error: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+[2018-06-13 10:29:25.430] [INFO] app - 获取弱覆盖记录数据失败:
+Error: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+[2018-06-13 10:30:16.117] [INFO] app - 数据库操作失败:
+Error: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+[2018-06-13 10:30:16.119] [INFO] app - 获取弱覆盖记录数据失败:
+Error: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+[2018-06-13 10:33:15.654] [INFO] app - 数据库操作失败:
+Error: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+[2018-06-13 10:33:15.656] [INFO] app - 获取弱覆盖记录数据失败:
+Error: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+[2018-06-13 10:33:22.182] [INFO] app - 数据库操作失败:
+Error: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+[2018-06-13 10:33:22.182] [INFO] app - 获取弱覆盖记录数据失败:
+Error: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+[2018-06-13 10:33:55.427] [INFO] app - 数据库操作失败:
+Error: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+[2018-06-13 10:33:55.428] [INFO] app - 获取弱覆盖记录数据失败:
+Error: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+[2018-06-13 10:34:56.508] [INFO] app - 数据库操作失败:
+Error: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+[2018-06-13 10:34:56.509] [INFO] app - 获取弱覆盖记录数据失败:
+Error: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+[2018-06-13 10:35:10.795] [INFO] app - 数据库操作失败:
+Error: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+[2018-06-13 10:35:10.795] [INFO] app - 获取弱覆盖记录数据失败:
+Error: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+[2018-06-13 10:36:37.613] [INFO] app - 数据库操作失败:
+Error: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+[2018-06-13 10:36:37.614] [INFO] app - 获取弱覆盖记录数据失败:
+Error: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+[2018-06-13 10:38:00.604] [INFO] app - 数据库操作失败:
+Error: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+[2018-06-13 10:38:00.604] [INFO] app - 获取有2G弱覆的弱覆盖记录数据失败:
+Error: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+[2018-06-13 10:39:56.168] [INFO] app - 数据库操作失败:
+Error: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+[2018-06-13 10:39:56.169] [INFO] app - 获取有2G弱覆的弱覆盖记录数据失败:
+Error: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+[2018-06-13 10:59:56.377] [INFO] app - 数据库操作失败:
+Error: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+[2018-06-13 10:59:56.378] [INFO] app - 获取有2G弱覆的弱覆盖记录数据失败:
+Error: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+[2018-06-13 10:59:57.795] [INFO] app - 数据库操作失败:
+Error: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+[2018-06-13 10:59:57.796] [INFO] app - 获取有2G弱覆的弱覆盖记录数据失败:
+Error: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+[2018-06-13 11:00:09.138] [INFO] app - 数据库操作失败:
+Error: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+[2018-06-13 11:00:09.138] [INFO] app - 获取有2G弱覆的弱覆盖记录数据失败:
+Error: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+[2018-06-13 11:07:11.666] [INFO] app - 数据库操作失败:
+Error: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+[2018-06-13 11:07:11.667] [INFO] app - 获取有2G弱覆的弱覆盖记录数据失败:
+Error: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+[2018-06-13 11:07:26.210] [INFO] app - 数据库操作失败:
+Error: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+[2018-06-13 11:07:26.210] [INFO] app - 获取有2G弱覆的弱覆盖记录数据失败:
+Error: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+[2018-06-13 11:07:27.557] [INFO] app - 数据库操作失败:
+Error: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+[2018-06-13 11:07:27.557] [INFO] app - 获取有2G弱覆的弱覆盖记录数据失败:
+Error: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+[2018-06-13 11:10:20.294] [INFO] app - 数据库操作失败:
+Error: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+[2018-06-13 11:10:20.294] [INFO] app - 获取有2G弱覆的弱覆盖记录数据失败:
+Error: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+[2018-06-13 11:13:37.075] [INFO] app - 数据库操作失败:
+Error: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+[2018-06-13 11:13:37.076] [INFO] app - 获取有2G弱覆的弱覆盖记录数据失败:
+Error: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+[2018-06-13 14:56:01.484] [INFO] app - 数据库操作失败:
+Error: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+[2018-06-13 14:56:01.484] [INFO] app - 获取有2G弱覆的弱覆盖记录数据失败:
+Error: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+[2018-06-13 14:56:03.168] [INFO] app - 数据库操作失败:
+Error: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+[2018-06-13 14:56:03.169] [INFO] app - 获取有2G弱覆的弱覆盖记录数据失败:
+Error: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+[2018-06-13 14:56:04.291] [INFO] app - 数据库操作失败:
+Error: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+[2018-06-13 14:56:04.291] [INFO] app - 获取有2G弱覆的弱覆盖记录数据失败:
+Error: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+[2018-06-13 14:56:10.094] [INFO] app - 数据库操作失败:
+Error: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+[2018-06-13 14:56:10.094] [INFO] app - 获取有2G弱覆的弱覆盖记录数据失败:
+Error: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+[2018-06-13 14:56:11.120] [INFO] app - 数据库操作失败:
+Error: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+[2018-06-13 14:56:11.120] [INFO] app - 获取有2G弱覆的弱覆盖记录数据失败:
+Error: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+[2018-06-13 15:01:16.744] [INFO] app - 数据库操作失败:
+Error: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+[2018-06-13 15:01:16.744] [INFO] app - 获取有2G弱覆的弱覆盖记录数据失败:
+Error: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN

@@ -1,0 +1,60 @@
+[2018-05-15 08:50:00.640] [INFO] app - 数据库操作失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+[2018-05-15 08:50:00.640] [INFO] app - 数据库连接失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+[2018-05-15 08:50:00.938] [INFO] app - 数据库操作失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+[2018-05-15 08:50:00.939] [INFO] app - 获取所有数据查询失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+[2018-05-15 08:50:06.213] [INFO] app - 数据库操作失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+[2018-05-15 08:50:06.213] [INFO] app - 获取弱覆盖记录总长度失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+[2018-05-15 10:00:45.933] [INFO] app - 数据库操作失败:
+Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(overlayScene, "_", -1) as overlayScene2, GPS, TAC, ECI, NetworkOperatorName, BS' at line 1
+[2018-05-15 10:00:45.934] [INFO] app - 获取弱覆盖记录用于导出失败:
+Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(overlayScene, "_", -1) as overlayScene2, GPS, TAC, ECI, NetworkOperatorName, BS' at line 1
+[2018-05-15 11:29:19.804] [INFO] app - 数据库操作失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: NO)
+[2018-05-15 11:29:19.805] [INFO] app - 获取弱覆盖记录总长度失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: NO)
+[2018-05-15 11:29:21.449] [INFO] app - 数据库操作失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: NO)
+[2018-05-15 11:29:21.450] [INFO] app - 数据库连接失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: NO)
+[2018-05-15 11:29:21.522] [INFO] app - 数据库操作失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: NO)
+[2018-05-15 11:29:21.524] [INFO] app - 获取所有数据查询失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: NO)
+[2018-05-15 11:29:29.052] [INFO] app - 数据库操作失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: NO)
+[2018-05-15 11:29:29.052] [INFO] app - 获取弱覆盖记录总长度失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: NO)
+[2018-05-15 11:29:29.594] [INFO] app - 数据库操作失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: NO)
+[2018-05-15 11:29:29.596] [INFO] app - 获取需求记录数据总长度失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: NO)
+[2018-05-15 11:29:57.602] [INFO] app - 数据库操作失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+[2018-05-15 11:29:57.602] [INFO] app - 获取需求记录数据总长度失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+[2018-05-15 11:29:59.630] [INFO] app - 数据库操作失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+[2018-05-15 11:29:59.630] [INFO] app - 数据库连接失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+[2018-05-15 11:29:59.689] [INFO] app - 数据库操作失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+[2018-05-15 11:29:59.693] [INFO] app - 获取所有数据查询失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+[2018-05-15 11:30:15.616] [INFO] app - 数据库操作失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+[2018-05-15 11:30:15.617] [INFO] app - 数据库连接失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+[2018-05-15 13:57:21.397] [INFO] app - 数据库操作失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+[2018-05-15 13:57:21.398] [INFO] app - 数据库连接失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+[2018-05-15 13:57:21.443] [INFO] app - 数据库操作失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+[2018-05-15 13:57:21.444] [INFO] app - 获取所有数据查询失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)

@@ -1,0 +1,36 @@
+[2018-05-03 10:29:29.763] [INFO] app - 数据库操作失败:
+Error: connect ETIMEDOUT
+[2018-05-03 10:29:29.764] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: connect ETIMEDOUT
+[2018-05-03 10:58:16.545] [INFO] app - 数据库操作失败:
+Error: connect ETIMEDOUT
+[2018-05-03 11:06:13.127] [INFO] app - 数据库操作失败:
+Error: connect ETIMEDOUT
+[2018-05-03 11:06:13.127] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: connect ETIMEDOUT
+[2018-05-03 11:08:01.934] [INFO] app - 数据库操作失败:
+Error: connect ETIMEDOUT
+[2018-05-03 11:08:01.934] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: connect ETIMEDOUT
+[2018-05-03 11:13:12.928] [INFO] app - 数据库操作失败:
+Error: connect ETIMEDOUT
+[2018-05-03 11:13:12.929] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: connect ETIMEDOUT
+[2018-05-03 14:57:46.639] [INFO] app - 数据库操作失败:
+Error: ER_DATA_TOO_LONG: Data too long for column 'GPS' at row 1
+[2018-05-03 14:57:46.640] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: ER_DATA_TOO_LONG: Data too long for column 'GPS' at row 1
+[2018-05-03 15:08:15.973] [INFO] app - 数据库操作失败:
+Error: connect ETIMEDOUT
+[2018-05-03 15:08:15.974] [INFO] app - 添加一条弱覆盖信息或导入弱覆盖记录失败:
+Error: connect ETIMEDOUT
+[2018-05-03 15:35:08.132] [INFO] app - 数据库操作失败:
+Error: ER_DUP_ENTRY: Duplicate entry '0c78e8e2-e6bb-4e27-a359-22d10f326c23' for key 'coll_ID'
+[2018-05-03 15:35:08.148] [INFO] app - 数据库操作失败:
+Error: ER_DUP_ENTRY: Duplicate entry '01b461a0-4ea1-11e8-af3d-4fb3c6322283' for key 'coll_ID'
+[2018-05-03 15:35:08.197] [INFO] app - 数据库操作失败:
+Error: ER_DUP_ENTRY: Duplicate entry '2c063250-e156-4596-8905-36435ffdf0b6' for key 'coll_ID'
+[2018-05-03 15:35:08.220] [INFO] app - 数据库操作失败:
+Error: ER_DUP_ENTRY: Duplicate entry 'db1261f4-d141-42cf-a70d-e98e6fa16024' for key 'coll_ID'
+[2018-05-03 15:35:09.231] [INFO] app - 数据库操作失败:
+Error: ER_DUP_ENTRY: Duplicate entry '5bc4dd6b-7e07-48e4-953a-91893cde10e2' for key 'coll_ID'

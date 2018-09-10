@@ -1,0 +1,144 @@
+[2018-09-06 15:27:07.836] [INFO] app - 数据库操作失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+[2018-09-06 15:27:07.837] [INFO] app - 数据库连接失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+[2018-09-06 15:27:07.920] [INFO] app - 数据库操作失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+[2018-09-06 15:27:07.921] [INFO] app - 获取所有数据查询失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+[2018-09-06 15:27:10.347] [INFO] app - 数据库操作失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+[2018-09-06 15:27:10.347] [INFO] app - 获取弱覆盖记录总长度失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+[2018-09-06 15:27:10.906] [INFO] app - 数据库操作失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+[2018-09-06 15:27:10.906] [INFO] app - 获取需求记录数据总长度失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+[2018-09-06 15:27:11.972] [INFO] app - 数据库操作失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+[2018-09-06 15:27:11.972] [INFO] app - 数据库连接失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+[2018-09-06 15:27:12.053] [INFO] app - 数据库操作失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+[2018-09-06 15:27:12.053] [INFO] app - 获取所有数据查询失败:
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+[2018-09-06 15:28:41.024] [INFO] app - 数据库操作失败:
+Error: ER_NO_SUCH_TABLE: Table 'network_planning_library_db.netcellnet' doesn't exist
+[2018-09-06 15:28:41.025] [INFO] app - 数据库连接失败:
+Error: ER_NO_SUCH_TABLE: Table 'network_planning_library_db.netcellnet' doesn't exist
+[2018-09-06 15:28:41.069] [INFO] app - 数据库操作失败:
+Error: ER_NO_SUCH_TABLE: Table 'network_planning_library_db.netcellnet' doesn't exist
+[2018-09-06 15:28:41.070] [INFO] app - 获取所有数据查询失败:
+Error: ER_NO_SUCH_TABLE: Table 'network_planning_library_db.netcellnet' doesn't exist
+[2018-09-06 15:29:19.834] [INFO] app - 数据库操作失败:
+Error: ER_NO_SUCH_TABLE: Table 'network_planning_library_db.netcellnet' doesn't exist
+[2018-09-06 15:29:19.834] [INFO] app - 数据库连接失败:
+Error: ER_NO_SUCH_TABLE: Table 'network_planning_library_db.netcellnet' doesn't exist
+[2018-09-06 15:29:19.879] [INFO] app - 数据库操作失败:
+Error: ER_NO_SUCH_TABLE: Table 'network_planning_library_db.netcellnet' doesn't exist
+[2018-09-06 15:29:19.879] [INFO] app - 获取所有数据查询失败:
+Error: ER_NO_SUCH_TABLE: Table 'network_planning_library_db.netcellnet' doesn't exist
+[2018-09-06 15:31:19.827] [INFO] app - 数据库操作失败:
+Error: ER_NO_SUCH_TABLE: Table 'network_planning_library_db.netcellnet' doesn't exist
+[2018-09-06 15:31:19.827] [INFO] app - 数据库连接失败:
+Error: ER_NO_SUCH_TABLE: Table 'network_planning_library_db.netcellnet' doesn't exist
+[2018-09-06 15:39:12.629] [INFO] app - 数据库操作失败:
+Error: ER_NO_SUCH_TABLE: Table 'network_planning_library_db.netcellnet' doesn't exist
+[2018-09-06 15:39:12.630] [INFO] app - 获取弱覆盖记录总长度失败:
+Error: ER_NO_SUCH_TABLE: Table 'network_planning_library_db.netcellnet' doesn't exist
+[2018-09-06 15:39:14.634] [INFO] app - 数据库操作失败:
+Error: ER_NO_SUCH_TABLE: Table 'network_planning_library_db.netcellnet' doesn't exist
+[2018-09-06 15:39:14.634] [INFO] app - 获取需求记录数据总长度失败:
+Error: ER_NO_SUCH_TABLE: Table 'network_planning_library_db.netcellnet' doesn't exist
+[2018-09-06 15:41:21.683] [INFO] app - 数据库操作失败:
+Error: ER_NO_SUCH_TABLE: Table 'network_planning_library_db.netcellnet' doesn't exist
+[2018-09-06 15:41:21.683] [INFO] app - 获取弱覆盖记录总长度失败:
+Error: ER_NO_SUCH_TABLE: Table 'network_planning_library_db.netcellnet' doesn't exist
+[2018-09-06 15:41:26.122] [INFO] app - 数据库操作失败:
+Error: ER_NO_SUCH_TABLE: Table 'network_planning_library_db.netcellnet' doesn't exist
+[2018-09-06 15:41:26.122] [INFO] app - 获取弱覆盖记录总长度失败:
+Error: ER_NO_SUCH_TABLE: Table 'network_planning_library_db.netcellnet' doesn't exist
+[2018-09-06 15:43:00.443] [INFO] app - 数据库操作失败:
+Error: ER_NO_SUCH_TABLE: Table 'network_planning_library_db.netcellnet' doesn't exist
+[2018-09-06 15:43:00.443] [INFO] app - 获取弱覆盖记录总长度失败:
+Error: ER_NO_SUCH_TABLE: Table 'network_planning_library_db.netcellnet' doesn't exist
+[2018-09-06 15:43:02.467] [INFO] app - 数据库操作失败:
+Error: ER_NO_SUCH_TABLE: Table 'network_planning_library_db.netcellnet' doesn't exist
+[2018-09-06 15:43:02.467] [INFO] app - 获取需求记录数据总长度失败:
+Error: ER_NO_SUCH_TABLE: Table 'network_planning_library_db.netcellnet' doesn't exist
+[2018-09-06 15:43:04.696] [INFO] app - 数据库操作失败:
+Error: ER_NO_SUCH_TABLE: Table 'network_planning_library_db.netcellnet' doesn't exist
+[2018-09-06 15:43:04.696] [INFO] app - 获取弱覆盖记录总长度失败:
+Error: ER_NO_SUCH_TABLE: Table 'network_planning_library_db.netcellnet' doesn't exist
+[2018-09-06 15:43:06.464] [INFO] app - 数据库操作失败:
+Error: ER_NO_SUCH_TABLE: Table 'network_planning_library_db.netcellnet' doesn't exist
+[2018-09-06 15:43:06.464] [INFO] app - 获取弱覆盖记录总长度失败:
+Error: ER_NO_SUCH_TABLE: Table 'network_planning_library_db.netcellnet' doesn't exist
+[2018-09-06 15:43:08.899] [INFO] app - 数据库操作失败:
+Error: ER_NO_SUCH_TABLE: Table 'network_planning_library_db.netcellnet' doesn't exist
+[2018-09-06 15:43:08.900] [INFO] app - 获取需求记录数据总长度失败:
+Error: ER_NO_SUCH_TABLE: Table 'network_planning_library_db.netcellnet' doesn't exist
+[2018-09-06 15:45:38.162] [INFO] app - 数据库操作失败:
+Error: ER_BAD_FIELD_ERROR: Unknown column 'GPS' in 'field list'
+[2018-09-06 15:45:38.163] [INFO] app - 获取弱覆盖记录用于导出失败:
+Error: ER_BAD_FIELD_ERROR: Unknown column 'GPS' in 'field list'
+[2018-09-06 15:45:47.681] [INFO] app - 数据库操作失败:
+Error: ER_BAD_FIELD_ERROR: Unknown column 'GPS' in 'field list'
+[2018-09-06 15:45:47.681] [INFO] app - 获取弱覆盖记录用于导出失败:
+Error: ER_BAD_FIELD_ERROR: Unknown column 'GPS' in 'field list'
+[2018-09-06 15:49:00.014] [INFO] app - 数据库操作失败:
+Error: ER_BAD_FIELD_ERROR: Unknown column 'bu_weak_coverage_demand.coll_ID' in 'on clause'
+[2018-09-06 15:49:00.014] [INFO] app - 获取弱覆盖记录用于导出失败:
+Error: ER_BAD_FIELD_ERROR: Unknown column 'bu_weak_coverage_demand.coll_ID' in 'on clause'
+[2018-09-06 16:38:53.427] [INFO] app - 数据库操作失败:
+Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'left JOIN bu_weak_confirmationon bu_collect_info.ID=bu_weak_confirmation.coll_id' at line 1
+[2018-09-06 16:38:53.428] [INFO] app - 获取弱覆盖记录用于导出失败:
+Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'left JOIN bu_weak_confirmationon bu_collect_info.ID=bu_weak_confirmation.coll_id' at line 1
+[2018-09-06 17:04:15.640] [INFO] app - 数据库操作失败:
+Error: ER_BAD_FIELD_ERROR: Unknown column 'GPS' in 'where clause'
+[2018-09-06 17:04:15.641] [INFO] app - 根据4G弱覆盖查询2G覆盖数据失败:
+Error: ER_BAD_FIELD_ERROR: Unknown column 'GPS' in 'where clause'
+[2018-09-06 17:12:23.789] [INFO] app - 数据库操作失败:
+Error: ER_BAD_FIELD_ERROR: Unknown column 'GPS' in 'field list'
+[2018-09-06 17:12:23.790] [INFO] app - 获取弱覆盖记录用于导出失败:
+Error: ER_BAD_FIELD_ERROR: Unknown column 'GPS' in 'field list'
+[2018-09-06 17:14:43.446] [INFO] app - 数据库操作失败:
+Error: ER_BAD_FIELD_ERROR: Unknown column 'GPS' in 'where clause'
+[2018-09-06 17:14:43.446] [INFO] app - 根据4G弱覆盖查询2G覆盖数据失败:
+Error: ER_BAD_FIELD_ERROR: Unknown column 'GPS' in 'where clause'
+[2018-09-06 17:14:45.689] [INFO] app - 数据库操作失败:
+Error: ER_BAD_FIELD_ERROR: Unknown column 'GPS' in 'where clause'
+[2018-09-06 17:14:45.690] [INFO] app - 根据4G弱覆盖查询2G覆盖数据失败:
+Error: ER_BAD_FIELD_ERROR: Unknown column 'GPS' in 'where clause'
+[2018-09-06 17:14:53.731] [INFO] app - 数据库操作失败:
+Error: ER_BAD_FIELD_ERROR: Unknown column 'GPS' in 'where clause'
+[2018-09-06 17:14:53.731] [INFO] app - 根据4G弱覆盖查询2G覆盖数据失败:
+Error: ER_BAD_FIELD_ERROR: Unknown column 'GPS' in 'where clause'
+[2018-09-06 17:15:01.892] [INFO] app - 数据库操作失败:
+Error: ER_BAD_FIELD_ERROR: Unknown column 'GPS' in 'where clause'
+[2018-09-06 17:15:01.892] [INFO] app - 根据4G弱覆盖查询2G覆盖数据失败:
+Error: ER_BAD_FIELD_ERROR: Unknown column 'GPS' in 'where clause'
+[2018-09-06 17:15:05.117] [INFO] app - 数据库操作失败:
+Error: ER_BAD_FIELD_ERROR: Unknown column 'GPS' in 'where clause'
+[2018-09-06 17:15:05.117] [INFO] app - 根据4G弱覆盖查询2G覆盖数据失败:
+Error: ER_BAD_FIELD_ERROR: Unknown column 'GPS' in 'where clause'
+[2018-09-06 17:15:19.886] [INFO] app - 数据库操作失败:
+Error: ER_BAD_FIELD_ERROR: Unknown column 'GPS' in 'where clause'
+[2018-09-06 17:15:19.886] [INFO] app - 根据4G弱覆盖查询2G覆盖数据失败:
+Error: ER_BAD_FIELD_ERROR: Unknown column 'GPS' in 'where clause'
+[2018-09-06 17:15:22.663] [INFO] app - 数据库操作失败:
+Error: ER_BAD_FIELD_ERROR: Unknown column 'GPS' in 'where clause'
+[2018-09-06 17:15:22.663] [INFO] app - 根据4G弱覆盖查询2G覆盖数据失败:
+Error: ER_BAD_FIELD_ERROR: Unknown column 'GPS' in 'where clause'
+[2018-09-06 17:15:26.030] [INFO] app - 数据库操作失败:
+Error: ER_BAD_FIELD_ERROR: Unknown column 'GPS' in 'where clause'
+[2018-09-06 17:15:26.030] [INFO] app - 根据4G弱覆盖查询2G覆盖数据失败:
+Error: ER_BAD_FIELD_ERROR: Unknown column 'GPS' in 'where clause'
+[2018-09-06 17:15:28.535] [INFO] app - 数据库操作失败:
+Error: ER_BAD_FIELD_ERROR: Unknown column 'GPS' in 'where clause'
+[2018-09-06 17:15:28.535] [INFO] app - 根据4G弱覆盖查询2G覆盖数据失败:
+Error: ER_BAD_FIELD_ERROR: Unknown column 'GPS' in 'where clause'
+[2018-09-06 17:15:30.325] [INFO] app - 数据库操作失败:
+Error: ER_BAD_FIELD_ERROR: Unknown column 'GPS' in 'where clause'
+[2018-09-06 17:15:30.325] [INFO] app - 根据4G弱覆盖查询2G覆盖数据失败:
+Error: ER_BAD_FIELD_ERROR: Unknown column 'GPS' in 'where clause'

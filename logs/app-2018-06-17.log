@@ -1,0 +1,104 @@
+[2018-06-17 22:33:35.940] [INFO] app - 数据库操作失败:
+Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+[2018-06-17 22:33:35.942] [INFO] app - 数据库连接失败:
+Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+[2018-06-17 22:33:36.027] [INFO] app - 数据库操作失败:
+Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+[2018-06-17 22:33:36.027] [INFO] app - 获取所有数据查询失败:
+Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+[2018-06-17 22:34:01.851] [INFO] app - 数据库操作失败:
+Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+[2018-06-17 22:34:01.851] [INFO] app - 数据库连接失败:
+Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+[2018-06-17 22:34:01.900] [INFO] app - 数据库操作失败:
+Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+[2018-06-17 22:34:01.903] [INFO] app - 获取所有数据查询失败:
+Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+[2018-06-17 22:34:03.870] [INFO] app - 数据库操作失败:
+Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+[2018-06-17 22:34:03.870] [INFO] app - 数据库连接失败:
+Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+[2018-06-17 22:34:03.960] [INFO] app - 数据库操作失败:
+Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+[2018-06-17 22:34:03.961] [INFO] app - 获取所有数据查询失败:
+Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+[2018-06-17 22:34:14.537] [INFO] app - 数据库操作失败:
+Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+[2018-06-17 22:34:14.537] [INFO] app - 数据库连接失败:
+Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+[2018-06-17 22:34:14.593] [INFO] app - 数据库操作失败:
+Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+[2018-06-17 22:34:14.593] [INFO] app - 获取所有数据查询失败:
+Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+[2018-06-17 22:35:54.003] [INFO] app - 数据库操作失败:
+Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+[2018-06-17 22:35:54.004] [INFO] app - 数据库连接失败:
+Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+[2018-06-17 22:35:54.078] [INFO] app - 数据库操作失败:
+Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+[2018-06-17 22:35:54.079] [INFO] app - 获取所有数据查询失败:
+Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+[2018-06-17 22:36:55.349] [INFO] app - 数据库操作失败:
+Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+[2018-06-17 22:36:57.065] [INFO] app - 数据库连接失败:
+Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+[2018-06-17 22:37:07.186] [INFO] app - 数据库操作失败:
+Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+[2018-06-17 22:37:22.012] [INFO] app - 获取所有数据查询失败:
+Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+[2018-06-17 22:39:02.478] [INFO] app - 数据库操作失败:
+Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+[2018-06-17 22:39:02.479] [INFO] app - 数据库连接失败:
+Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+[2018-06-17 22:39:02.543] [INFO] app - 数据库操作失败:
+Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+[2018-06-17 22:39:02.544] [INFO] app - 获取所有数据查询失败:
+Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+[2018-06-17 22:39:59.946] [INFO] app - 数据库操作失败:
+Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+[2018-06-17 22:39:59.946] [INFO] app - 数据库连接失败:
+Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+[2018-06-17 22:40:00.010] [INFO] app - 数据库操作失败:
+Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+[2018-06-17 22:40:00.010] [INFO] app - 获取所有数据查询失败:
+Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+[2018-06-17 22:41:07.264] [INFO] app - 数据库操作失败:
+Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+[2018-06-17 22:41:07.265] [INFO] app - 数据库连接失败:
+Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+[2018-06-17 22:41:07.355] [INFO] app - 数据库操作失败:
+Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+[2018-06-17 22:41:07.355] [INFO] app - 获取所有数据查询失败:
+Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+[2018-06-17 22:42:59.964] [INFO] app - 数据库操作失败:
+Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+[2018-06-17 22:42:59.964] [INFO] app - 数据库连接失败:
+Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+[2018-06-17 22:43:00.060] [INFO] app - 数据库操作失败:
+Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+[2018-06-17 22:43:00.061] [INFO] app - 获取所有数据查询失败:
+Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+[2018-06-17 22:43:01.014] [INFO] app - 数据库操作失败:
+Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+[2018-06-17 22:43:01.014] [INFO] app - 数据库连接失败:
+Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+[2018-06-17 22:43:01.097] [INFO] app - 数据库操作失败:
+Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+[2018-06-17 22:43:01.098] [INFO] app - 获取所有数据查询失败:
+Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+[2018-06-17 22:43:01.566] [INFO] app - 数据库操作失败:
+Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+[2018-06-17 22:43:01.566] [INFO] app - 数据库连接失败:
+Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+[2018-06-17 22:43:01.645] [INFO] app - 数据库操作失败:
+Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+[2018-06-17 22:43:01.645] [INFO] app - 获取所有数据查询失败:
+Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+[2018-06-17 22:43:02.861] [INFO] app - 数据库操作失败:
+Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+[2018-06-17 22:43:02.862] [INFO] app - 获取弱覆盖记录总长度失败:
+Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+[2018-06-17 22:43:07.359] [INFO] app - 数据库操作失败:
+Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+[2018-06-17 22:43:07.359] [INFO] app - 获取弱覆盖记录总长度失败:
+Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client

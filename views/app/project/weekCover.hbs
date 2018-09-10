@@ -1,0 +1,2145 @@
+<script src="{{projcfg.appurl}}/static/js/fontJquery/jquery.flot.js"></script>
+<script src="{{projcfg.appurl}}/static/js/fontJquery/jquery.flot.resize.js"></script>
+<script src="{{projcfg.appurl}}/static/js/fontJquery/jquery.flot.pie.js"></script>
+<script src="{{projcfg.appurl}}/static/js/fontJquery/jquery.flot.tooltip.js"></script>
+<script src="{{projcfg.appurl}}/static/js/fontJquery/jquery.flot.orderBars.js"></script>
+<script src="{{projcfg.appurl}}/static/js/echart/v3.1.3/echarts.min.js"></script>
+<script src="{{projcfg.appurl}}/static/laydate/laydate.js"></script>
+<script src="{{projcfg.appurl}}/static/code/highcharts.js"></script>
+<!--<script src="{{projcfg.appurl}}/static/file/弱覆盖信息导入模板.xlsx"></script>-->
+<script src="{{projcfg.appurl}}/static/common/sence.js"></script>
+
+
+
+<div class="row" style="solid: rgba(106,93,153,0.51)">
+
+    <div class="col-xs-10 col-md-10">
+            <label>采集时间&nbsp从</label>
+            <input id="queryDateStart" name="queryDateStart" style="height: 34px;width:120px ">
+            &nbsp到&nbsp
+            <input id="queryDateEnd" name="queryDateEnd" style="height: 34px;width:120px ">
+            <label>&nbsp&nbsp地区</label>
+            <input class="easyui-combobox" value="请选择地市" style="width: 130px;height:34px;" name="district1"
+                   id="district1"/>
+            <label>&nbsp&nbsp场景</label>
+            <input class="easyui-combobox" value="请选择场景" style="width: 130px;height:34px;" name="firstScene"
+                   id="firstScene"/>
+            <input class="easyui-combobox" value="请选择场景" style="width: 130px;height:34px;" name="secondScene"
+                   id="secondScene"/>
+    </div>
+
+
+    <div class="col-xs-2 col-md-2 text-left">
+        <div class="btn-group" style="margin-top: 3px">
+            <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" onclick="checkWeekData();"
+               aria-expanded="false">
+                查询 <i class="glyphicon glyphicon-search"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<div class="row" style="padding: 20px 5px 5px 10px">
+    <div class="col-md-12">
+        <button class="btn   purple" type="button" style="padding-left:20px" onclick="sameLocView();" id="addBtn">
+            <i class="glyphicon glyphicon-search">
+            </i>
+            查看同位点
+        </button>
+        <button class="btn   purple" type="button" style="padding-left:20px" onclick="doAdd();" id="addBtn">
+            <i class="fa fa-plus">
+            </i>
+            增加
+        </button>
+        <button class="btn   purple" onclick="doDelete();" type="button" style="padding-left:20px">
+            <i class="fa fa-minus">
+            </i>
+            删除
+        </button>
+        <button class="btn   purple" type="button" onclick=" importExcel();" style="padding-left:20px">
+            <i class="fa fa-sign-in">
+            </i>
+            导入Excel
+        </button>
+        <button class="btn   purple" type="button" onclick="exportExcel();" style="padding-left:20px">
+            <i class="fa fa-share">
+            </i>
+            导出到Excel
+        </button>
+    </div>
+</div>
+
+
+<div class="row" style="padding: 10px 5px 5px 10px">
+    <div class="col-md-12" style="height: 500px">
+        <table id="showWeekCover"></table>
+    </div>
+</div>
+
+
+<div class="mydialog" style="padding: 20px 0 0 30px">
+    <div id="addWeekCover">
+        <div class="row">
+            <div class="col-md-12">
+                <form id="lookUpModal" class="form-horizontal form-bordered" role="form"
+                      enctype="multipart/form-data">
+                    <div class="form-group">
+                        <div class="col-sm-9" align="center" style="margin: 5px">
+                            <!--窗口上方留白-->
+                        </div>
+                    </div>
+                    <div class="row" style="padding: 5px 0 0 2px">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputNo"
+                                       class="col-sm-4 control-label no-padding-right">城市</label>
+                                <div class="col-sm-7">
+                                    <input class="easyui-combobox" style="width: 203px;height:34px;" name="city"
+                                           id="city"
+                                           data-options='data:[
+                                       {id:"黔东南",text:"黔东南"}],
+                                   valueField: "id",
+                                   textField: "text",
+                                   panelWidth: 130,
+                                   panelHeight: "auto"
+                    '/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputName"
+                                       class="col-sm-4 control-label no-padding-right">CID/ECI</label>
+                                <div class="col-sm-7">
+                                    <input class="easyui-validatebox form-control"
+                                           data-options="required:true" style="width:100%;color:#050505" name="ECI"
+                                           id="ECI">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" style="padding: 5px 0 0 2px">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputNo"
+                                       class="col-sm-4 control-label no-padding-right">LAC/TAC</label>
+                                <div class="col-sm-7">
+                                    <input class="easyui-validatebox form-control"
+                                           data-options="required:true" style="width:100%;color:#050505" name="TAC"
+                                           id="TAC">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputName"
+                                       class="col-sm-4 control-label no-padding-right">信号强度</label>
+                                <div class="col-sm-7">
+                                    <input class="easyui-validatebox form-control"
+                                           data-options="required:true" style="width:100%;color:#050505" name="BSSS"
+                                           id="BSSS" onchange="checkBSSS();">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" style="padding: 5px 0 0 2px">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputNo"
+                                       class="col-sm-4 control-label no-padding-right">手机型号</label>
+                                <div class="col-sm-7">
+                                    <input class="easyui-validatebox form-control"
+                                           data-options="required:true" style="width:100%;color:#050505"
+                                           name="phoneType"
+                                           id="phoneType">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputName"
+                                       class="col-sm-4 control-label no-padding-right">上传人姓名</label>
+                                <div class="col-sm-7">
+                                    <input class="easyui-validatebox form-control"
+                                           data-options="required:true" style="width:100%;color:#050505"
+                                           name="collectUsername" maxlength="11"
+                                           id="collectUsername">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="padding: 5px 0 0 2px">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputNo"
+                                       class="col-sm-4 control-label no-padding-right">所属部门</label>
+                                <div class="col-sm-7">
+                                    <input class="easyui-combobox" value="请选择部门"  style="width: 100%;height:34px;" name="FromDepartment"
+                                           id="FromDepartment"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputName"
+                                       class="col-sm-4 control-label no-padding-right">手机号</label>
+                                <div class="col-sm-7">
+                                    <input class="easyui-validatebox form-control"
+                                           data-options="required:true" style="width:100%;color:#050505"
+                                           name="phoneNumber" maxlength="11"
+                                           id="phoneNumber" onchange="isPhoneNumber()">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" style="padding: 5px 0 0 2px">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputNo"
+                                       class="col-sm-4 control-label no-padding-right">GPS经度</label>
+                                <div class="col-sm-7">
+                                    <input class="easyui-validatebox form-control"
+                                           data-options="required:true" style="width:100%;color:#050505"
+                                           name="GPSlon"
+                                           id="GPSlon">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputName"
+                                       class="col-sm-4 control-label no-padding-right">GPS纬度</label>
+                                <div class="col-sm-7">
+                                    <input class="easyui-validatebox form-control"
+                                           data-options="required:true" style="width:100%;color:#050505"
+                                           name="GPSlat" maxlength="11"
+                                           id="GPSlat">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="row" style="padding: 5px 0 0 2px">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputNo"
+                                       class="col-sm-4 control-label no-padding-right">区县</label>
+                                <div class="col-sm-7">
+                                    <input class="easyui-combobox" value="请选择区县"  style="width: 100%;height:34px;" name="district"
+                                           id="districtCom"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputName"
+                                       class="col-sm-4 control-label no-padding-right">覆盖场景</label>
+                                <div class="col-sm-8">
+                                    <input class="easyui-combobox" value="请选择场景" style="width: 100px;height:34px;" name="firstScene1"
+                                           id="firstScene1"/>
+                                    <input class="easyui-combobox" value="请选择场景" style="width: 100px;height:34px;" name="secondScene1"
+                                           id="secondScene1"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="padding: 5px 0 0 2px">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputNo"
+                                       class="col-sm-4 control-label no-padding-right">详细地址</label>
+                                <div class="col-sm-7">
+                                    <input class="easyui-validatebox form-control"
+                                           data-options="required:true"  name="address"
+                                           id="address">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputName"
+                                       class="col-sm-4 control-label no-padding-right">网络制式</label>
+                                <div class="col-sm-7">
+                                    <input class="easyui-combobox" style="width: 100%;height:34px;" name="netType"
+                                           id="netType"
+                                           data-options='data:[
+                                           {id:"4G",text:"4G"},
+                                           {id:"3G",text:"3G"},
+                                           {id:"2G",text:"2G"}
+                                       ],
+                                   valueField: "id",
+                                   textField: "text",
+                                   panelWidth: 130,
+                                   panelHeight: "auto"
+                    '/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="row" style="padding: 5px 0 0 2px">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputNo"
+                                       class="col-sm-4 control-label no-padding-right">采集时间</label>
+                                <div class="col-sm-7">
+                                    <input class="easyui-datebox"
+                                           data-options="required:true"
+                                           style="height:35px;width:100%;color:#050505"
+                                           name="collTime"
+                                           id="collTime">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputName"
+                                       class="col-sm-4 control-label no-padding-right">服务商信息</label>
+                                <div class="col-sm-7">
+                                    <input class="easyui-combobox" style="width: 200px;height:34px;"
+                                           name="NetworkOperatorName"
+                                           id="NetworkOperatorName"
+                                           data-options='data:[
+                                       {id:"中国移动",text:"中国移动"},
+                                       {id:"中国联通",text:"中国联通"},
+                                       {id:"中国电信",text:"中国电信"},
+                                       {id:"中国铁通",text:"中国铁通"}],
+                                   valueField: "id",
+                                   textField: "text",
+                                   panelWidth: 130,
+                                   panelHeight: "auto"
+                    '/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" style="padding: 5px 0 0 2px">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputNo"
+                                       class="col-sm-4 control-label no-padding-right">解决状态</label>
+                                <div class="col-sm-7">
+                                    <input class="easyui-combobox" style="width: 200px;height:34px;" name="solveStatus"
+                                           id="solveStatus"
+                                           data-options='data:[{id:"未处理",text:"未处理"},
+                                       {id:"已解决",text:"已解决"},
+                                       {id:"已受理",text:"已受理"},
+                                       {id:"未解决",text:"未解决"},
+                                       {id:"处理中",text:"处理中"}],
+                                   valueField: "id",
+                                   textField: "text",
+                                   panelWidth: 130,
+                                   panelHeight: "auto"
+                    '/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputName"
+                                       class="col-sm-4 control-label no-padding-right">解决时间</label>
+                                <div class="col-sm-7">
+                                    <input class="easyui-datebox"
+                                           data-options="required:false"
+                                           style="height:35px;width:100%;color:#050505"
+                                           name="solveTime"
+                                           id="solveTime">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-9" align="center" style="margin: 5px">
+                        <!--窗口下方留白-->
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mydialog" style="padding: 20px 0 0 30px">
+    <div id="checkTheSameLoca">
+        <div class="row">
+            <div class="col-md-12">
+                <form id="showTheSameLocaForm" class="form-horizontal form-bordered" role="form"
+                      enctype="multipart/form-data">
+                    <div class="form-group">
+                        <div class="col-sm-9" align="center" style="margin: 5px">
+                            <!--窗口上方留白-->
+                        </div>
+                    </div>
+                    <div class="row" style="padding: 5px 0 0 2px">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputNo"
+                                       class="col-sm-4 control-label no-padding-right">城市</label>
+                                <div class="col-sm-7">
+                                    <input class="easyui-combobox" style="width: 203px;height:34px;" name="cityFor2G"
+                                           readonly="readonly"
+                                           id="cityFor2G"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputName"
+                                       class="col-sm-4 control-label no-padding-right">ECI</label>
+                                <div class="col-sm-7">
+                                    <input class="easyui-validatebox form-control"
+                                           data-options="required:true" style="width:100%;color:#050505" name="ECIFor2G"
+                                           readonly="readonly"
+                                           id="ECIFor2G">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" style="padding: 5px 0 0 2px">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputNo"
+                                       class="col-sm-4 control-label no-padding-right">位置区域码</label>
+                                <div class="col-sm-7">
+                                    <input class="easyui-validatebox form-control"
+                                           data-options="required:true" style="width:100%;color:#050505" name="TACFor2G"
+                                           readonly="readonly"
+                                           id="TACFor2G">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row" style="padding: 5px 0 0 2px">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputNo"
+                                       class="col-sm-4 control-label no-padding-right">手机型号</label>
+                                <div class="col-sm-7">
+                                    <input class="easyui-validatebox form-control"
+                                           data-options="required:true" style="width:100%;color:#050505"
+                                           name="phoneTypeFor2G" readonly="readonly"
+                                           id="phoneTypeFor2G">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputName"
+                                       class="col-sm-4 control-label no-padding-right">手机号</label>
+                                <div class="col-sm-7">
+                                    <input class="easyui-validatebox form-control"
+                                           data-options="required:true" style="width:100%;color:#050505"
+                                           name="phoneNumberFor2G" readonly="readonly"
+                                           id="phoneNumberFor2G">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row" style="padding: 7px 0 0 5px">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="inputNo"
+                                       class="col-sm-2 control-label no-padding-right">GPS经纬度</label>
+                                <div class="col-sm-10">
+                                    <input class="easyui-validatebox form-control"
+                                           data-options="required:true" style="width:610px;color:#050505"
+                                           name="GPSFor2G" readonly="readonly"
+                                           id="GPSFor2G">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" style="padding: 5px 0 0 2px">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputNo"
+                                       class="col-sm-4 control-label no-padding-right">区县</label>
+                                <div class="col-sm-7">
+                                    <input class="easyui-combobox" style="width: 200px;height:34px;"
+                                           name="districtFor2G" readonly="readonly"
+                                           id="districtFor2G"
+
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputName"
+                                       class="col-sm-4 control-label no-padding-right">覆盖场景</label>
+                                <div class="col-sm-7">
+                                    <input class="easyui-validatebox form-control"
+                                           data-options="required:true" style="width:100%;color:#050505"
+                                           name="overlaySceneFor2G" readonly="readonly"
+                                           id="overlaySceneFor2G">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" style="padding: 7px 0 0 5px">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="inputName"
+                                       class="col-sm-2 control-label no-padding-right">详细地址</label>
+                                <div class="col-sm-10">
+                                    <input class="easyui-validatebox form-control"
+                                           data-options="required:true" style="width:610px;color:#050505"
+                                           name="addressFor2G"
+                                           readonly="readonly" id="addressFor2G">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" style="padding: 5px 0 0 2px">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputNo"
+                                       class="col-sm-4 control-label no-padding-right">采集时间</label>
+                                <div class="col-sm-7">
+                                    <input class="easyui-datebox"
+                                           data-options="required:true"
+                                           style="height:35px;width:100%;color:#050505"
+                                           name="collTimeFor2G" readonly="readonly"
+                                           id="collTimeFor2G">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputName"
+                                       class="col-sm-4 control-label no-padding-right">服务商信息</label>
+                                <div class="col-sm-7">
+                                    <input class="easyui-combobox" style="width: 200px;height:34px;"
+                                           name="NetworkOperatorNameFor2G"
+                                           id="NetworkOperatorNameFor2G" readonly="readonly"
+
+
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" style="padding: 5px 0 0 2px">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputNo"
+                                       class="col-sm-4 control-label no-padding-right">解决状态</label>
+                                <div class="col-sm-7">
+                                    <input class="easyui-combobox" style="width: 200px;height:34px;"
+                                           name="solveStatusFor2G"
+                                           id="solveStatusFor2G" readonly="readonly"
+
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputName"
+                                       class="col-sm-4 control-label no-padding-right">解决时间</label>
+                                <div class="col-sm-7">
+                                    <input class="easyui-datebox"
+                                           data-options="required:false"
+                                           style="height:35px;width:100%;color:#050505"
+                                           readonly="readonly"
+                                           name="solveTimeFor2G"
+                                           id="solveTimeFor2G">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" style="padding: 5px 0 10px 2px"></div>
+
+                    <div class="row" style="padding: 5px 0 0 2px">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputName"
+                                       class="col-sm-4 control-label no-padding-right">4G信号强度</label>
+                                <div class="col-sm-7">
+                                    <input class=" form-control"
+                                           data-options="required:true" style="width:100%;color:#050505"
+                                           name="BSSSFor2G" readonly="readonly"
+                                           id="BSSSFor4G">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputName"
+                                       class="col-sm-4 control-label no-padding-right">2G信号强度</label>
+                                <div class="col-sm-7">
+                                    <input class="form-control"
+                                           data-options="required:true" style="width:100%;color:#050505"
+                                           name="BSSSFor2G" readonly="readonly"
+                                           id="BSSSFor2G">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-sm-9" align="center" style="margin: 5px">
+                        <!--窗口下方留白-->
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="mydialog" style="padding: 20px 0 0 30px">
+    <div>
+        <div class="row">
+            <div class="col-md-12">
+                <form id="addRequirement" class="form-horizontal form-bordered" role="form"
+                      enctype="multipart/form-data">
+                    <div class="form-group">
+                        <div class="col-sm-9" align="center" style="margin: 5px">
+                            <!--窗口上方留白-->
+                        </div>
+                    </div>
+                    <input class="easyui-validatebox form-control"
+                           data-options="required:true" type="hidden" style="width:100%;color:#050505" name="coll_ID"
+                           id="coll_ID">
+                    <div class="row" style="padding: 5px 0 0 2px">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputNo"
+                                       class="col-sm-4 control-label no-padding-right">预建站点名称</label>
+                                <div class="col-sm-8">
+                                    <input class="easyui-validatebox form-control"
+                                           data-options="required:true" style="width:100%;color:#050505"
+                                           name="preStName"
+                                           id="preStName">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputNo"
+                                       class="col-sm-4 control-label no-padding-right">网络制式</label>
+                                <div class="col-sm-7">
+                                    <input class="easyui-combobox"
+                                           data-options="required:true,
+                                                       valueField: 'id',
+                                                        textField: 'text',
+                                                        data: [{id:'2G',text:'2G'},
+                                                                {id:'4G',text:'4G'}]"
+                                           style="width: 200px;height:34px;" name="netModel"
+                                           id="netModel">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" style="padding: 7px 0 0 5px">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="inputName"
+                                       class="col-sm-2 control-label no-padding-right">建站位置地址</label>
+                                <div class="col-sm-8">
+                                    <input class="easyui-validatebox form-control"
+                                           data-options="required:true" style="width:100%;color:#050505"
+                                           name="stAddress"
+                                           id="stAddress">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row" style="padding: 10px 0 10px 2px">
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputName"
+                                       class="col-sm-4 control-label no-padding-right">站点属性</label>
+                                <div class="col-sm-7">
+                                    <input class="easyui-combobox form-control"
+                                           data-options="required:true,
+                                                         valueField: 'id',
+                                                        textField: 'text',
+                                                        data: [{id:'宏站',text:'宏站'},
+                                                                {id:'室分',text:'室分'} ,
+                                                                {id:'小基站',text:'小基站'}]"
+                                           style="width: 200px;height:34px;" name="stPrope"
+                                           id="stPrope">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputNo"
+                                       class="col-sm-4 control-label no-padding-right">建设类型</label>
+                                <div class="col-sm-7">
+                                    <input class="easyui-combobox form-control"
+                                           data-options="required:true,
+                                                         valueField: 'id',
+                                                        textField: 'text',
+                                                        data: [{id:'新建',text:'新建'},
+                                                                {id:'共址',text:'共址'}]"
+                                           style="width: 200px;height:34px;"
+                                           name="buildType" id="buildType">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" style="padding: 5px 0 0 2px">
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputName"
+                                       class="col-sm-4 control-label no-padding-right">需求小区数</label>
+                                <div class="col-sm-8">
+                                    <input class="easyui-validatebox form-control"
+                                           data-options="required:true"
+                                           style="width:100%;color:#050505"
+                                           name="reqCellNum" id="reqCellNum">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputNo"
+                                       class="col-sm-4 control-label no-padding-right">是否通过联席会</label>
+                                <div class="col-sm-5">
+                                    <input class="easyui-combobox form-control"
+                                           data-options="required:true,
+                                                          valueField: 'id',
+                                                        textField: 'text',
+                                                        data: [{id:'是',text:'是'},
+                                                                {id:'否',text:'否'}]"
+                                           style="width: 200px;height:34px;"
+                                           name="isPass"
+                                           id="isPass">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row" style="padding: 7px 0 0 5px">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputNo"
+                                       class="col-sm-4 control-label no-padding-right">负责人</label>
+                                <div class="col-sm-7">
+                                    <input class="easyui-validatebox form-control"
+                                           data-options="required:true"
+                                           style="width:100%;color:#050505"
+                                           name="personCharge"
+                                           id="personCharge">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputName"
+                                       class="col-sm-4 control-label no-padding-right">联系电话</label>
+                                <div class="col-sm-7">
+                                    <input class="easyui-validatebox form-control"
+                                           data-options="required:true" style="width:100%;color:#050505"
+                                           name="personTel" maxlength="11"
+                                           id="personTel">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" style="padding: 5px 0 0 2px">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="inputName"
+                                       class="col-sm-2 control-label no-padding-right">上报时间</label>
+                                <div class="col-sm-8">
+                                    <input class="easyui-validatebox form-control"
+                                           data-options="required:true" style="width:200px;color:#050505"
+                                           name="reportTime"
+                                           id="reportTime">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--  <div class="row" style="padding: 7px 0 0 5px">
+
+                      </div>-->
+
+
+                    <div class="col-sm-9" align="center" style="margin: 50px">
+                        <!--窗口下方留白-->
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="mydialog" id="inportExcelForm" style="padding: 20px 0 0 30px">
+    <div>
+        <div class="row">
+            <div class="col-md-12">
+                <!--<form id="inportExcelForm" enctype="multipart/form-data">-->
+                <form id="inportExcelForm" name="inportExcelForm" enctype="multipart/form-data" href="#" method="post">
+
+                    <div class="row">
+                        <button class="btn   purple" type="button" style="padding-left:20px">
+                            <a href="{{projcfg.appurl}}/static/file/弱覆盖信息导入模板.xlsx">
+                                <i class="fa fa-plus">
+                                </i>
+                                下载Excel模板
+                            </a>
+                        </button>
+                    </div>
+                </form>
+
+                <form id="file-upload" name="file-upload">
+                    <div class="row" style="padding: 50px 0 50px 2px">
+                        <div class="form-group">
+                            <label for="inputName"
+                                   class="col-sm-2 control-label no-padding-left">导入Excel</label>
+                            <div class="col-sm-8">
+                                <!--<input class="easyui-filebox "-->
+                                <input class="easyui-filebox " data-options="prompt:'请选择文件 支持xlsx和xls' "
+                                       style="width:100%;"
+                                       name="inportWeekFile" id="inportWeekFile">
+                            </div>
+                            <div class="col-sm-2">
+                                <!--<input type='button' value='上传' onclick="">-->
+                                <!--<input type='submit' value='提交' onclick="fileUpload()">-->
+
+                            </div>
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mydialog" id="downloadExcel" style="padding: 20px 0 0 30px">
+    <div>
+        <div class="row">
+            <div class="col-md-12">
+                <form id="downloadExcel">
+
+                    <div class="row">
+                        <button class="btn   purple" type="button" style="padding-right:20px">
+                            <a id="links" href="" onclick="downloadXLS()">
+                                <i class="fa fa-save">
+                                </i>
+                                下载Excel
+                            </a>
+                        </button>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="mydialog" id="sameLocInf" style="padding: 20px 0 0 30px">
+    <div>
+        <div class="row">
+            <div class="col-md-12">
+                <form id="sameLocInf">
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mydialog" id="showUploadErr" style="padding: 0 0 0 0">
+    <div class="form-group" >
+                <textarea style="overflow:auto;width: 488px;height: 387px" name="uploadErr" id="uploadErr">
+                </textarea>
+
+    </div>
+</div>
+
+<div class="mydialog" style="padding: 20px 0 0 30px">
+    <div>
+        <div class="row">
+            <div class="col-md-12">
+                <form id="showTheRequirement" class="form-horizontal form-bordered" role="form"
+                      enctype="multipart/form-data">
+                    <div class="form-group">
+                        <div class="col-sm-9" align="center" style="margin: 5px">
+                            <!--窗口上方留白-->
+                        </div>
+                    </div>
+                    <input class="easyui-validatebox form-control"
+                           data-options="required:true" type="hidden" style="width:100%;color:#050505" name="showID"
+                           readonly="readonly"
+                           id="showID">
+                    <input class="easyui-validatebox form-control"
+                           data-options="required:true" type="hidden" style="width:100%;color:#050505"
+                           name="showcoll_ID" readonly="readonly"
+                           id="showcoll_ID">
+
+                    <div class="row" style="padding: 5px 0 0 2px">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputNo"
+                                       class="col-sm-4 control-label no-padding-right">预建站点名称</label>
+                                <div class="col-sm-8">
+                                    <input class="easyui-validatebox form-control"
+                                           data-options="required:true" style="width:100%;color:#050505"
+                                           name="showpreStName" readonly="readonly"
+                                           id="showpreStName">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputNo"
+                                       class="col-sm-4 control-label no-padding-right">网络制式</label>
+                                <div class="col-sm-7">
+                                    <input class="easyui-combobox"
+                                           data-options="required:true,
+                                                       valueField: 'id',
+                                                        textField: 'text',
+                                                        data: [{id:'2G',text:'2G'},
+                                                                {id:'4G',text:'4G'}]"
+                                           style="width:100px;color:#050505" name="shownetModel" readonly="readonly"
+                                           id="shownetModel">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" style="padding: 7px 0 0 5px">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="inputName"
+                                       class="col-sm-2 control-label no-padding-right">建站位置地址</label>
+                                <div class="col-sm-8">
+                                    <input class="easyui-validatebox form-control"
+                                           data-options="required:true" style="width:100%;color:#050505"
+                                           name="showstAddress" readonly="readonly"
+                                           id="showstAddress">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row" style="padding: 10px 0 10px 2px">
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputName"
+                                       class="col-sm-4 control-label no-padding-right">站点属性</label>
+                                <div class="col-sm-7">
+                                    <input class="easyui-combobox form-control"
+                                           data-options="required:true,
+                                                         valueField: 'id',
+                                                        textField: 'text',
+                                                        data: [{id:'宏站',text:'宏站'},
+                                                                {id:'室分',text:'室分'} ,
+                                                                {id:'小基站',text:'小基站'}]"
+                                           style="width:100px;color:#050505" name="showstPrope" readonly="readonly"
+                                           id="showstPrope">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputNo"
+                                       class="col-sm-4 control-label no-padding-right">建设类型</label>
+                                <div class="col-sm-7">
+                                    <input class="easyui-combobox form-control"
+                                           data-options="required:true,
+                                                         valueField: 'id',
+                                                        textField: 'text',
+                                                        data: [{id:'新建',text:'新建'},
+                                                                {id:'共址',text:'共址'}]" style="width:100px;color:#050505"
+                                           name="showbuildType" readonly="readonly" id="showbuildType">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" style="padding: 5px 0 0 2px">
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputName"
+                                       class="col-sm-4 control-label no-padding-right">需求小区数</label>
+                                <div class="col-sm-8">
+                                    <input class="easyui-validatebox form-control"
+                                           data-options="required:true" style="width:100%;color:#050505"
+                                           name="showreqCellNum" readonly="readonly" id="showreqCellNum">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputNo"
+                                       class="col-sm-4 control-label no-padding-right">是否通过联席会</label>
+                                <div class="col-sm-5">
+                                    <input class="easyui-combobox form-control"
+                                           data-options="required:true,
+                                                          valueField: 'id',
+                                                        textField: 'text',
+                                                        data: [{id:'是',text:'是'},
+                                                                {id:'否',text:'否'}]" style="width:100px;color:#050505"
+                                           name="showisPass" readonly="readonly"
+                                           id="showisPass">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row" style="padding: 7px 0 0 5px">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputNo"
+                                       class="col-sm-4 control-label no-padding-right">负责人</label>
+                                <div class="col-sm-7">
+                                    <input class="easyui-validatebox form-control"
+                                           data-options="required:true" style="width:100%;color:#050505"
+                                           name="showpersonCharge" readonly="readonly"
+                                           id="showpersonCharge">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputName"
+                                       class="col-sm-4 control-label no-padding-right">联系电话</label>
+                                <div class="col-sm-7">
+                                    <input class="easyui-validatebox form-control"
+                                           data-options="required:true" style="width:100%;color:#050505"
+                                           name="showpersonTel" readonly="readonly"
+                                           id="showpersonTel">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" style="padding: 5px 0 0 2px">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="inputName"
+                                       class="col-sm-2 control-label no-padding-right">上报时间</label>
+                                <div class="col-sm-8">
+                                    <input class="easyui-validatebox form-control"
+                                           data-options="required:true" style="width:200px;color:#050505"
+                                           name="showreportTime" readonly="readonly"
+                                           id="showreportTime">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-9" align="center" style="margin: 50px">
+                        <!--窗口下方留白-->
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+
+
+    /**
+     *  加载页面时，显示弱覆盖数据表格
+     */
+    $(document).ready(function () {
+
+        checkWeekData();
+        // test();
+
+    });
+
+
+    /**
+     * 时间插件，并显示在框内
+     */
+    var currentDate = new Date();
+    //开始时间
+    laydate.render({
+        elem: '#queryDateStart',
+        type: 'date',
+        theme: '#1640b6',
+        calendar: true,
+        max: currentDate.getFullYear() + "-" + (currentDate.getMonth()) + '-' + (currentDate.getDate()),
+        format: 'yyyy-MM-dd',
+        done: function (value, date, endDate) {
+
+        }
+    });
+    //结束时间
+    laydate.render({
+        elem: '#queryDateEnd',
+        type: 'date',
+        theme: '#1640b6',
+        calendar: true,
+        max: currentDate.getFullYear() + "-" + (currentDate.getMonth() + 1) + '-' + (currentDate.getDate()),
+        format: 'yyyy-MM-dd',
+        done: function (value, date, endDate) {
+
+        }
+    });
+    //查询开始时间，比当前时间提前一月
+    var ownMonth = (currentDate.getMonth() + 1);
+    var ownDay = (currentDate.getDate());
+    var thisDay = currentDate.getFullYear() + "-" + ((ownMonth >= 10) ? ownMonth : ('0' + ownMonth)) + '-' + ((ownDay >= 10) ? ownDay : ('0' + ownDay));
+
+    //查询结束时间
+    var thatMonth = (currentDate.getMonth());
+    var thatDay = currentDate.getFullYear() + "-" + ((thatMonth >= 10) ? thatMonth : ('0' + thatMonth)) + '-' + ((ownDay >= 10) ? ownDay : ('0' + ownDay));
+
+    $('#queryDateEnd').val(thisDay);
+    $('#queryDateStart').val(thatDay);
+
+
+    laydate.render({
+        elem: '#reportTime',
+        type: 'datetime',
+        theme: '#1640b6',
+        calendar: true,
+        max: currentDate.getFullYear() + "-" + (currentDate.getMonth() + 1) + '-' + (currentDate.getDate()),
+        format: 'yyyy-MM-dd HH:mm:ss',
+        done: function (value, date, endDate) {
+
+        }
+    });
+
+    var ownHour = (currentDate.getHours());
+    var ownMin = currentDate.getMinutes();
+    var ownSecond = (currentDate.getSeconds());
+    var showCheckReportime = currentDate.getFullYear() + "-" + ((ownMonth >= 10) ? ownMonth : ('0' + ownMonth)) + '-' + ((ownDay >= 10) ? ownDay : ('0' + ownDay))
+            + ' ' + ((ownHour >= 10) ? ownHour : ('0' + ownHour)) + ':' + ((ownMin >= 10) ? ownMin : ('0' + ownMin)) + ':' + ((ownSecond >= 10) ? ownSecond : ('0' + ownSecond));
+
+    $('#reportTime').val(showCheckReportime);
+
+
+    /**
+     *  文件导入时，先将文件上传到项目文件目录
+     *  /public/static/file/importExcel
+     */
+    function fileUpload() {
+        //获取导入文件的信息
+        var formData = new FormData($('#file-upload')[0]);
+        //上传到项目本地目录
+        $.ajax({
+            url: '{{projcfg.appurl}}/api/netCell/exportAndInput_router/upload',
+            type: 'POST',
+            data: formData,
+            async: true,
+            cache: false,
+            contentType: false,
+            processData: false,
+            success: function (data) {
+                console.log(data)
+                if (data.success) {
+                    msgSuccess(data.msg.data);
+
+                    console.log(data.msg.str);
+
+                    if (data.msg.str != '') {
+                        $('#showUploadErr').show();
+                        $('#showUploadErr').mydialog({
+                            title: "上传错误信息",
+                            width: 500,
+                            height: 450,
+                            modal: true,
+                            myButtons: [
+                                {
+                                    text: '关闭',
+                                    btnCls: 'btn btn-blue',
+                                    handler: function () {
+                                        // fileUpload();
+                                        $('#showUploadErr').dialog('close');
+
+                                    }
+                                }
+                            ]
+                        });
+                        // $('#uploadErr').val(aa);
+                        var p = document.getElementById("uploadErr");
+                        p.innerHTML += data.msg.str;
+                    }
+
+
+                } else {
+                    msgError(data.msg);
+                }
+            }
+        });
+    }
+
+    
+    var overlaySceneLoader=function () {
+        return readScene().direct;
+    };
+
+
+
+
+    /**
+     *  弹出框 添加导入Excel文件
+     *  该页有弱覆盖数据模板文件
+     *
+     */
+    function importExcel() {
+        $('#inportExcelForm').show();
+        $('#inportExcelForm').mydialog({
+            title: '添加文件',
+            autoOpen: false,
+            width: 500,
+            height: 300,
+            top: 50,
+            modal: true,
+            myButtons: [
+                {
+                    text: '保存',
+                    btnCls: 'btn btn-blue',
+                    handler: function () {
+                        fileUpload();
+                        $('#inportExcelForm').dialog('close');
+
+                    }
+                },
+                {
+                    text: '取消',
+                    btnCls: 'btn btn-danger',
+                    handler: function () {
+                        $('#inportExcelForm').form('clear');
+                        $('#inportExcelForm').dialog('close');
+                    }
+                }
+            ]
+        });
+
+    }
+
+    /**
+     *  设置联动选择，每个第一场景下有不相同的二级场景
+     *
+     */
+    var scene = readScene();
+    var typeData = scene.typeData;
+    var options01 = scene.options01;
+    var options02 = scene.options02;
+    var options03 = scene.options03;
+    var options04 = scene.options04;
+    //初始化查询项目的下拉列表
+
+    $("#district1").combobox({
+        valueField: 'value',//值字段
+        textField: 'text',//显示的字段
+        data: scene.direct,
+        panelWidth: 130,
+        panelHeight: "auto"
+    });
+
+
+
+    FromDepartmentData=readScene().FromDepartmentData;
+
+    $("#FromDepartment").combobox({
+        valueField: 'value',//值字段
+        textField: 'text',//显示的字段
+        data: FromDepartmentData,
+        panelHeight: 170
+
+    });
+    $("#firstScene").combobox({
+        valueField: 'value',//值字段
+        textField: 'text',//显示的字段
+        data: typeData,
+        panelHeight: 170,
+        onSelect: function () {
+            var myOptValue = $("#firstScene").combobox("getValue");
+            // console.log('myOptValue = ' + myOptValue);
+            //清空原来的classify这个combobox中的选项
+            $("#secondScene").combobox("clear");
+            //动态添加"操作类型"的下拉列表框的option
+            if (myOptValue != null && myOptValue === '全部') {
+
+                $("#secondScene").combobox({
+                    autoHeight: true,
+                    data: '',
+                    valueField: 'value',//值字段
+                    textField: 'text'//显示的字段
+                });
+            }
+            else if (myOptValue != null && myOptValue === '城区') {
+
+                $("#secondScene").combobox({
+                    autoHeight: true,
+                    data: options01,
+                    valueField: 'value',//值字段
+                    textField: 'text'//显示的字段
+                });
+            } else if (myOptValue != null && myOptValue === '乡镇') {
+
+                $("#secondScene").combobox({
+                    autoHeight: true,
+                    data: options02,
+                    valueField: 'value',//值字段
+                    textField: 'text'//显示的字段
+                });
+            } else if (myOptValue != null && myOptValue === '农村') {
+
+                $("#secondScene").combobox({
+                    autoHeight: true,
+                    data: options03,
+                    valueField: 'value',//值字段
+                    textField: 'text'//显示的字段
+                });
+            } else if (myOptValue != null && myOptValue === '交通') {
+
+                $("#secondScene").combobox({
+                    autoHeight: true,
+                    data: options04,
+                    valueField: 'value',//值字段
+                    textField: 'text'//显示的字段
+                });
+            }
+
+        }
+    });
+
+    $("#firstScene1").combobox({
+        valueField: 'value',//值字段
+        textField: 'text',//显示的字段
+        data: typeData,
+        panelHeight: 170,
+        onSelect: function () {
+            var myOptValue = $("#firstScene1").combobox("getValue");
+            // console.log('myOptValue = ' + myOptValue);
+            //清空原来的classify这个combobox中的选项
+            $("#secondScene1").combobox("clear");
+            //动态添加"操作类型"的下拉列表框的option
+            if (myOptValue != null && myOptValue === '全部') {
+
+                $("#secondScene1").combobox({
+                    autoHeight: true,
+                    data: '',
+                    valueField: 'value',//值字段
+                    textField: 'text'//显示的字段
+                });
+            }
+            else if (myOptValue != null && myOptValue === '城区') {
+
+                $("#secondScene1").combobox({
+                    autoHeight: true,
+                    data: options01,
+                    valueField: 'value',//值字段
+                    textField: 'text'//显示的字段
+                });
+            } else if (myOptValue != null && myOptValue === '乡镇') {
+
+                $("#secondScene1").combobox({
+                    autoHeight: true,
+                    data: options02,
+                    valueField: 'value',//值字段
+                    textField: 'text'//显示的字段
+                });
+            } else if (myOptValue != null && myOptValue === '农村') {
+
+                $("#secondScene1").combobox({
+                    autoHeight: true,
+                    data: options03,
+                    valueField: 'value',//值字段
+                    textField: 'text'//显示的字段
+                });
+            } else if (myOptValue != null && myOptValue === '交通') {
+
+                $("#secondScene1").combobox({
+                    autoHeight: true,
+                    data: options04,
+                    valueField: 'value',//值字段
+                    textField: 'text'//显示的字段
+                });
+            }
+
+        }
+    });
+
+
+    var directData=readScene().direct;
+    $("#districtCom").combobox({
+        valueField: 'value',//值字段
+        textField: 'text',//显示的字段
+        data: directData,
+        panelHeight: 170
+    });
+
+
+    /**
+     *  增加弱覆盖需求信息
+     */
+    function addRequirement() {
+
+
+        //选择要添加的弱覆盖需求行
+        var rows = $('#showWeekCover').datagrid('getSelections');
+        if (rows.length > 1) {
+            alert('请选择一条数据');
+        } else {
+
+            //设置当前选择行的coll_ID
+
+            $.ajax({
+                url: "{{projcfg.appurl}}/api/netCell/requirementMan_router/isExists",
+                type: "post",
+                async: true,
+                cache: true,
+                data: {coll_ID: rows[0].ID},
+                success: function (data) {
+
+
+                    console.log(data);
+                    if (data.length > 0) {
+
+                        msgSuccess('该弱覆盖已有需求');
+
+                    } else {
+
+                        $('#addRequirement').form('clear');
+                        $('#coll_ID').val(rows[0].ID);
+
+                        // console.log($('#coll_ID').val(rows[0].ID));
+                        $('#addRequirement').show();
+                        $('#addRequirement').mydialog({
+                            title: '添加弱覆盖需求信息',
+                            autoOpen: false,
+                            width: 700,
+                            height: 600,
+                            top: 50,
+                            modal: true,
+                            myButtons: [
+                                {
+                                    text: '保存',
+                                    btnCls: 'btn btn-danger',
+                                    width: 50,
+                                    handler: function () {
+
+                                        var params = getParameter();
+                                        //点击保存后添加到弱覆盖需求表
+                                        $.ajax({
+                                            url: "{{projcfg.appurl}}/api/netCell/requirementMan_router/addRequire",
+                                            type: "post",
+                                            async: true,
+                                            cache: true,
+                                            data: $('#addRequirement').serialize(),
+                                            success: function (data) {
+                                                // console.log(data);
+                                                if (data.success) {
+
+                                                    msgSuccess(data.data);
+                                                }
+                                                $('#inportExcelForm').datagrid('reload', params);
+                                            },
+                                            error: function (err) {
+                                                console.log(err);
+                                            }
+                                        });
+                                        $('#addRequirement').dialog('close');
+
+                                    }
+                                },
+                                {
+                                    text: '取消',
+                                    btnCls: 'btn btn-default',
+                                    width: 20,
+                                    handler: function () {
+                                        $('#addRequirement').dialog('close');
+
+                                    }
+                                }
+                            ]
+                        });
+                    }
+
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            });
+
+
+        }
+
+
+    }
+
+
+    //查看弱覆盖需求数据
+    function checkRequirement() {
+
+        var rows = $('#showWeekCover').datagrid('getSelections');
+        if (rows.length > 1) {
+            alercheckRequirementt('请选择一条数据');
+        } else {
+            $.ajax({
+                url: "{{projcfg.appurl}}/api/netCell/requirementMan_router/isExists",
+                type: "post",
+                async: true,
+                cache: true,
+                data: {coll_ID: rows[0].ID},
+                success: function (data) {
+                    if (data.length > 0) {
+                        $('#showTheRequirement').form('clear');
+                        $('#showID').val(data.ID);
+                        // console.log( $('#ID').val(data[0].ID));
+                        $('#showcoll_ID').val(data[0].coll_ID);
+                        $('#showbuildType').textbox('setValue', data[0].buildType);
+                        $('#showisPass').textbox('setValue', data[0].isPass);
+                        $('#shownetModel').textbox('setValue', data[0].netModel);
+                        $('#showpersonCharge').val(data[0].personCharge);
+                        $('#showpersonTel').val(data[0].personTel);
+                        $('#showpreStName').val(data[0].preStName);
+                        $('#showreportTime').val(data[0].reportTime);
+                        $('#showreqCellNum').val(data[0].reqCellNum);
+                        $('#showstAddress').val(data[0].stAddress);
+                        $('#showstPrope').textbox('setValue', data[0].stPrope);
+
+                        $('#showTheRequirement').show();
+                        $('#showTheRequirement').mydialog({
+                            title: '查看弱覆盖信息',
+                            autoOpen: false,
+                            width: 700,
+                            height: 600,
+                            top: 50,
+                            modal: true,
+                            myButtons: [
+                                {
+                                    text: '取消',
+                                    btnCls: 'btn btn-default',
+                                    width: 20,
+                                    handler: function () {
+                                        $('#showTheRequirement').dialog('close');
+
+                                    }
+                                }
+                            ]
+                        });
+
+
+                    } else {
+                        msgSuccess('该弱覆盖没有需求');
+                    }
+
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            });
+        }
+    }
+
+
+    /**
+     *  删除指定的弱覆盖信息数据
+     *
+     */
+    function doDelete() {
+
+        //获取当前要删除的数据
+        var rows = $('#showWeekCover').datagrid('getSelections');//获取当前页的数据行
+        if (rows.length <= 0) {
+            alert('请至少选择一条数据');
+        } else {
+
+            //confirm("确认要更改该条记录状态吗？")==true
+            if (confirm("确认删除这些弱覆盖信息记录吗？") == true) {
+                var params = getParameter();
+                $.ajax({
+
+                    url: "{{projcfg.appurl}}/api/netCell/netCell_router/delete",
+                    type: "get",
+                    data: {rows: rows},
+                    success: function (data) {
+                        // console.log(data);
+                        if (data.success) {
+
+                            msgSuccess(data.data);
+                            $('#showWeekCover').datagrid('reload', params);
+
+                        }
+                    }
+                });
+            }
+
+        }
+
+
+    }
+
+    function checkBSSS() {
+        var bsss = $('#BSSS').val();
+        var patt = /^-[0-9]*$/;
+        if (!patt.test(bsss)) {
+            alert('输入错误，信号强度类型为数字,例如：-97');
+            $('#BSSS').val('');
+        }
+    }
+
+
+    /**
+     *  手动增加一条弱覆盖数据
+     */
+    function doAdd() {
+
+        // $('#lookUpModal').dialog('destroy');
+
+        //$("#lookUpModal").form("clear");
+        $('#addWeekCover').show();
+        $('#addWeekCover').mydialog({
+            title: '添加弱覆盖信息',
+            autoOpen: false,
+            width: 800,
+            height: 500,
+            top: 100,
+            modal: true,
+            myButtons: [
+
+                {
+                    text: '保存',
+                    btnCls: 'btn btn-danger',
+                    width: 100,
+                    handler: function () {
+                        if(getAddWeakData()){
+                            var params = getParameter();
+                            //写入数据
+                            $.ajax({
+                                url: "{{projcfg.appurl}}/api/netCell/netCell_router/insert",
+                                type: "post",
+                                async: true,
+                                cache: true,
+                                data: $('#lookUpModal').serialize(),
+                                success: function (data) {
+                                    msgSuccess(data.data);
+                                    $('#showWeekCover').datagrid('reload', params);
+
+                                }
+                            });
+                            //$('#addWeekCover').dialog('close');
+                        }else{
+                            msgError("请确认信息是否完整");
+                        }
+
+
+
+                    }
+                },
+                {
+                    text: '取消',
+                    btnCls: 'btn btn-default',
+                    width: 50,
+                    handler: function () {
+                        $('#addWeekCover').dialog('close');
+
+                    }
+                }
+            ]
+        });
+    }
+
+
+    /**
+     * 根据查询条件，点击查询后
+     * 获取所有弱覆盖全部数据
+     */
+    function checkWeekData(params) {
+
+        if (params == '' || params == undefined || params == null) {
+            params = getParameter();
+        }
+        // console.log('3333333' + params)
+
+        $('#showWeekCover').datagrid({
+            // iconCls: "icon-save",//图标
+            width: "100%",
+            nowrap: false, //默认true,设置为 true，则把数据显示在一行里。
+            striped: true, //设置为 true，则把行条纹化。（即奇偶行使用不同背景色）
+            collapsible: false,//是否可折叠的
+            remoteSort: true,//默认true,定义是否从服务器排序数据。
+            frozenColumns: [[{field: 'ck', checkbox: true}]],//多选框,位置固定在最左边
+            url: "{{projcfg.appurl}}/api/netCell/weekCover_router/",
+            method: 'post',
+            queryParams: params,
+            title: '弱覆盖数据',
+            rownumbers: true,
+            autoRowHeight: true,
+            fitColumns: false,
+            resizable: true,
+            fixed: true,
+            border: true,
+            singleSelect: false,
+            checkOnSelect: true,
+            height: 600,
+            // singleSelect: true,
+            columns: [[
+
+                {
+                    "field": "ID", "title": "ID", align: 'center', hidden: true
+                },
+                {
+                    "field": "ECI", "title": "ECI", align: 'center'
+                },
+                {
+                    "field": "TAC", "title": "位置区域码", align: 'center'
+                },
+                {
+                    "field": "BSSS", "title": "信号强度", fixed: true, sortable: true
+                },
+                {
+                    "field": "GpsLon", "title": "GPS经度", fixed: true
+                },
+                {
+                    "field": "GpsLat", "title": "GPS纬度", fixed: true
+                },
+                {
+                    "field": "collectUsername", "title": "上传人", halign: 'center'
+                },
+                {
+                    "field": "phoneNumber", "title": "手机号", halign: 'center'
+                },
+                {
+                    "field": "FromDepartment", "title": "部门", halign: 'center'
+                },
+                {
+                    "field": "phoneType", "title": "手机型号", halign: 'center'
+                },
+                {
+                    "field": "overlayScene", "title": "覆盖场景", halign: 'center'
+                },
+                {
+                    "field": "district", "title": "区县", halign: 'center',width:100
+                },
+                {
+                    "field": "address", "title": "详细地址", halign: 'center'
+                },
+                {
+                    "field": "NetworkOperatorName", "title": "服务商信息", halign: 'center'
+                },
+                {
+                    "field": "city", "title": "城市", halign: 'center'
+                },
+                {
+                    "field": "solveStatus", "title": "解决状态", halign: 'center', formatter: function (value, row, index) {
+                        var uid = "selectIDis" + index;
+                        var str = '<select id="' + uid + '" onchange="selectChange(\'' + uid + '\',\'' + row.ID + '\',\'' + row.solveStatus + '\')">';
+                        if (value == "未处理") {
+                            str = str + "<option value =\"未处理\">未处理</option>" +
+                                    "<option value =\"已受理\">已受理</option>" +
+                                    "<option value=\"已解决\">已解决</option>" +
+                                    "</select>";
+                        }
+                        else if (value == "已受理") {
+                            str = str + "<option value =\"已受理\">已受理</option>" +
+                                    "<option value=\"处理中\">处理中</option>" +
+                                    "</select>";
+                        }
+                        else if (value == "处理中") {
+                            str = str + "<option value=\"处理中\">处理中</option>\n" +
+                                    "<option value=\"已解决\">已解决</option>\n" +
+                                    "<option value=\"未解决\">未解决</option>\n" +
+                                    "</select>";
+                        }
+                        else if (value == "已解决") {
+                            str = str + "<option value=\"已解决\">已解决</option>\n" +
+                                    "</select>";
+                        }
+                        else if (value == "未解决") {
+                            str = str + "<option value=\"未解决\">未解决</option>\n" +
+                                    "</select>";
+                        }
+                        else {
+
+                        }
+                        return str;
+                    }
+                },
+                {
+                    "field": "solveTime", "title": "解决时间", halign: 'center', sortable: true ,hidden:true
+                },
+                {
+                    "field": "collTime", "title": "采集时间", halign: 'center', sortable: true
+                },
+                {
+                    'field': 'operate', title: '操作', align: 'center', width: 220,
+                    formatter: function (value, row, index) {
+                        var str = '<button class="btn   purple" type="button"  onclick="addRequirement()" >\n' +
+                                '            <i class="fa fa-plus">\n' +
+                                '            </i>\n' +
+                                '            增加需求\n' +
+                                '</button>' + '&nbsp&nbsp' +
+                                '<button class="btn   purple" type="button"  onclick="checkRequirement()" >\n' +
+                                '            <i class="glyphicon glyphicon-search">\n' +
+                                '            </i>\n' +
+                                '            查看' +
+                                '</button>';
+
+                        return str;
+                    }
+                }
+
+            ]],
+            onDblClickRow: function (rowIndex, rowData) {
+
+                var queryDataFor2G = rowData;
+                checkTheSameLoc(queryDataFor2G);
+
+            },
+            onBeforeLoad: function (param) {
+
+            },
+
+            onLoadSuccess: function (data) {
+
+            },
+
+            onLoadError: function () {
+                msgError('加载数据出现时发生错误,请稍候重试...');
+            },
+            pagination: true,
+            loadMsg: '正在加载...'
+        });
+    }
+
+
+    function checkTheSameLoc(queryData) {
+
+        // console.log(queryData);
+        // alert('11111');
+
+        $.ajax({
+            url: "{{projcfg.appurl}}/api/netCell/weekCover_router/checkSameLoca",
+            type: "post",
+            async: true,
+            cache: true,
+            data: queryData,
+            success: function (data) {
+
+                data = data.data[0];
+                // console.log(data)
+                // console.log(data.BSSS)
+                if (data != '') {
+                    $('#showTheSameLocaForm').form('clear');
+                    $('#showIDFor2G').val(data.ID);
+                    $('#ECIFor2G').val(data.ECI);
+                    $('#TACFor2G').val(data.TAC);
+                    $('#BSSSFor2G').val(data.BSSS);
+                    $('#BSSSFor4G').val('-130');
+                    $('#GPSFor2G').val(data.GPS);
+                    $('#phoneTypeFor2G').val(data.phoneType);  //
+                    $('#phoneNumberFor2G').val(data.phoneNumber);
+                    $('#overlaySceneFor2G').val(data.overlayScene);
+                    $('#districtFor2G').textbox('setValue', data.district);
+                    $('#addressFor2G').val(data.address);
+                    $('#cityFor2G').textbox('setValue', data.city);
+                    $('#collTimeFor2G').textbox('setValue', data.collTime);
+                    $('#solveStatusFor2G').textbox('setValue', data.solveStatus);
+                    $('#solveTimeFor2G').textbox('setValue', data.solveTime);
+                    $('#NetworkOperatorNameFor2G').textbox('setValue', data.NetworkOperatorName);
+                    // $('#solveTimeFor2G').val(data.solveTime);
+                    $('#createPersionFor2G').val(data.createPersion);
+                    $('#createTimeFor2G').val(data.createTime);
+                    $('#alterpersionFor2G').val(data.alterpersion);
+                    $('#alterTimeFor2G').val(data.alterTime);
+                    $('#deleteFlagFor2G').val(data.deleteFlag);
+
+                    /*   // console.log( $('#ID').val(data.ID));
+                       $('#showcoll_IDFor2G').val(data.coll_ID);
+                       $('#showbuildTypeFor2G').textbox('setValue', data.buildType);
+                       $('#showisPassFor2G').textbox('setValue', data.isPass);
+                       $('#shownetModelFor2G').textbox('setValue', data.netModel);
+                       $('#showpersonChargeFor2G').val(data.personCharge);
+                       $('#showpersonTelFor2G').val(data.personTel);
+                       $('#showpreStNameFor2G').val(data.preStName);
+                       $('#showreportTimeFor2G').val(data.reportTime);
+                       $('#showreqCellNumFor2G').val(data.reqCellNum);
+                       $('#showstAddressFor2G').val(data.stAddress);
+                       $('#showstPropeFor2G').textbox('setValue', data.stPrope);*/
+
+
+                    $('#checkTheSameLoca').show();
+                    $('#checkTheSameLoca').mydialog({
+                        title: '查看该弱覆盖2G数据',
+                        autoOpen: false,
+                        width: 700,
+                        height: 600,
+                        top: 50,
+                        modal: true,
+                        myButtons: [
+                            {
+                                text: '关闭',
+                                btnCls: 'btn btn-default',
+                                width: 20,
+                                handler: function () {
+                                    $('#checkTheSameLoca').dialog('close');
+
+                                }
+                            }
+                        ]
+                    });
+
+
+                } else {
+                    msgSuccess('数据加载错误');
+                }
+
+            },
+            error: function (err) {
+                console.log(err);
+            }
+        });
+
+
+    }
+
+
+
+    function selectChange(assemblyID, rowID, oldStatus) {
+
+        var params = getParameter();
+
+        //确认是否修改
+        if (confirm("确认要更改该条记录状态吗？") == true) {
+            var nowStatus = $('#' + assemblyID + '').val();
+            // console.log('nowStatus:'+nowStatus);
+            // console.log('rowID:'+rowID);
+
+            $.ajax({
+                url: "{{projcfg.appurl}}/api/netCell/weekCover_router/updateStatus",
+                type: "get",
+                data: {
+                    "nowStatus": nowStatus,
+                    "ID": rowID
+                },
+                success: function (data) {
+                    //修改成功与否结果
+                    if (data.success) {
+                        msgSuccess(data.msg);
+                        $('#showWeekCover').datagrid('reload', params);
+                    } else {
+                        msgError(data.msg + ',错误代码:' + data.code);
+                    }
+
+                }
+            });
+        } else {
+            $('#' + assemblyID + '').val(oldStatus);
+            msgSuccess('状态未变更');
+            return false;
+        }
+    }
+
+    /**
+     * 将选中的数据条目导出到Excel
+     */
+            //用于暂存导出的文件名
+    var fileName = '';
+
+    function exportExcel() {
+        //获取当前选择的数据行内容
+        // var rows = $('#showWeekCover').datagrid('getSelections');
+        var params = getParameter();
+        $.ajax({
+            url: "{{projcfg.appurl}}/api/netCell/exportAndInput_router/exportExcel",
+            type: "get",
+            data: {rows: params},
+            success: function (data) {
+                //如果导出成功，即弹出下载狂
+                if (data.success) {
+                    //暂存文件名
+                    fileName = data.data.fileName;
+                    msgSuccess(data.msg);
+                    $('#downloadExcel').show();
+                    $('#downloadExcel').mydialog({
+                        title: '下载文件',
+                        autoOpen: false,
+                        width: 300,
+                        height: 250,
+                        top: 50,
+                        modal: true,
+                        myButtons: [
+                            {
+                                text: '取消',
+                                btnCls: 'btn btn-default',
+                                width: 20,
+                                handler: function () {
+                                    $('#downloadExcel').dialog('close');
+                                }
+                            }
+                        ]
+                    });
+                }else{
+                    msgError(data.msg)
+                }
+            }
+        });
+
+    }
+
+    //下载已生成的excel表格
+    function downloadXLS() {
+
+        document.getElementById("links").href = "{{projcfg.appurl}}/static/file/exportExcel/" + fileName;
+        $('#downloadExcel').dialog('close');
+
+
+    }
+
+    //封装查询条件
+    function getParameter() {
+
+        var queryDateStart = $('#queryDateStart').val();
+        var queryDateEnd = $('#queryDateEnd').val();
+        var city = $('#district1').combobox("getValue");
+        var firstScene = $('#firstScene').combobox("getValue");
+        var secondScene = $('#secondScene').combobox("getValue");
+        return {
+            queryDateStart: queryDateStart,
+            queryDateEnd: queryDateEnd,
+            city: city,
+            firstScene: firstScene,
+            secondScene: secondScene
+        };
+    }
+
+    function isPhoneNumber() {
+        var phoneNumber = $("#phoneNumber").val();
+        var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/;
+        if (!myreg.test(phoneNumber)) {
+            $("#phoneNumber").val('');
+            alert('请输入有效的手机号码');
+            return false;
+        }
+    }
+
+
+    function sameLocView() {
+
+
+        var params = getParameter();
+        params.BSSSfor2G = -130;
+        checkWeekData(params);
+
+
+        // var aa =
+        <!--$.ajax({-->
+        <!--url: "{{projcfg.appurl}}/api/netCell/weekCover_router/checkSameLoca",-->
+        <!--type: "post",-->
+        <!--async: true,-->
+        <!--cache: true,-->
+        <!--data: $('#lookUpModal').serialize(),-->
+        <!--success: function (data) {-->
+        <!--msgSuccess(data.data);-->
+        <!--$('#showWeekCover').datagrid('reload', params);-->
+
+        <!--}-->
+        <!--});-->
+        // alert('正在查看');
+    }
+
+
+    function getAddWeakData() {
+        var city = $("#city").combobox('getValue');
+        var ECI = $("#ECI").val();
+        var TAC = $("#TAC").val();
+        var BSSS = $("#BSSS").val();
+        var phoneType = $("#phoneType").val();
+        var collectUsername = $("#collectUsername").val();
+        var FromDepartment = $("#FromDepartment").combobox('getValue');
+        var phoneNumber = $("#phoneNumber").val();
+        var GPSlon = $("#GPSlon").val();
+        var GPSlat = $("#GPSlat").val();
+        var districtCom = $("#districtCom").combobox('getValue');
+        var firstScene1 = $("#firstScene1").combobox('getValue');
+        var secondScene1 = $("#secondScene1").combobox('getValue');
+        var address = $("#address").val();
+        var netType = $("#netType").combobox('getValue');
+        var collTime = $("#collTime").datebox("getValue");
+        var NetworkOperatorName = $("#NetworkOperatorName").combobox('getValue');
+        var solveStatus = $("#solveStatus").combobox('getValue');
+        var solveTime = $("#solveTime").datebox("getValue");
+        console.log(city,
+                ECI,
+                TAC,
+                BSSS ,
+                phoneType ,
+                collectUsername ,
+                FromDepartment ,
+                phoneNumber,
+                GPSlon ,
+                GPSlat ,
+                districtCom ,
+                firstScene1,
+                secondScene1,
+                address,
+                netType,
+                collTime,
+                NetworkOperatorName,
+                solveStatus,
+                solveTime);
+
+
+
+
+        return  checkIsNull(city )&&
+                checkIsNull(ECI )&&
+                checkIsNull(TAC )&&
+                checkIsNull(BSSS )&&
+                checkIsNull(phoneType )&&
+                checkIsNull(collectUsername )&&
+                checkIsNull(FromDepartment )&&
+                checkIsNull(phoneNumber)&&
+                checkIsNull(GPSlon )&&
+                checkIsNull(GPSlat )&&
+                checkIsNull(districtCom )&&
+                checkIsNull(firstScene1)&&
+                checkIsNull(secondScene1)&&
+                checkIsNull(address)&&
+                checkIsNull(netType)&&
+                checkIsNull(collTime)&&
+                checkIsNull(NetworkOperatorName)&&
+                checkIsNull(solveStatus)&&
+                checkIsNull(solveTime);
+    }
+    function checkIsNull(str) {
+        return str!=undefined&&str!=null&&str!=""&&str!="undefined"
+    }
+
+
+</script>
