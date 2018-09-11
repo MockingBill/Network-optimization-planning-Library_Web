@@ -12,6 +12,7 @@ var excelService = require('../model/execlExport.js');
 var uuid = require('uuid');
 var app=require('../../../../app');
 var config=require('../../../../config');
+var sd = require('silly-datetime');
 
 
 
@@ -520,32 +521,83 @@ exports.isExistsRequirement = function (id, cb) {
 
 };
 
-exports.addExcelRequirement = function (params, cb) {
+exports.addExcelRequirement = function (results, loginName, cb) {
+    try {
+        var sqlParamsEntity = [];
+        var sqlForConfirm = "insert into bu_weak_confirmation(demand_id,coll_id,im_remark,reportTime,reportPersion,createPersion,createTime,confirm_eci,confirm_tac,confirm_bsss,confirm_networktype,confirm_lon,confirm_lat) values (?,?,?,?,?,?,?,?,?,?,?,?,?);";
+        var sqlForDemand = "insert into bu_weak_coverage_demand (ID,preStName,stAddress,netModel,stPrope,buildType,reqCellNum,isPass,personCharge,personTel,reportTime) values (?,?,?,?,?,?,?,?,?,?,?)";
 
-    //插入数据sql
+        for (var i in results) {
+            if (i > 0) {
+                /**
+                 * 检查本行数据合法性
+                 */
+                var column = results[i];
+                var flag = false;
+                for (var j in column) {
+                    flag = checkData(column[j])
+                }
+                var paramForConfirm = [];
+                var paramForDemand = [];
 
-    var sql = 'INSERT INTO bu_weak_confirmation( ID ,coll_ID,preStName ,netModel  ,stAddress,stPrope ,buildType ,reqCellNum ,isPass ,personCharge ,personTel,reportTime ) VALUES(?,?,?,?,?,?,?,?,?,?,?,?)';
+                if (flag) {
+                    /**
+                     * 合法则解析数据成为param
+                     */
+                    var demandID = uuid.v4();
+                    paramForConfirm.push(demandID);
+                    paramForConfirm.push(column[0]);
+                    paramForConfirm.push(column[36]);
 
-   try{
-       model.query(sql, params, function (err, rows) {
-           if (err) {
-               console.log("写入错误： " + err);
-               cb(err,null);
-           } else {
-               console.log('------写入成功------');
+                    paramForConfirm.push(column[29]);
+                    paramForConfirm.push(column[27]);
+                    paramForConfirm.push("创建人");
 
-               console.log(rows);
-               //成功后返回插入数据条数
-               cb(  null,rows.affectedRows + '条数据已保存。');
-           }
+                    paramForConfirm.push(getDate());
+                    paramForConfirm.push(column[30]);
+                    paramForConfirm.push(column[31]);
+                    paramForConfirm.push(column[32]);
+                    paramForConfirm.push(column[33]);
+                    paramForConfirm.push(column[34]);
+                    paramForConfirm.push(column[35]);
+                    sqlParamsEntity.push(model.getNewSqlParamEntity(sqlForConfirm, paramForConfirm));
 
-       });
-   }catch (e) {
-       console.log("进入了");
-       cb(e,0);
-   }
+                    paramForDemand.push(demandID);
+                    paramForDemand.push(column[20]);
+                    paramForDemand.push(column[21]);
+                    paramForDemand.push(column[22]);
+                    paramForDemand.push(column[23]);
+                    paramForDemand.push(column[24]);
+                    paramForDemand.push(column[25]);
+                    paramForDemand.push(column[26]);
+                    paramForDemand.push(column[27]);
+                    paramForDemand.push(column[28]);
+                    paramForDemand.push(column[29]);
+                    sqlParamsEntity.push(model.getNewSqlParamEntity(sqlForDemand, paramForConfirm));
 
-
+                } else {
+                    continue;
+                }
+            }
+        }
+        model.execTrans(sqlParamsEntity, function (err, res) {
+            if (err) {
+                cb(utils.returnMsg(false, '1010', '全部数据导入失败', null, err));
+            } else {
+                cb(utils.returnMsg(true, '1000', sqlParamsEntity.length + '条数据导入成功', res, null));
+            }
+        });
+    } catch (err) {
+        cb(utils.returnMsg(false, '1010', '全部数据导入失败', null, err));
+    }
 };
 
+
+function checkData(str) {
+    return str!=undefined&&str!=""&&str!=null&&str!="undefined"
+}
+
+function getDate() {
+    return sd.format(new Date(), 'YYYY-MM-DD HH:mm:ss');
+}
 

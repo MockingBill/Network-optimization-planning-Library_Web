@@ -1,0 +1,5 @@
+[2018-09-11 10:48:26.159] [INFO] app - 数据库操作失败:
+Error: ER_BAD_FIELD_ERROR: Unknown column 'GPS' in 'where clause'
+[2018-09-11 10:48:26.160] [INFO] app - 根据4G弱覆盖查询2G覆盖数据失败:
+Error: ER_BAD_FIELD_ERROR: Unknown column 'GPS' in 'where clause'
+[2018-09-11 15:37:56.078] [INFO] app - 未捕获异常：Error: ER_DUP_ENTRY: Duplicate entry '007d4702-4eb8-45a8-85d9-12305765798d' for key 'PRIMARY'

@@ -608,7 +608,6 @@ exports.getWeekExcelData = function (params, cb) {
         'confirm_lon,'+
         'confirm_lat,'+
         'im_remark '+
-
         ' FROM weak_and_demand' +
         ' where district like ' + '"%' + city + '%"' +
         ' and overlayScene like ' + '"%' + overlayScene + '%"' +
@@ -638,7 +637,7 @@ exports.getWeekExcelData = function (params, cb) {
 
                 //设置导出excel头
             var header = [
-                    '需求id',
+                    '弱覆盖ID',
                     '城市',
                     '区县',
                     '详细地址',
@@ -658,7 +657,6 @@ exports.getWeekExcelData = function (params, cb) {
                     '手机型号',
                     '解决状态',
                     '解决时间',
-
                     '预建站点名称',
                     '建站位置地址',
                     '网络制式',

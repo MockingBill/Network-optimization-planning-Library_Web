@@ -1759,18 +1759,20 @@
             height: 600,
             // singleSelect: true,
             columns: [[
-
                 {
                     "field": "ID", "title": "ID", align: 'center', hidden: true
                 },
                 {
-                    "field": "ECI", "title": "ECI", align: 'center'
+                    "field": "city", "title": "城市", halign: 'center',width:100
                 },
                 {
-                    "field": "TAC", "title": "位置区域码", align: 'center'
+                    "field": "district", "title": "区县", halign: 'center'
                 },
                 {
-                    "field": "BSSS", "title": "信号强度", fixed: true, sortable: true
+                    "field": "address", "title": "详细地址", halign: 'center'
+                },
+                {
+                    "field": "overlayScene", "title": "覆盖场景", halign: 'center'
                 },
                 {
 
@@ -1779,6 +1781,22 @@
                 {
                     "field": "GpsLat", "title": "GPS纬度", fixed: true
                 },
+                {
+                    "field": "ECI", "title": "CID/ECI", align: 'center'
+                },
+                {
+                    "field": "TAC", "title": "LAC/TAC", align: 'center'
+                },
+                {
+                    "field": "BSSS", "title": "信号强度", fixed: true, sortable: true
+                },
+                {
+                    "field": "NetworkOperatorName", "title": "服务商信息", halign: 'center'
+                },
+                {
+                    "field": "netWorkType", "title": "网络类型", halign: 'center'
+                },
+
                 {
                     "field": "collectUsername", "title": "上传人", halign: 'center'
 
@@ -1794,21 +1812,7 @@
 
                     "field": "phoneType", "title": "手机型号", halign: 'center'
                 },
-                {
-                    "field": "overlayScene", "title": "覆盖场景", halign: 'center'
-                },
-                {
-                    "field": "district", "title": "区县", halign: 'center'
-                },
-                {
-                    "field": "address", "title": "详细地址", halign: 'center'
-                },
-                {
-                    "field": "NetworkOperatorName", "title": "服务商信息", halign: 'center'
-                },
-                {
-                    "field": "city", "title": "城市", halign: 'center'
-                },
+
                 {
                     "field": "solveStatus", "title": "解决状态", halign: 'center', formatter: function (value, row, index) {
                         var uid = "selectIDis" + index;
@@ -1853,7 +1857,9 @@
                 {
                     'field': 'operate', title: '操作', align: 'center', width: 220,
                     formatter: function (value, row, index) {
-                        var str = '<button class="btn   purple" type="button"  onclick="addRequirement()" >\n' +
+
+                        var str =
+                                '<button class="btn   purple" type="button"  onclick="addRequirement()" >\n' +
                                 '            <i class="fa fa-plus">\n' +
                                 '            </i>\n' +
                                 '            增加需求\n' +
@@ -1861,7 +1867,7 @@
                                 '<button class="btn   purple" type="button"  onclick="checkRequirement()" >\n' +
                                 '            <i class="glyphicon glyphicon-search">\n' +
                                 '            </i>\n' +
-                                '            查看' +
+                                '查看' +
                                 '</button>';
 
                         return str;

@@ -250,4 +250,11 @@ app.use(function (err, req, res, next) {
     });
 });
 
+/**
+ * 获取未捕获的异常，防止程序崩溃。
+ */
+process.on('uncaughtException', function (err) {
+    log4js.getLogger('app').info("未捕获异常："+err);
+});
+
 module.exports = app;
